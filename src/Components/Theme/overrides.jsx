@@ -48,7 +48,16 @@ export function overrides(theme) {
                         backgroundColor: theme.palette.primary.dark,
                     },
                 },
-                ghostPrimary: {
+                outlinedPrimary: {
+                    color: theme.palette.primary.main,
+                    border: "1px solid theme.palette.primary.main",
+                    boxShadow: "none",
+                    "&:hover": {
+                        boxShadow: "none",
+                        backgroundColor: alpha(theme.palette.primary.main, 0.16),
+                    },
+                },
+                softPrimary: {
                     backgroundColor: theme.palette.primary.light,
                     color: theme.palette.primary.main,
                     border: "1px dashed",
@@ -56,15 +65,6 @@ export function overrides(theme) {
                     "&:hover": {
                         boxShadow: "none",
                         backgroundColor: alpha(theme.palette.primary.main, 0.16),
-                    },
-                },
-                outlinedPrimary: {
-                    color: theme.palette.primary.main,
-                    border: "1px solid theme.palette.primary.main",
-                    boxShadow: "none",
-                    "&:hover": {
-                        boxShadow: "none",
-                        backgroundColor: theme.palette.primary.light,
                     },
                 },
                 sizeLarge: {
