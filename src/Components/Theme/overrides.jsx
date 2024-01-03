@@ -38,6 +38,15 @@ export function overrides(theme) {
                         boxShadow: "none",
                     },
                 },
+                sizeLarge: {
+                    minHeight: 48,
+                },
+                sizeMedium: {
+                    minHeight: 40,
+                },
+                sizeSmall: {
+                    minHeight: 32,
+                },
                 containedPrimary: {
                     backgroundColor: theme.palette.primary,
                     color: "white",
@@ -67,15 +76,7 @@ export function overrides(theme) {
                         backgroundColor: alpha(theme.palette.primary.main, 0.16),
                     },
                 },
-                sizeLarge: {
-                    minHeight: 48,
-                },
-                sizeMedium: {
-                    minHeight: 40,
-                },
-                sizeSmall: {
-                    minHeight: 32,
-                },
+                
             },
         },
         MuiOutlinedInput: {

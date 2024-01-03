@@ -7,12 +7,12 @@ export default function Home() {
         <Button variant="contained" color="primary" size="large">large</Button>
         <Button variant="contained" color="primary" size="medium">medium</Button>
         <Button variant="contained" color="primary" size="small">small</Button>
-        <Button variant="outlined" color="primary" size="large">large</Button>
+        {/* <Button variant="outlined" color="primary" size="large">large</Button>
         <Button variant="outlined" color="primary" size="medium">small</Button>
         <Button variant="outlined" color="primary" size="small">medium</Button>
         <Button variant="soft" color="primary" size="large">large</Button>
         <Button variant="soft" color="primary" size="medium">small</Button>
-        <Button variant="soft" color="primary" size="small">medium</Button>
+        <Button variant="soft" color="primary" size="small">medium</Button> */}
     </Box>
   )
 }
