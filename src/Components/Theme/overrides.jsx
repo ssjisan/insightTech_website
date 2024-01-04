@@ -39,14 +39,51 @@ export function overrides(theme) {
                     },
                 },
                 sizeLarge: {
-                    minHeight: 48,
+                    height: 48,
                 },
                 sizeMedium: {
-                    minHeight: 40,
+                    height: 40,
                 },
                 sizeSmall: {
-                    minHeight: 32,
+                    height: 32,
                 },
+
+                // Inherit Color Start
+                containedInherit: {
+                    backgroundColor: "#DFE3E8",
+                    color: theme.palette.grey[900],
+                    borderRadius: "8px",
+                    boxShadow: "none",
+                    "&:hover": {
+                        boxShadow: "none",
+                        backgroundColor: alpha(theme.palette.grey[500], 0.32),
+                    },
+                },
+                outlinedInherit: {
+                    backgroundColor: "none",
+                    color: theme.palette.grey[900],
+                    borderRadius: "8px",
+                    border: "1px solid",
+                    borderColor: theme.palette.grey[500],
+                    boxShadow: "none",
+                    "&:hover": {
+                        boxShadow: "none",
+                        backgroundColor: alpha(theme.palette.grey[500], 0.08),
+                    },
+                },
+                softInherit: {
+                    backgroundColor: alpha(theme.palette.grey[500], 0.08),
+                    color: theme.palette.grey[900],
+                    borderRadius: "8px",
+                    boxShadow: "none",
+                    "&:hover": {
+                        boxShadow: "none",
+                        backgroundColor: alpha(theme.palette.grey[500], 0.16),
+                    },
+                },
+                // Inherit Color End
+
+                // Primary Color Start
                 containedPrimary: {
                     backgroundColor: theme.palette.primary,
                     color: "white",
@@ -59,24 +96,25 @@ export function overrides(theme) {
                 },
                 outlinedPrimary: {
                     color: theme.palette.primary.main,
-                    border: "1px solid theme.palette.primary.main",
+                    border: "1px solid",
+                    borderColor: theme.palette.primary.main,
                     boxShadow: "none",
                     "&:hover": {
                         boxShadow: "none",
-                        backgroundColor: alpha(theme.palette.primary.main, 0.16),
+                        backgroundColor: alpha(theme.palette.primary.main, 0.08),
                     },
                 },
                 softPrimary: {
-                    backgroundColor: theme.palette.primary.light,
+                    backgroundColor: alpha(theme.palette.primary.main, 0.16),
                     color: theme.palette.primary.main,
-                    border: "1px dashed",
                     boxShadow: "none",
                     "&:hover": {
                         boxShadow: "none",
-                        backgroundColor: alpha(theme.palette.primary.main, 0.16),
+                        backgroundColor: alpha(theme.palette.primary.main, 0.32),
                     },
                 },
-                
+                // Primary Color End
+
             },
         },
         MuiOutlinedInput: {
