@@ -47,7 +47,6 @@ export function overrides(theme) {
                 sizeSmall: {
                     height: 32,
                 },
-
                 // Inherit Color Start
                 containedInherit: {
                     backgroundColor: "#DFE3E8",
@@ -97,6 +96,7 @@ export function overrides(theme) {
                 outlinedPrimary: {
                     color: theme.palette.primary.main,
                     border: "1px solid",
+                    borderRadius: "8px",
                     borderColor: theme.palette.primary.main,
                     boxShadow: "none",
                     "&:hover": {
@@ -108,6 +108,7 @@ export function overrides(theme) {
                     backgroundColor: alpha(theme.palette.primary.main, 0.16),
                     color: theme.palette.primary.main,
                     boxShadow: "none",
+                    borderRadius: "8px",
                     "&:hover": {
                         boxShadow: "none",
                         backgroundColor: alpha(theme.palette.primary.main, 0.32),

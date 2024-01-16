@@ -2,23 +2,27 @@ import { Box, Button, Typography, useMediaQuery } from "@mui/material"
 import { services } from "../Navbar/NavConfig"
 import { Logo } from "../../Assets/Logo"
 export default function Navbar() {
-    const forBelow416 = useMediaQuery("(max-width:1200px)");
+    // eslint-disable-next-line
+    const forBelow1400 = useMediaQuery("(max-width:1400px)");
+    // eslint-disable-next-line
+    const forBelow1300 = useMediaQuery("(max-width:1300px)");
+    const forBelow1100 = useMediaQuery("(max-width:1100px)");
 
     return (
         <Box sx={{
-            padding: forBelow416 ? "16px 24px" : "16px 40px", display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "1px solid rgba(145, 142, 175, 0.24)",
+            padding: "16px 24px", display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "1px solid rgba(145, 142, 175, 0.24)",
             background: "rgba(255, 255, 255, 0.48)",
             backdropFilter: "blur(16px)"
         }}>
-            <Box sx={{ width: forBelow416 ? "120px" : "168px" }}>
+            <Box sx={{ width:forBelow1100 ? "120px" : "120px"}}>
                 <Logo />
             </Box>
-            <Box sx={{ display: "flex", gap: forBelow416 ? "8px" : "16px" }}>
+            <Box sx={{ display: "flex" }}>
                 {
                     services.map((data) => {
                         return (
-                            <Box sx={{ display: "flex", alignItems: "center" }} key={data.id}>
-                                <Box sx={{ display: "flex", height: "40px", padding: "8px 16px", justifyContent: "center", alignItems: "center" }}>
+                            <Box sx={{ display: "flex", alignItems: "center", gap:"8px"}} key={data.id}>
+                                <Box sx={{ display: "flex", height: "40px", padding: "10px", justifyContent: "center", alignItems: "center" }}>
                                     <Typography variant="subtitle2">{data.title}</Typography>
                                 </Box>
                             </Box>
@@ -26,7 +30,7 @@ export default function Navbar() {
                     })
                 }
             </Box>
-            <Button size="medium" variant="contained" color="primary" sx={{ width: forBelow416 ? "140px" : "160px" }}>Schedule a Call</Button>
+            <Button size="medium" variant="contained" color="primary" >Schedule a Call</Button>
         </Box>
     )
 }

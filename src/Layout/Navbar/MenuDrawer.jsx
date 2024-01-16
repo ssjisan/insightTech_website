@@ -6,7 +6,7 @@ import { services } from "./NavConfig"
 
 export default function MenuDrawer() {
     const { toggleDrawer, open, handleDrawerClose } = useContext(DataContext)
-    const forBelow999 = useMediaQuery("(max-width:676px)");
+    const forBelow676 = useMediaQuery("(max-width:676px)");
 
     return (
         <Drawer
@@ -42,13 +42,13 @@ export default function MenuDrawer() {
                             return (
                                 <Box sx={{ display: "flex", alignItems: "center" }} key={data.id}>
                                     <Box sx={{ display: "flex", height: "40px", padding: "8px 16px", justifyContent: "center", alignItems: "center" }}>
-                                        <Typography sx={{ fontSize:forBelow999 && "18px" }}>{data.title}</Typography>
+                                        <Typography sx={{ fontSize:forBelow676 && "18px" }}>{data.title}</Typography>
                                     </Box>
                                 </Box>
                             )
                         })
                     }
-                    <Button variant="contained" color="primary">Schedule a Call</Button>
+                    <Button variant="contained" color="primary" size="large">Schedule a Call</Button>
                 </Box>
             </Box>
         </Drawer>

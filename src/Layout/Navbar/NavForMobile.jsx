@@ -11,8 +11,8 @@ export default function NavForMobile() {
 
     return (
         <>
-            <Box sx={{ padding: "12px 16px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                <Box sx={{ width: forBelow676 ? "140px" :"168px" }}>
+            <Box sx={{ padding: "12px 16px", display: "flex", justifyContent: "space-between", alignItems: "center",borderBottom: "1px solid rgba(145, 142, 175, 0.24)" }}>
+                <Box sx={{ width: forBelow676 ? "152px" : "168px" }}>
                     <Logo />
                 </Box>
                 <Box sx={{

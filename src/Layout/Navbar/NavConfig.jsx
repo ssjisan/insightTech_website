@@ -34,8 +34,8 @@ const services = [
     },
     {
         id: 3,
-        title: "Web Development",
-        link: "/web_development",
+        title: "Web Solutions",
+        link: "/web_solutions",
     },
     {
         id: 4,
@@ -44,13 +44,18 @@ const services = [
     },
     {
         id: 5,
-        title: "Video",
+        title: "Domain & Hosting",
         link: "/video",
     },
     {
         id: 6,
-        title: "PBX",
+        title: "Videography",
         link: "/pbx",
+    },
+    {
+        id: 7,
+        title: "PBX",
+        link: "/video",
     }
 ];
 
