@@ -24,18 +24,18 @@ const main = [
 const services = [
     {
         id: 1,
-        title: "Digital Marketing",
-        link: "/digital_marketing",
+        title: "Web Development",
+        link: "/web_development",
     },
     {
         id: 2,
-        title: "Network Solution",
-        link: "/network_solution",
+        title: "Domain & Hosting",
+        link: "/domain_hosting",
     },
     {
         id: 3,
-        title: "Web Solutions",
-        link: "/web_solutions",
+        title: "Digital Marketing",
+        link: "/digital_marketing",
     },
     {
         id: 4,
@@ -44,18 +44,18 @@ const services = [
     },
     {
         id: 5,
-        title: "Domain & Hosting",
-        link: "/video",
+        title: "Videography",
+        link: "/videography",
     },
     {
         id: 6,
-        title: "Videography",
-        link: "/pbx",
+        title: "Network Solution",
+        link: "/network_solution",
     },
     {
         id: 7,
         title: "PBX",
-        link: "/video",
+        link: "/pbx",
     }
 ];
 
