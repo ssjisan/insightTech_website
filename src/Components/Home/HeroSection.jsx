@@ -10,7 +10,7 @@ export default function HeroSection() {
             backgroundImage: !forBelow667 && "url('homeBG.png')", backgroundSize: "cover",
             backgroundRepeat: "no-repeat", backgroundPosition: 'center'
         }}>
-            <Container sx={{ p: forBelow999 ? "80px 16px" : "160px 0px", display: "flex", justifyContent: "center", alignItems: "center", flexDirection: 'column' }}>
+            <Container sx={{ p: forBelow999 ? "160px 16px" : "160px 0px", display: "flex", justifyContent: "center", alignItems: "center", flexDirection: 'column' }}>
                 <Box sx={{ flexDirection: 'column', alignItems: 'center', gap: "40px", display: 'flex', mb: "64px" }}>
                     <Typography variant="h1" sx={{
                         textAlign: "center",

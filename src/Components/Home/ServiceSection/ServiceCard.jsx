@@ -1,8 +1,9 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography, useMediaQuery } from "@mui/material";
 import { services } from "../../../Layout/Navbar/NavConfig"
 import { Link } from "react-router-dom";
 
 export default function ServiceCard() {
+    const forBelow787 = useMediaQuery("(max-width:787px)");
 
     // Configure Style Start
 
@@ -12,7 +13,7 @@ export default function ServiceCard() {
     };
     const CardSx = {
         display: "flex",
-        padding: "40px 24px",
+        padding: forBelow787?"20px 12px":"40px 24px",
         flexDirection: "column",
         alignItems: "flex-start",
         gap: "30px",

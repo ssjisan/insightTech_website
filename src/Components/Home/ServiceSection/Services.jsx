@@ -5,8 +5,8 @@ export default function Services() {
 
     // Configure Style Start
     const ContainerSx = {
-        mt: "64px",
-        mb: "64px"
+        paddingTop: "64px",
+        paddingBottom: "64px",
     }
     const MainBox = {
         display: "flex",
