@@ -9,9 +9,8 @@ export default function DataProcessing({ children }) {
     return (
         <DataContext.Provider
             value={{
-                // Add New Category Data Processing
+                // Drawer for mobile
                 toggleDrawer, open, handleDrawerClose
-                // Add New Publisher Data Processing
             }}
         >
             {children}

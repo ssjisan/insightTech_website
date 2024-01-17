@@ -3,6 +3,7 @@ import { useMediaQuery } from "@mui/material";
 import Navbar from "../Layout/Navbar/Navbar";
 import NavForMobile from "../Layout/Navbar/NavForMobile";
 import HeroSection from "../Components/Home/HeroSection";
+import Services from "../Components/Home/ServiceSection/Services";
 
 export default function Home() {
   // eslint-disable-next-line
@@ -15,6 +16,7 @@ export default function Home() {
         forBelow1100 ? <NavForMobile /> : <Navbar />
       }
       <HeroSection/>
+      <Services/>
     </>
   )
 }
