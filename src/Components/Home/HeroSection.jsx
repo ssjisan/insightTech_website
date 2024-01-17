@@ -4,14 +4,7 @@ import { keyframes } from '@emotion/react';
 export default function HeroSection() {
     const forBelow667 = useMediaQuery("(max-width:667px)");
     const forBelow999 = useMediaQuery("(max-width:999px)");
-    const gradientAnimation = keyframes`
-  from {
-    filter: hue-rotate(0deg);
-  }
-  to {
-    filter: hue-rotate(-360deg);
-  }
-`;
+    const gradientAnimation = keyframes`from {filter: hue-rotate(0deg);} to {filter: hue-rotate(-360deg);}`;
     return (
         <Box sx={{
             backgroundImage: !forBelow667 && "url('homeBG.png')", backgroundSize: "cover",
