@@ -6,6 +6,8 @@ import Services from "../Components/Home/ServiceSection/Services";
 import WhoWeAre from "../Components/Home/WhoWeAre/WhoWeAre";
 import HappyClient from "../Components/Home/HappyClient/HappyClient";
 import Footer from "../Layout/Footer/Footer";
+import Testimonial from "../Components/Home/Testimonial/Testimonial";
+import Reminder from "../Components/Home/Reminder";
 
 export default function Home() {
   // eslint-disable-next-line
@@ -20,8 +22,10 @@ export default function Home() {
       <HeroSection />
       <Services />
       <WhoWeAre />
-      <HappyClient/>
-      <Footer/>
+      <HappyClient />
+      <Testimonial />
+      <Reminder />
+      <Footer />
     </Box>
   )
 }

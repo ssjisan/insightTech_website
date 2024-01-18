@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "rating": 5,
+        "avatar": "testimonial/1.jpg",
+        "name": "Jimmy Rajkumar",
+        "company": "company 1",
+        "position": "General Manager",
+        "message": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available."
+    },
+    {
+        "id": 2,
+        "rating": 5,
+        "avatar": "testimonial/2.jpg",
+        "name": "Prashant Rao",
+        "company": "company 2",
+        "position": "Senior Manager",
+        "message": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available."
+    }
+]
