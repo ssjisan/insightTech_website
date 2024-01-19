@@ -9,6 +9,7 @@ import Footer from "../Layout/Footer/Footer";
 import Testimonial from "../Components/Home/Testimonial/Testimonial";
 import Reminder from "../Components/Home/Reminder";
 import Blog from "../Components/Home/Blog/Blog";
+import WhyUs from "../Components/Home/WhyUs/WhyUs";
 
 export default function Home() {
   // eslint-disable-next-line
@@ -24,8 +25,9 @@ export default function Home() {
       <Services />
       <WhoWeAre />
       <HappyClient />
+      <WhyUs />
       <Testimonial />
-      <Blog/>
+      <Blog />
       <Reminder />
       <Footer />
     </Box>
