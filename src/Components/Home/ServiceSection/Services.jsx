@@ -1,12 +1,13 @@
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Container, Typography, useMediaQuery } from "@mui/material";
 import ServiceCard from "./ServiceCard";
 
 export default function Services() {
+    const forBelow999 = useMediaQuery("(max-width:999px)");
 
     // Configure Style Start
     const ContainerSx = {
-        paddingTop: "64px",
-        paddingBottom: "64px",
+        paddingTop: forBelow999 ? "40px" : "64px",
+        paddingBottom: forBelow999 ? "40px" : "64px",
     }
     const MainBox = {
         display: "flex",

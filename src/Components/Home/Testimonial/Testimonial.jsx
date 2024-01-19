@@ -5,28 +5,29 @@ import ContentHeader from "./ContentHeader";
 import ArrowGroup from "./ArrowGroup";
 
 export default function Testimonial() {
-    const forBelow899px = useMediaQuery("(max-width:899px)");
+    const forBelow899 = useMediaQuery("(max-width:899px)");
+    const forBelow999 = useMediaQuery("(max-width:899px)");
 
     const ContainerSx = {
-        paddingTop: "64px",
-        paddingBottom: "64px",
+        paddingTop: forBelow999 ? "40px" : "64px",
+        paddingBottom: forBelow999 ? "40px" : "64px",
     }
 
     const GridSx = {
-        marginTop: forBelow899px && "40px",
-        marginBottom: forBelow899px && "40px",
-        display:"flex",
-        justifyContent:"center"
+        marginTop: forBelow899 && "40px",
+        marginBottom: forBelow899 && "40px",
+        display: "flex",
+        justifyContent: "center"
     }
     return (
         <Container sx={ContainerSx}>
             <Grid container spacing={2}>
-                {forBelow899px &&
+                {forBelow899 &&
                     <Grid sx={{ width: "100%" }}>
                         <ContentHeader />
                     </Grid>
                 }
-                {!forBelow899px &&
+                {!forBelow899 &&
                     <Grid item xs={12} sm={12} md={4} lg={4}>
                         <Controller />
                     </Grid>
@@ -34,7 +35,7 @@ export default function Testimonial() {
                 <Grid item xs={12} sm={12} md={8} lg={8} sx={GridSx}>
                     <TestimonialSlider />
                 </Grid>
-                {forBelow899px &&
+                {forBelow899 &&
                     <Grid sx={{ width: "100%" }}>
                         <ArrowGroup />
                     </Grid>

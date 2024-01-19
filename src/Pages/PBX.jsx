@@ -2,6 +2,7 @@ import { Box } from "@mui/material";
 import { useMediaQuery } from "@mui/material";
 import Navbar from "../Layout/Navbar/Navbar";
 import NavForMobile from "../Layout/Navbar/NavForMobile";
+import ComingSoon from "../Components/ComingSoon";
 
 export default function PBX() {
   // eslint-disable-next-line
@@ -9,11 +10,11 @@ export default function PBX() {
   const forBelow1100 = useMediaQuery("(max-width:1100px)");
 
   return (
-    <>
-      {
-        forBelow1100 ? <NavForMobile /> : <Navbar />
-      }
-      <Box>PBX</Box>
-    </>
+    <Box>
+    {
+      forBelow1100 ? <NavForMobile /> : <Navbar />
+    }
+    <ComingSoon/>
+  </Box>
   )
 }

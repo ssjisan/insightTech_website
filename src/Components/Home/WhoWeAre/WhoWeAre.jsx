@@ -4,12 +4,13 @@ import Matrix from "./Matrix";
 export default function WhoWeAre() {
     const forBelow800 = useMediaQuery("(max-width:800px)");
     const forBelow599 = useMediaQuery("(max-width:599px)");
+    const forBelow999 = useMediaQuery("(max-width:999px)");
 
     // Configure Style Start
 
     const ContainerSx = {
-        paddingTop: "64px",
-        paddingBottom: "64px",
+        paddingTop: forBelow999 ? "40px" : "64px",
+        paddingBottom: forBelow999 ? "40px" : "64px",
     }
     const ContentContainerSx = {
         display: "flex",
