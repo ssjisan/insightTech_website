@@ -10,9 +10,8 @@ export default function HeroSection() {
         backgroundRepeat: "no-repeat", backgroundPosition: 'center'
     }
     const ContainerSx = {
-        p: "160px 0px",
-        paddingTop:forBelow999 && "120px",
-        paddingBottom:forBelow999 && "80px",
+        paddingTop:forBelow999 ? "120px" : "160px",
+        paddingBottom:forBelow999 ? "80px" : "160px",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
