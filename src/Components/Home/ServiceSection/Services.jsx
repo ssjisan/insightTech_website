@@ -1,5 +1,6 @@
 import { Box, Container, Typography, useMediaQuery } from "@mui/material";
 import ServiceCard from "./ServiceCard";
+import PageChip from "../../Common/PageChip";
 
 export default function Services() {
     const forBelow999 = useMediaQuery("(max-width:999px)");
@@ -22,14 +23,6 @@ export default function Services() {
         gap: "16px",
         alignItems: "center"
     }
-    const ChipSx = {
-        display: "flex",
-        padding: "10px 20px",
-        alignItems: "flex-start",
-        gap: "10px",
-        borderRadius: "100px",
-        background: "rgba(10, 37, 63, 0.05)"
-    }
     const TitleContainerSx = {
         maxWidth: "586px",
         width: "100%",
@@ -41,9 +34,7 @@ export default function Services() {
         <Container sx={ContainerSx}>
             <Box sx={MainBox}>
                 <Box sx={ContentContainerSx}>
-                    <Box sx={ChipSx}>
-                        <Typography variant="body2">What We Do</Typography>
-                    </Box>
+                    <PageChip label="What we do"/>
                     <Typography variant="h2" sx={TitleContainerSx}>Explore Our Diverse Range of <Box component="span" sx={{ color: "#00AE60" }}>Solutions</Box></Typography>
                     <Typography variant="h5" color="text.secondary" sx={{ textAlign: "center" }}>Explore a Myriad of Tailored Solutions, Delving into a Spectrum of Services Crafted to Elevate Your Experience and Propel Your Digital Success to Uncharted Heights</Typography>
                 </Box>

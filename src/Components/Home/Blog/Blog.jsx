@@ -1,6 +1,7 @@
 import { Box, Button, Container, Grid, Typography, useMediaQuery } from "@mui/material";
 import RandomBlog from "./RandomBlog";
 import FoucsBlog from "./FoucsBlog";
+import PageChip from "../../Common/PageChip";
 
 export default function Blog() {
     const forBelow899 = useMediaQuery("(max-width:899px)");
@@ -23,14 +24,6 @@ export default function Blog() {
         gap: "16px",
         alignItems: forBelow899 ? "center" : "flex-start"
     }
-    const ChipSx = {
-        display: "flex",
-        padding: "10px 20px",
-        alignItems: "flex-start",
-        gap: "10px",
-        borderRadius: "100px",
-        background: "rgba(10, 37, 63, 0.05)"
-    }
     const TitleContainerSx = {
         maxWidth: "356px",
         width: "100%",
@@ -42,9 +35,7 @@ export default function Blog() {
                 <Grid item xs={12} sm={12} md={6} lg={6}>
                     <Box sx={BoxSx}>
                         <Box sx={ContentContainerSx}>
-                            <Box sx={ChipSx}>
-                                <Typography variant="body2">Blogs</Typography>
-                            </Box>
+                            <PageChip label="Blogs"/>
                             <Typography variant="h3" sx={TitleContainerSx}>The <Box component="span" sx={{ color: "#00AE60" }}>Blog</Box> of Insighttech</Typography>
                         </Box>
                         <FoucsBlog />

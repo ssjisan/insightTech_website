@@ -2,6 +2,7 @@ import { Box, Typography } from "@mui/material";
 import { LeftArrow, RightArrow } from "../../../Assets/IconSet";
 import { useContext } from "react";
 import { DataContext } from "../../../DataProcessing/DataProcessing";
+import PageChip from "../../Common/PageChip";
 
 export default function Controller() {
     const { nextSlide, prevSlide } = useContext(DataContext)
@@ -23,18 +24,10 @@ export default function Controller() {
         alignSelf: "stretch"
     }
 
-    const ChipSx = {
+    const ControllerSx = {
         display: "flex",
-        padding: "10px 20px",
         alignItems: "flex-start",
-        gap: "10px",
-        borderRadius: "100px",
-        background: "rgba(10, 37, 63, 0.05)"
-    }
-    const ControllerSx = { 
-        display: "flex", 
-        alignItems: "flex-start", 
-        gap: "10px" 
+        gap: "10px"
     }
     const ArrowBoxSx = {
         display: "flex",
@@ -48,10 +41,8 @@ export default function Controller() {
     return (
         <Box sx={ControllerContainerSx}>
             <Box sx={ContentContainerSx}>
-                <Box sx={ChipSx}>
-                    <Typography variant="body2">Client Testimonials</Typography>
-                </Box>
-                <Typography variant="h3">Insight Impact in Real <Box component="span" sx={{color:"#00AE60"}}>Stories</Box></Typography>
+                <PageChip label="Client Testimonials" />
+                <Typography variant="h3">Insight Impact in Real <Box component="span" sx={{ color: "#00AE60" }}>Stories</Box></Typography>
             </Box>
             <Box sx={ControllerSx}>
                 <Box sx={ArrowBoxSx} onClick={nextSlide}>

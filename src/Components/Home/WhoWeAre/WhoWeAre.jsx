@@ -1,5 +1,6 @@
 import { Box, Button, Container, Grid, Typography, useMediaQuery } from "@mui/material";
 import Matrix from "./Matrix";
+import PageChip from "../../Common/PageChip";
 
 export default function WhoWeAre() {
     const forBelow800 = useMediaQuery("(max-width:800px)");
@@ -19,12 +20,6 @@ export default function WhoWeAre() {
         gap: "64px",
         flex: "1 0 0"
     }
-    const ChipSx = {
-        display: "flex",
-        padding: "10px 20px",
-        borderRadius: "100px",
-        background: "rgba(10, 37, 63, 0.05)"
-    }
     const TitleContainerSx = {
         display: "flex",
         flexDirection: "column",
@@ -43,9 +38,7 @@ export default function WhoWeAre() {
                 <Grid item xs={12} sm={6} lg={6}>
                     <Box sx={ContentContainerSx}>
                         <Box sx={TitleContainerSx}>
-                            <Box sx={ChipSx}>
-                                <Typography variant="body2">What We Do</Typography>
-                            </Box>
+                            <PageChip label="Who we are"/>
                             <Typography variant="h2" sx={TextSx}>Driving Digital Growth with <Box component="span" sx={{ color: "#00AE60" }}>Innovation</Box> &  <Box component="span" sx={{ color: "#00AE60" }}>Success</Box></Typography>
                             <Typography variant="body1" color="text.secondary" sx={TextSx}>Insighttech Bangladesh accelerates digital growth, offering innovative solutions to optimize business processes and drive efficiency, contributing to a thriving global digital ecosystem.</Typography>
                         </Box>

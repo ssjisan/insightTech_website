@@ -1,5 +1,6 @@
 import { Box, Button, Container, Typography, useMediaQuery } from "@mui/material";
 import { keyframes } from '@emotion/react';
+import { Link } from "react-router-dom";
 
 export default function HeroSection() {
     const forBelow667 = useMediaQuery("(max-width:667px)");
@@ -10,8 +11,8 @@ export default function HeroSection() {
         backgroundRepeat: "no-repeat", backgroundPosition: 'center'
     }
     const ContainerSx = {
-        paddingTop:forBelow999 ? "120px" : "160px",
-        paddingBottom:forBelow999 ? "80px" : "160px",
+        paddingTop: forBelow999 ? "120px" : "160px",
+        paddingBottom: forBelow999 ? "80px" : "160px",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -39,7 +40,9 @@ export default function HeroSection() {
                     }} color="text.primary">Propelling your <Box component="span" sx={SpanSx}>business</Box>  to new heights</Typography>
                     <Typography variant="h5" color="text.secondary" sx={{ textAlign: "center" }}>Innovation, strategy, passion propel businesses to remarkable success.</Typography>
                 </Box>
-                <Button variant="contained" color="primary" sx={{ width: "220px" }} size="large">Start a Project</Button>
+                <Link to="/contact_us">
+                    <Button variant="contained" color="primary" sx={{ width: "220px" }} size="large">Start a Project</Button>
+                </Link>
             </Container>
         </Box>
     )

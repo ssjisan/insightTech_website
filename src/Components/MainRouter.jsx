@@ -7,6 +7,7 @@ import Graphics from "../Pages/Graphics";
 import Videography from "../Pages/Videography";
 import NetworkSolution from "../Pages/NetworkSolution";
 import PBX from "../Pages/PBX";
+import Contact from "../Pages/Contact";
 
 
 export default function MainRoute() {
@@ -20,6 +21,7 @@ export default function MainRoute() {
         <Route path="/videography" element={<Videography />} />
         <Route path="/network_solution" element={<NetworkSolution />} />
         <Route path="/pbx" element={<PBX />} />
+        <Route path="/contact_us" element={<Contact />} />
       </Routes>
     );
   }
