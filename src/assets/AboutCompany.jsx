@@ -1,4 +1,4 @@
-const aboutUsQuestions = [
+const AboutCompany = [
     {
         id: "1",
         question: "What services does Insighttech offer?",
@@ -26,4 +26,4 @@ const aboutUsQuestions = [
     },
 ];
 
-export {aboutUsQuestions}
+export {AboutCompany}

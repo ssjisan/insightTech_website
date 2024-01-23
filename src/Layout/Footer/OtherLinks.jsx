@@ -18,10 +18,16 @@ export default function OtherLinks() {
     const linkStyle = {
         textDecoration: "none",
     };
+    const goToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    };
     return (
-        <Box sx={ContainerSx}>
+        <Box sx={ContainerSx} >
             <Typography variant="subtitle1" color="text.secondary">Company</Typography>
-            <Box sx={LinkSx}>
+            <Box sx={LinkSx} onClick={goToTop}>
                 <Link to="/" style={linkStyle}>
                     <Typography variant="subtitle1" sx={{ color: "#fff" }}>Home</Typography>
                 </Link>

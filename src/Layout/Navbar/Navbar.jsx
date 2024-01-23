@@ -48,17 +48,23 @@ export default function Navbar() {
 
     // Configure Style End
 
+    const goToTop = () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      };
     return (
         <Box sx={NavSx}>
             <Link to="/">
-                <Box sx={LogoSx}>
+                <Box sx={LogoSx}  onClick={goToTop}>
                     <Logo />
                 </Box></Link>
             <Box sx={{ display: "flex" }}>
                 {
                     services.map((data) => {
                         return (
-                            <Box sx={MenuListSx} key={data.id}>
+                            <Box sx={MenuListSx} key={data.id}  onClick={goToTop}>
                                 <Link to={data.link} style={linkStyle}>
                                     <Box sx={{ ...MenuButtonSx, backgroundColor: pathname === data.link && "rgba(0, 174, 96, 0.08)" }}>
                                         <Typography sx={{

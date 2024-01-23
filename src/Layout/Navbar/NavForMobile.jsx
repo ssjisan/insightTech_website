@@ -24,7 +24,7 @@ export default function NavForMobile() {
         zIndex: 1000
     }
     const logoSx = {
-        width: forBelow676 ? "152px" : "168px"
+        width: forBelow676 ? "120px" : "168px"
     }
     const menuButtonSx = {
         borderRadius: "8px",

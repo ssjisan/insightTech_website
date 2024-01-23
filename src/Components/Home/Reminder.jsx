@@ -1,4 +1,5 @@
 import { Box, Button, Container, Typography, useMediaQuery } from "@mui/material"
+import { Link } from "react-router-dom";
 
 export default function Reminder() {
     const forBelow999 = useMediaQuery("(max-width:999px)");
@@ -44,10 +45,12 @@ export default function Reminder() {
         <Container sx={ReminderContainerSx}>
             <Box sx={ContainerSx}>
                 <Box sx={ContentSx}>
-                    <Typography variant="h3" sx={ColorSx}>You`ve got a project. Let`s elevate it together</Typography>
-                    <Typography variant="body1" sx={{...ColorSx, width:"100%"}}>Schedule a meeting with us.</Typography>
+                    <Typography variant="h3" sx={ColorSx}>You&lsquo;ve got a project. Let&lsquo;s elevate it together</Typography>
+                    <Typography variant="body1" sx={{ ...ColorSx, width: "100%" }}>Schedule a meeting with us.</Typography>
                 </Box>
-                <Button sx={ButtonSx}>Start a Project</Button>
+                <Link to="/contact_us">
+                    <Button sx={ButtonSx}>Start a Project</Button>
+                </Link>
             </Box>
         </Container>
     )
