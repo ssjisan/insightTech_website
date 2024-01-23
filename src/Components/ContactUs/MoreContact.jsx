@@ -22,7 +22,7 @@ export default function MoreContact() {
     }
     const InfoContainerSx = {
         display: "flex",
-        padding: "20px 20px",
+        padding: forBelow999 ? "12px" : "20px",
         flexDirection: "column",
         alignItems: "center",
         gap: "16px",

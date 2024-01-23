@@ -1,3 +1,6 @@
+import { useMediaQuery } from "@mui/material";
+
+
 export const Menu = () => {
     return (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -123,8 +126,10 @@ export const ClientCentric = () => {
 }
 
 export const Call = () => {
+    const forBelow767 = useMediaQuery("(max-width:767px)");
+
     return (
-        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width={forBelow767 ? "24" :"40"} height={forBelow767 ? "24" :"40"} viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="call">
                 <g id="call_2">
                     <g id="call_3">

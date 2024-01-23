@@ -1,12 +1,14 @@
-import { Box, TextField } from "@mui/material";
+import { Box, TextField, useMediaQuery } from "@mui/material";
 
 export default function InputFields() {
+    const forBelow767 = useMediaQuery("(max-width:767px)");
+
     const ContainerSx = {
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        gap: "40px",
+        gap: forBelow767 ? "24px" :"40px",
         width: "100%"
     }
 

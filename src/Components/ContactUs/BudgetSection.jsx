@@ -1,21 +1,24 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useMediaQuery } from "@mui/material";
 import FormChip from "./FormChip";
 
 
 export default function BudgetSection() {
+    const forBelow767 = useMediaQuery("(max-width:767px)");
+
     const ContainerSx = {
         display: "flex",
         flexDirection: "column",
         alignItems: "flex-start",
         gap: "40px",
-        width:"100%"
+        width: "100%"
     }
+
 
     const ChipContainerSx = {
         display: "flex",
         alignItems: "center",
         alignContent: "flex-start",
-        gap: "24px",
+        gap: forBelow767 ? "16px" : "24px",
         alignSelf: "stretch",
         flexWrap: "wrap",
     }

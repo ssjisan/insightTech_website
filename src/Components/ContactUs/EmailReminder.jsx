@@ -1,4 +1,4 @@
-import { Box, Button, Container, Typography, useMediaQuery } from "@mui/material"
+import { Box, Container, Typography, useMediaQuery } from "@mui/material"
 
 export default function EmailReminder() {
     const forBelow999 = useMediaQuery("(max-width:999px)");
