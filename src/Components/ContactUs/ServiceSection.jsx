@@ -6,7 +6,6 @@ import FormChip from "./FormChip";
 export default function ServiceSection() {
     const forBelow767 = useMediaQuery("(max-width:767px)");
 
-
     const ContainerSx = {
         display: "flex",
         flexDirection: "column",
@@ -18,10 +17,10 @@ export default function ServiceSection() {
         display: "flex",
         alignItems: "center",
         alignContent: "center",
-        gap: forBelow767?"16px":"24px",
+        gap: forBelow767 ? "16px" : "24px",
         alignSelf: "stretch",
         flexWrap: "wrap",
-        width:"100%",
+        width: "100%",
     }
 
     return (

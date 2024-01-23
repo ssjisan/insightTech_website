@@ -1,7 +1,7 @@
 import { Box, Container, Grid, Typography, useMediaQuery } from "@mui/material";
 import PageChip from "../Common/PageChip";
 import FaQAccordion from "../Common/FaQAccordion";
-import {aboutUsQuestions} from "../../Assets/AboutCompany"
+import {Contact} from "../../Assets/Contact"
 export default function FaQ() {
     const forBelow999 = useMediaQuery("(max-width:999px)");
     const ContainerSx = {
@@ -31,7 +31,7 @@ export default function FaQ() {
             </Box>
             <Grid container sx={FqAContainerSx}>
                 <Grid item xs={12} sm={12} md={8} lg={8}>
-                    <FaQAccordion questions={aboutUsQuestions} />
+                    <FaQAccordion questions={Contact} />
                 </Grid>
             </Grid>
         </Container>

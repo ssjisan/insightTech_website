@@ -1,4 +1,5 @@
 import { Box, Typography } from "@mui/material"
+import { Link } from "react-router-dom";
 
 export default function OtherLinks() {
     const ContainerSx = {
@@ -14,15 +15,27 @@ export default function OtherLinks() {
         alignItems: "flex-start",
         gap: "12px"
     }
+    const linkStyle = {
+        textDecoration: "none",
+    };
     return (
         <Box sx={ContainerSx}>
             <Typography variant="subtitle1" color="text.secondary">Company</Typography>
             <Box sx={LinkSx}>
-                <Typography variant="subtitle1" sx={{ color: "#fff" }}>Home</Typography>
-                <Typography variant="subtitle1" sx={{ color: "#fff" }}>About Us</Typography>
-                <Typography variant="subtitle1" sx={{ color: "#fff" }}>Blog</Typography>
-                <Typography variant="subtitle1" sx={{ color: "#fff" }}>Contact Us</Typography>
+                <Link to="/" style={linkStyle}>
+                    <Typography variant="subtitle1" sx={{ color: "#fff" }}>Home</Typography>
+                </Link>
+                <Link to="/about_us" style={linkStyle}>
+                    <Typography variant="subtitle1" sx={{ color: "#fff" }}>About Us</Typography>
+                </Link>
+                <Link to="/blog" style={linkStyle}>
+                    <Typography variant="subtitle1" sx={{ color: "#fff" }}>Blog</Typography>
+                </Link>
+                <Link to="/contact_us" style={linkStyle}>
+                    <Typography variant="subtitle1" sx={{ color: "#fff" }}>Contact Us</Typography>
+                </Link>
             </Box>
         </Box>
     )
 }
+
