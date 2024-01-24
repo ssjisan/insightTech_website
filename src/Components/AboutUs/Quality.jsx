@@ -2,6 +2,7 @@ import { Box, Container, Grid, Typography, useMediaQuery } from "@mui/material";
 import PageChip from "../Common/PageChip";
 import { QualityData } from "../../Assets/QualityData"
 export default function Quality() {
+    const forBelow899 = useMediaQuery("(max-width:899px)");
     const forBelow767 = useMediaQuery("(max-width:767px)");
 
     const ContainerSx = {
@@ -39,11 +40,11 @@ export default function Quality() {
                 {
                     QualityData.map((data) => {
                         return (
-                            <Grid item xs={12} sm={6} md={4} lg={4} key={data.id}>
-                                <Box sx={{...CardSx, paddingTop: (data.id === 2 && "80px") || (data.id === 3 && "280px")}}>
+                            <Grid item xs={12} sm={6} md={4} lg={4} key={data.id} sx={{}}>
+                                <Box sx={{...CardSx, paddingTop: (data.id === 2 && "80px") || (data.id === 3 && (forBelow899 ? "40px" : "280px"))}}>
                                     {!(data.id === 1) &&
                                         <Box sx={{width:"190px"}}>
-                                            <img src="about_us/illustration.png" width="190px"/>
+                                            <img src="about_us/illustration.png" width="190px" style={{ transform: forBelow899 && data.id === 3 ? "scaleX(-1)" : "scaleX(1)"}}/>
                                         </Box>
                                     }
                                     <Box>

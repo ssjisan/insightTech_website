@@ -2,7 +2,10 @@ import { Box } from "@mui/material";
 import { useMediaQuery } from "@mui/material";
 import Navbar from "../Layout/Navbar/Navbar";
 import NavForMobile from "../Layout/Navbar/NavForMobile";
-import ComingSoon from "../Components/ComingSoon";
+import HeroSection from "../Components/WebDevelopment/HeroSection";
+import Services from "../Components/WebDevelopment/ServiceSection/Services";
+import FaQ from "../Components/WebDevelopment/FaQ";
+import CleanUI from "../Components/WebDevelopment/CleanUI";
 
 export default function WebDevelopment() {
   // eslint-disable-next-line
@@ -14,7 +17,10 @@ export default function WebDevelopment() {
       {
         forBelow1100 ? <NavForMobile /> : <Navbar />
       }
-      <ComingSoon/>
+      <HeroSection />
+      <Services />
+      <CleanUI />
+      <FaQ />
     </Box>
   )
 }
