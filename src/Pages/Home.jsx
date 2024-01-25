@@ -10,7 +10,6 @@ import Reminder from "../Components/Common/Reminder";
 import Blog from "../Components/Home/Blog/Blog";
 import WhyUs from "../Components/Home/WhyUs/WhyUs";
 import Testimonial from "../Components/Common/Testimonial/Testimonial";
-import { Fade } from "react-awesome-reveal";
 
 export default function Home() {
   // eslint-disable-next-line
@@ -23,7 +22,6 @@ export default function Home() {
         forBelow1100 ? <NavForMobile /> : <Navbar />
       }
         <HeroSection />
-      <Fade bottom delay={1}>
         <Services />
         <WhoWeAre />
         <HappyClient />
@@ -32,7 +30,6 @@ export default function Home() {
         <Blog />
         <Reminder />
         <Footer />
-      </Fade>
     </Box>
   )
 }

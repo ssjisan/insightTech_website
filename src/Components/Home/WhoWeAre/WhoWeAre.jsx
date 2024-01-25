@@ -1,6 +1,7 @@
 import { Box, Button, Container, Grid, Typography, useMediaQuery } from "@mui/material";
 import Matrix from "./Matrix";
 import PageChip from "../../Common/PageChip";
+import { Link } from "react-router-dom";
 
 export default function WhoWeAre() {
     const forBelow800 = useMediaQuery("(max-width:800px)");
@@ -31,21 +32,26 @@ export default function WhoWeAre() {
         textAlign: forBelow599 && "center"
     }
     // Configure Style End
-
+    const goToTop = () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      };
     return (
         <Container sx={ContainerSx}>
             <Grid container spacing={forBelow599 ? 3 : 2}>
                 <Grid item xs={12} sm={6} lg={6}>
                     <Box sx={ContentContainerSx}>
                         <Box sx={TitleContainerSx}>
-                            <PageChip label="Who we are"/>
+                            <PageChip label="Who we are" />
                             <Typography variant="h2" sx={TextSx}>Driving Digital Growth with <Box component="span" sx={{ color: "#00AE60" }}>Innovation</Box> &  <Box component="span" sx={{ color: "#00AE60" }}>Success</Box></Typography>
                             <Typography variant="body1" color="text.secondary" sx={TextSx}>Insighttech Bangladesh accelerates digital growth, offering innovative solutions to optimize business processes and drive efficiency, contributing to a thriving global digital ecosystem.</Typography>
                         </Box>
                         {!forBelow800 &&
                             <Box sx={{ width: "100%", display: "flex", flexDirection: "column", gap: "64px" }}>
                                 <Matrix />
-                                <Button variant="contained" size="large" sx={{ width: "220px" }}>Learn more about us</Button>
+                                <Link to="/about_us"><Button variant="contained" size="large" sx={{ width: "220px" }} onClick={goToTop}>Learn more about us</Button></Link>
                             </Box>
                         }
                     </Box>
@@ -59,7 +65,7 @@ export default function WhoWeAre() {
                     <Grid item xs={12} sm={12}>
                         <Box sx={{ width: "100%", display: "flex", flexDirection: "column", gap: "40px", alignItems: "center" }}>
                             <Matrix />
-                            <Button variant="contained" size="large" sx={{ width: "220px" }}>Learn more about us</Button>
+                            <Link to="/about_us"><Button variant="contained" size="large" sx={{ width: "220px" }} onClick={goToTop}>Learn more about us</Button></Link>
                         </Box>
                     </Grid>
                 }

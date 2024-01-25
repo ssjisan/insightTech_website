@@ -1,9 +1,11 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography, useMediaQuery } from "@mui/material";
 import { quality } from "../../../Assets/WhyUs"
 export default function WhyUsPoints() {
+    const forBelow599 = useMediaQuery("(max-width:599px)");
+
     const PointSx = {
         display: "flex",
-        padding: "20px",
+        padding:forBelow599 ? "12px" : "20px",
         justifyContent: "center",
         alignItems: "center",
         gap: "20px",

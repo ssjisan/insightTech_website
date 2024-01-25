@@ -1,4 +1,19 @@
-import { DigitalMarketingIcon, DomainHostIcon, GraphicsIcon, NetworkSolutionIcon, PBXIcon, VideographyIcon, WebDevIcon } from "../../Assets/ServiceIcons";
+import {
+    DigitalMarketingIconDefault,
+    DigitalMarketingIconHover,
+    DomainHostIconDefault,
+    DomainHostIconHover,
+    GraphicsIconDefault,
+    GraphicsIconHover,
+    NetworkSolutionIconDefault,
+    NetworkSolutionIconHover,
+    PBXIconDefault,
+    PBXIconHover,
+    VideographyIconDefault,
+    VideographyIconHover,
+    WebDevIconDefault,
+    WebDevIconHover
+} from "../../Assets/ServiceIcons";
 
 const main = [
     {
@@ -29,49 +44,56 @@ const services = [
         title: "Web Development",
         link: "/web_development",
         subTitle: "Crafting Dynamic Digital Experiences through Innovative Web Solutions",
-        icon: <WebDevIcon />
+        iconDefault: <WebDevIconDefault />,
+        iconHover: <WebDevIconHover />,
     },
     {
         id: 2,
         title: "Domain & Hosting",
-        link: "/domain_hosting", 
+        link: "/domain_hosting",
         subTitle: "Crafting Dynamic Digital Experiences through Innovative Web Solutions",
-        icon: <DomainHostIcon />
+        iconDefault: <DomainHostIconDefault />,
+        iconHover: <DomainHostIconHover />,
     },
     {
         id: 3,
         title: "Digital Marketing",
         link: "/digital_marketing",
         subTitle: "Crafting Dynamic Digital Experiences through Innovative Web Solutions",
-        icon: <DigitalMarketingIcon />
+        iconDefault: <DigitalMarketingIconDefault />,
+        iconHover: <DigitalMarketingIconHover />,
     },
     {
         id: 4,
         title: "Graphics",
         link: "/graphics",
         subTitle: "Crafting Dynamic Digital Experiences through Innovative Web Solutions",
-        icon: <GraphicsIcon />
+        iconDefault: <GraphicsIconDefault />,
+        iconHover: <GraphicsIconHover />,
     },
     {
         id: 5,
         title: "Videography",
         link: "/videography",
         subTitle: "Crafting Dynamic Digital Experiences through Innovative Web Solutions",
-        icon: <VideographyIcon />
+        iconDefault: <VideographyIconDefault />,
+        iconHover: <VideographyIconHover />,
     },
     {
         id: 6,
         title: "Network Solution",
         link: "/network_solution",
         subTitle: "Crafting Dynamic Digital Experiences through Innovative Web Solutions",
-        icon: <NetworkSolutionIcon />
+        iconDefault: <NetworkSolutionIconDefault />,
+        iconHover: <NetworkSolutionIconHover />,
     },
     {
         id: 7,
         title: "PBX",
         link: "/pbx",
         subTitle: "Crafting Dynamic Digital Experiences through Innovative Web Solutions",
-        icon: <PBXIcon />
+        iconDefault: <PBXIconDefault />,
+        iconHover: <PBXIconHover />,
     }
 ];
 

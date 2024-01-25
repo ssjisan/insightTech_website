@@ -1,8 +1,8 @@
-import { Box, Button, Container, Typography, useMediaQuery } from "@mui/material"
-import { Link } from "react-router-dom";
+import { Box, Container, Typography, useMediaQuery } from "@mui/material"
 
 export default function HistoryMatrix() {
     const forBelow999 = useMediaQuery("(max-width:999px)");
+    const forBelow599 = useMediaQuery("(max-width:599px)");
 
     const ReminderContainerSx = {
         paddingTop: "40px",
@@ -20,37 +20,45 @@ export default function HistoryMatrix() {
     }
     const ContentSx = {
         display: "flex",
-        maxWidth: "546px",
         width: "100%",
         textAlign: forBelow999 && "center",
-        flexDirection: "column",
-        alignItems: "flex-start",
+        flexDirection: forBelow599 && "column",
+        alignItems: forBelow599 ? "center" :"flex-start",
         gap: "16px",
-        flexShrink: 0
+        flexWrap: forBelow999 && "wrap",
+        justifyContent: forBelow999 && "center"
     }
     const ColorSx = {
         color: "#fff"
     }
-    const ButtonSx = {
-        width: "220px",
-        borderRadius: "8px",
-        background: "#FFF",
-        color: "#000",
-        "&:hover": {
-            background: "#FFF",
-            boxShadow: "0px 8px 16px 0px rgba(255, 255, 255, 0.24)"
-        }
+    const ListSx = {
+        display: "flex",
+        maxWidth:"318px",
+        width:"100%",
+        padding: "8px",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        gap: "8px",
     }
+
     return (
         <Container sx={ReminderContainerSx}>
             <Box sx={ContainerSx}>
                 <Box sx={ContentSx}>
-                    <Typography variant="h3" sx={ColorSx}>You&lsquo;ve got a project. Let&lsquo;s elevate it together</Typography>
-                    <Typography variant="body1" sx={{ ...ColorSx, width: "100%" }}>Schedule a meeting with us.</Typography>
+                    <Box sx={ListSx}>
+                        <Typography variant="h2" sx={ColorSx}>2020</Typography>
+                        <Typography variant="h5" sx={ColorSx}>InsightTech was founded</Typography>
+                    </Box>
+                    <Box sx={ListSx}>
+                        <Typography variant="h2" sx={ColorSx}>30+</Typography>
+                        <Typography variant="h5" sx={ColorSx}>Total Services</Typography>
+                    </Box>
+                    <Box sx={ListSx}>
+                        <Typography variant="h2" sx={ColorSx}>25</Typography>
+                        <Typography variant="h5" sx={ColorSx}>Happy Clients</Typography>
+                    </Box>
                 </Box>
-                <Link to="/contact_us">
-                    <Button sx={ButtonSx}>Start a Project</Button>
-                </Link>
             </Box>
         </Container>
     )

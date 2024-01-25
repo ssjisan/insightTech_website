@@ -18,7 +18,7 @@ export default function DataProcessing({ children }) {
                 // Testimonial Controller
                 sliderRef, nextSlide, prevSlide,
                 // Blog Data
-                randomBlogs, blogWithId1
+                randomBlogs, blogWithId1,
             }}
         >
             {children}
