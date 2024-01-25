@@ -1,6 +1,7 @@
 import { Box, Grid, Typography, useMediaQuery } from "@mui/material";
 import { services } from "../../../Layout/Navbar/NavConfig"
 import { Link } from "react-router-dom";
+import { Fade } from "react-awesome-reveal";
 
 export default function ServiceCard() {
     const forBelow787 = useMediaQuery("(max-width:787px)");
@@ -13,7 +14,7 @@ export default function ServiceCard() {
     };
     const CardSx = {
         display: "flex",
-        padding: forBelow787?"20px 12px":"40px 24px",
+        padding: forBelow787 ? "20px 12px" : "40px 24px",
         flexDirection: "column",
         alignItems: "flex-start",
         gap: "30px",
@@ -43,28 +44,30 @@ export default function ServiceCard() {
         alignItems: "flex-start",
         gap: "12px"
     }
-    
+
     // Configure Style Start
 
     return (
-        <Grid container spacing={2}>
-            {services.map((data) => {
-                return (
-                    <Grid item sx={12} sm={6} lg={[1, 2, 6, 7].includes(data.id) ? 6 : 4} key={data.id}>
-                        <Link to={data.link} style={linkStyle}>
-                            <Box sx={CardSx}>
-                                <Box sx={IconSx}>
-                                    {data.icon}
+        <Fade right cascade duration={1}>
+            <Grid container spacing={2}>
+                {services.map((data) => {
+                    return (
+                        <Grid item sx={12} sm={6} lg={[1, 2, 6, 7].includes(data.id) ? 6 : 4} key={data.id}>
+                            <Link to={data.link} style={linkStyle}>
+                                <Box sx={CardSx}>
+                                    <Box sx={IconSx}>
+                                        {data.icon}
+                                    </Box>
+                                    <Box sx={ContentSx}>
+                                        <Typography variant="h4">{data.title}</Typography>
+                                        <Typography variant="body1" color="text.secondary">{data.subTitle}</Typography>
+                                    </Box>
                                 </Box>
-                                <Box sx={ContentSx}>
-                                    <Typography variant="h4">{data.title}</Typography>
-                                    <Typography variant="body1" color="text.secondary">{data.subTitle}</Typography>
-                                </Box>
-                            </Box>
-                        </Link>
-                    </Grid>
-                )
-            })}
-        </Grid>
+                            </Link>
+                        </Grid>
+                    )
+                })}
+            </Grid >
+        </Fade>
     )
 }

@@ -37,8 +37,12 @@ export default function HeroSection() {
                 <Box sx={ContentSx}>
                     <Typography variant="h1" sx={{
                         textAlign: "center",
-                    }} color="text.primary">Propelling your <Box component="span" sx={SpanSx}>business</Box>  to new heights</Typography>
-                    <Typography variant="h5" color="text.secondary" sx={{ textAlign: "center" }}>Innovation, strategy, passion propel businesses to remarkable success.</Typography>
+                    }} color="text.primary">
+                        Propelling your <Box component="span" sx={SpanSx}>business</Box>  to new heights
+                    </Typography>
+                    <Typography variant="h5" color="text.secondary" sx={{ textAlign: "center" }}>
+                        Innovation, strategy, passion propel businesses to remarkable success.
+                    </Typography>
                 </Box>
                 <Link to="/contact_us">
                     <Button variant="contained" color="primary" sx={{ width: "220px" }} size="large">Start a Project</Button>
