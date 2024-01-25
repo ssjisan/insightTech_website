@@ -8,8 +8,9 @@ import FaQ from "../Components/WebDevelopment/FaQ";
 import CleanUI from "../Components/WebDevelopment/CleanUI";
 import Technology from "../Components/WebDevelopment/Technology";
 import NeedWebsite from "../Components/WebDevelopment/NeedWebsite";
-import Reminder from "../Components/Home/Reminder"
-import Footer from "../Layout/Footer/Footer"
+import Reminder from "../Components/Common/Reminder";
+import Footer from "../Layout/Footer/Footer";
+
 export default function WebDevelopment() {
   // eslint-disable-next-line
   const forBelow999 = useMediaQuery("(max-width:999px)");
