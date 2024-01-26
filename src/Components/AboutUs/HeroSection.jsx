@@ -27,7 +27,7 @@ export default function HeroSection() {
                 <Typography variant="h2" sx={{ textAlign: "center" }}>We are Creative Designers, Insightful Strategists, and Exceptional Engineers</Typography>
             </Box>
             <Box sx={{ width: "100%" }}>
-                <img src="about_us/cover.png" alt="" style={{ objectFit: "cover", width:"100%" }} />
+                <img src="about_us/cover.webp" alt="About Us" style={{ objectFit: "cover", width:"100%" }} />
             </Box>
         </Container>
     )

@@ -54,7 +54,7 @@ export default function Features() {
                 </Grid>
                 <Grid item sx={12} sm={7} md={7} lg={7}>
                     <Box sx={{ width: "100%" }}>
-                        <img src="PBX/feature.png" alt="Hero Section" style={{ objectFit: "cover", width: "100%" }} />
+                        <img src="PBX/feature.webp" alt="Hero Section" style={{ objectFit: "cover", width: "100%" }} />
                     </Box>
                 </Grid>
             </Grid>

@@ -45,7 +45,7 @@ export default function WhyUs() {
                 </Grid>
                 <Grid item xs={12} sm={12} md={6} lg={6}>
                     <Box sx={{ width: "100%", borderRadius: "16px", overflow: "hidden", }}>
-                        <img src="PBX/whyus.png" style={{ objectFit: "cover", width: "100%" }} alt="why us?" />
+                        <img src="PBX/whyus.webp" style={{ objectFit: "cover", width: "100%" }} alt="why us?" />
                     </Box>
                 </Grid>
                 {

@@ -31,12 +31,12 @@ export default function Promotion() {
                 <Grid container spacing={3}>
                     <Grid item xs={12} sm={12} md={7} lg={7}>
                         <Box sx={{ width: "100%" }}>
-                            <img src="PBX/1st.png" alt="first" style={{ objectFit: "cover", width: "100%" }} />
+                            <img src="PBX/1st.webp" alt="first" style={{ objectFit: "cover", width: "100%" }} />
                         </Box>
                     </Grid>
                     <Grid item xs={12} sm={12} md={5} lg={5}>
                         <Box sx={{ width: "100%" }}>
-                            <img src="PBX/2nd.png" alt="first" style={{ objectFit: "cover", width: "100%" }} />
+                            <img src="PBX/2nd.webp" alt="first" style={{ objectFit: "cover", width: "100%" }} />
                         </Box>
                     </Grid>
                 </Grid>
