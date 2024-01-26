@@ -12,7 +12,7 @@ export default function HeroSection() {
     }
     const ContainerSx = {
         paddingTop: forBelow999 ? "120px" : "160px",
-        paddingBottom: forBelow999 ? "80px" : "160px",
+        paddingBottom: forBelow999 ? "64px" : "160px",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",

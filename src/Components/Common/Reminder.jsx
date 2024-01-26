@@ -1,9 +1,11 @@
 import { Box, Button, Container, Typography, useMediaQuery } from "@mui/material"
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { DataContext } from "../../DataProcessing/DataProcessing";
 
 export default function Reminder() {
     const forBelow999 = useMediaQuery("(max-width:999px)");
-
+    const { goToTop } = useContext(DataContext)
     const ReminderContainerSx = {
         paddingTop: "40px",
         paddingBottom: "40px"
@@ -41,6 +43,7 @@ export default function Reminder() {
             boxShadow: "0px 8px 16px 0px rgba(255, 255, 255, 0.24)"
         }
     }
+
     return (
         <Container sx={ReminderContainerSx}>
             <Box sx={ContainerSx}>
@@ -49,7 +52,7 @@ export default function Reminder() {
                     <Typography variant="body1" sx={{ ...ColorSx, width: "100%" }}>Schedule a meeting with us.</Typography>
                 </Box>
                 <Link to="/contact_us">
-                    <Button sx={ButtonSx}>Start a Project</Button>
+                    <Button sx={ButtonSx} onClick={goToTop}>Start a Project</Button>
                 </Link>
             </Box>
         </Container>

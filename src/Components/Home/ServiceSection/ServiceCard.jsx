@@ -1,11 +1,12 @@
 import { Box, Grid, Typography, useMediaQuery, } from "@mui/material";
 import { services } from "../../../Layout/Navbar/NavConfig"
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { DataContext } from "../../../DataProcessing/DataProcessing";
 
 export default function ServiceCard() {
     const forBelow787 = useMediaQuery("(max-width:787px)");
-
+    const { goToTop } = useContext(DataContext)
     const [hoveredId, setHoveredId] = useState(null);
 
     const handleMouseEnter = (id) => {
@@ -64,10 +65,10 @@ export default function ServiceCard() {
                 return (
                     <Grid item sx={12} sm={6} lg={[1, 2, 6, 7].includes(data.id) ? 6 : 4} key={data.id}>
                         <Link to={data.link} style={linkStyle}>
-                            <Box sx={CardSx} onMouseEnter={() => handleMouseEnter(data.id)} onMouseLeave={handleMouseLeave}>
+                            <Box sx={CardSx} onMouseEnter={() => handleMouseEnter(data.id)} onMouseLeave={handleMouseLeave} onClick={goToTop}>
                                 <Box sx={{
-                                    ...IconSx, 
-                                    background: hoveredId === data.id ? "linear-gradient(161deg, #00AE60 -1.7%, #00AE60 -1.7%, #00CB70 -1.69%, #009050 97.75%)" : "linear-gradient(161deg, #E5E4EC -1.7%, #F3F3F3 -1.69%, #C8C8C8 97.75%)", 
+                                    ...IconSx,
+                                    background: hoveredId === data.id ? "linear-gradient(161deg, #00AE60 -1.7%, #00AE60 -1.7%, #00CB70 -1.69%, #009050 97.75%)" : "linear-gradient(161deg, #E5E4EC -1.7%, #F3F3F3 -1.69%, #C8C8C8 97.75%)",
                                 }}>
                                     {hoveredId === data.id ? data.iconHover : data.iconDefault}
                                 </Box>

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import MobileDrawer from "./Components/MobileDrawer";
 import Testimonial from "./Components/Testimonial";
 import BlogData from "./Components/BlogData";
+import ScrollTop from "./Components/ScrollTop";
 
 export const DataContext = createContext();
 
@@ -10,6 +11,7 @@ export default function DataProcessing({ children }) {
     const { toggleDrawer, open, handleDrawerClose } = MobileDrawer()
     const { sliderRef, nextSlide, prevSlide } = Testimonial()
     const { randomBlogs, blogWithId1 } = BlogData()
+    const { goToTop } = ScrollTop()
     return (
         <DataContext.Provider
             value={{
@@ -19,6 +21,8 @@ export default function DataProcessing({ children }) {
                 sliderRef, nextSlide, prevSlide,
                 // Blog Data
                 randomBlogs, blogWithId1,
+                // Scroll Top 
+                goToTop
             }}
         >
             {children}

@@ -129,7 +129,7 @@ export const Call = () => {
     const forBelow767 = useMediaQuery("(max-width:767px)");
 
     return (
-        <svg width={forBelow767 ? "24" :"40"} height={forBelow767 ? "24" :"40"} viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width={forBelow767 ? "24" : "40"} height={forBelow767 ? "24" : "40"} viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="call">
                 <g id="call_2">
                     <g id="call_3">
@@ -145,6 +145,14 @@ export const DownArrow = () => {
     return (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M19.9201 8.95001L13.4001 15.47C12.6301 16.24 11.3701 16.24 10.6001 15.47L4.08008 8.95001" stroke="#031E21" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+    )
+}
+
+export const BulletPointIcon = () => {
+    return (
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.5 6.83334V13.1667C2.5 13.75 2.83333 14.3333 3.33333 14.5833L9.16667 17.8333C9.66667 18.0833 10.25 18.0833 10.75 17.8333L16.5833 14.5833C17.0833 14.25 17.4167 13.75 17.4167 13.1667V6.83334C17.4167 6.25001 17.0833 5.66667 16.5833 5.41667L10.75 2.16667C10.25 1.91667 9.66667 1.91667 9.16667 2.16667L3.33333 5.33334C2.83333 5.66667 2.5 6.25001 2.5 6.83334Z" stroke="#00AE60" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
     )
 }

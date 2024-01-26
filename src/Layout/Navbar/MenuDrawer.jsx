@@ -9,7 +9,7 @@ export default function MenuDrawer() {
     const { toggleDrawer, open, handleDrawerClose } = useContext(DataContext)
     const forBelow676 = useMediaQuery("(max-width:676px)");
     const { pathname } = useLocation();
-
+    const { goToTop } = useContext(DataContext)
     // Configure Style Start
 
     const linkStyle = {
@@ -52,7 +52,7 @@ export default function MenuDrawer() {
         alignItems: "center",
     }
     // Configure Style End
-
+    
     return (
         <Drawer
             variant="temporary"
@@ -70,7 +70,7 @@ export default function MenuDrawer() {
                 {
                     services.map((data) => {
                         return (
-                            <Box sx={{ display: "flex", alignItems: "center" }} key={data.id}>
+                            <Box sx={{ display: "flex", alignItems: "center" }} key={data.id} onClick={goToTop}>
                                 <Link to={data.link} style={linkStyle}>
                                     <Box sx={{ ...MenuButtonSx, backgroundColor: pathname == data.link && "rgba(0, 174, 96, 0.08)", borderRadius: "4px" }} onClick={handleDrawerClose}>
                                         <Typography sx={{

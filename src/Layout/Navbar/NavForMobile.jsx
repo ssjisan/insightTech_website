@@ -30,14 +30,14 @@ export default function NavForMobile() {
         borderRadius: "8px",
         background: "rgba(145, 142, 175, 0.16)",
         p: "4px",
-        width: "48px",
-        height: "48px",
+        width:forBelow676 ? "40px" : "48px",
+        height: forBelow676 ? "40px" : "48px",
         display: "flex",
         justifyContent: "center",
         alignItems: "center"
     }
     // Configure Style Start
-
+ 
     return (
         <>
             <Box sx={navSx}>

@@ -2,15 +2,17 @@ import { Box, Button, Typography, useMediaQuery } from "@mui/material"
 import { services } from "../Navbar/NavConfig"
 import { Logo } from "../../Assets/Logo"
 import { Link, useLocation } from "react-router-dom";
+import { useContext } from "react";
+import { DataContext } from "../../DataProcessing/DataProcessing";
 export default function Navbar() {
     const { pathname } = useLocation();
+    const { goToTop } = useContext(DataContext);
 
     // eslint-disable-next-line
     const forBelow1400 = useMediaQuery("(max-width:1400px)");
     // eslint-disable-next-line
     const forBelow1300 = useMediaQuery("(max-width:1300px)");
     const forBelow1100 = useMediaQuery("(max-width:1100px)");
-
     // Configure Style Start
 
     const linkStyle = {
@@ -48,12 +50,6 @@ export default function Navbar() {
 
     // Configure Style End
 
-    const goToTop = () => {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      };
     return (
         <Box sx={NavSx}>
             <Link to="/">
