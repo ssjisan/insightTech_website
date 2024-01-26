@@ -23,11 +23,13 @@ export default function HeroSection() {
     return (
         <Container sx={ContainerSx}>
             <Box sx={ContentSx}>
-                <PageChip label="Web Development" />
-                <Typography variant="h1" sx={{ textAlign: "center" }}>Not Just an Another <Box component="span" sx={{color:"#00AE60"}}>SASS</Box> product.</Typography>
+                <PageChip label="Digital Marketing" />
+                <Typography variant="h1" sx={{ textAlign: "center" }}>
+                    Driving <Box component="span" sx={{ color: "#00AE60" }}>Digital</Box> Success, Boosting Your <Box component="span" sx={{ color: "#00AE60" }}>Brand</Box>.
+                </Typography>
             </Box>
-            <Box sx={{ width: "100%" }}>
-                <img src="web_development/hero.png" alt="" style={{ objectFit: "cover", width: "100%" }} />
+            <Box sx={{ maxWidth: "780px", width:"100%"}}>
+                <img src="https://i.ibb.co/r4L2972/herosection.webp" alt="" style={{ objectFit: "cover", width: "100%" }} />
             </Box>
         </Container>
     )
