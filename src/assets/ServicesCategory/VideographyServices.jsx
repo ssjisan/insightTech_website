@@ -1,35 +1,29 @@
-const DigitalMarketingServices = [
+const VideographyServices = [
     {
         id: 1,
-        title: "Social Media Management",
+        title: "2D & 3D Motion Graphics",
         subTitle: "Crafting Dynamic Digital Experiences through Innovative Web Solutions",
     },
     {
         id: 2,
-        title: "Content Marketing",
+        title: "Corporate Videos",
         subTitle: "Crafting Dynamic Digital Experiences through Innovative Web Solutions",
     },
     {
         id: 3,
-        title: "Advertisement",
+        title: "Product Shoots",
         subTitle: "Crafting Dynamic Digital Experiences through Innovative Web Solutions",
     },
     {
         id: 4,
-        title: "Influencer marketing",
+        title: "TV Commercials",
         subTitle: "Crafting Dynamic Digital Experiences through Innovative Web Solutions",
     },
     {
         id: 5,
-        title: "Paid Media Marketing",
+        title: "Event Promotions",
         subTitle: "Crafting Dynamic Digital Experiences through Innovative Web Solutions",
     }
 ];
 
-export { DigitalMarketingServices };
-
-// 2D & 3D Motion Graphics
-// Corporate Videos
-// Product Shoots
-// TV Commercials
-// Event Promotions
+export { VideographyServices };
