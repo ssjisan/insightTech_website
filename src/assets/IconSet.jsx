@@ -156,3 +156,46 @@ export const BulletPointIcon = () => {
         </svg>
     )
 }
+
+export const Audience = () => {
+    return (
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24.5004 10.1934C24.4204 10.18 24.3271 10.18 24.2471 10.1934C22.4071 10.1267 20.9404 8.62002 20.9404 6.75336C20.9404 4.84669 22.4738 3.31335 24.3804 3.31335C26.2871 3.31335 27.8204 4.86002 27.8204 6.75336C27.8071 8.62002 26.3404 10.1267 24.5004 10.1934Z" stroke="#00AE60" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M23.1269 19.9C24.9536 20.2067 26.9669 19.8867 28.3803 18.94C30.2603 17.6867 30.2603 15.6333 28.3803 14.38C26.9536 13.4333 24.9136 13.1133 23.0869 13.4333" stroke="#00AE60" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M8.45965 10.1934C8.53965 10.18 8.63298 10.18 8.71298 10.1934C10.553 10.1267 12.0196 8.62002 12.0196 6.75336C12.0196 4.84669 10.4863 3.31335 8.57965 3.31335C6.67298 3.31335 5.13965 4.86002 5.13965 6.75336C5.15298 8.62002 6.61965 10.1267 8.45965 10.1934Z" stroke="#00AE60" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M9.83325 19.9C8.00659 20.2067 5.99326 19.8867 4.57992 18.94C2.69992 17.6867 2.69992 15.6333 4.57992 14.38C6.00659 13.4333 8.04659 13.1133 9.87325 13.4333" stroke="#00AE60" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M16.5004 20.1534C16.4204 20.1401 16.3271 20.1401 16.2471 20.1534C14.4071 20.0868 12.9404 18.5801 12.9404 16.7134C12.9404 14.8068 14.4738 13.2734 16.3804 13.2734C18.2871 13.2734 19.8204 14.8201 19.8204 16.7134C19.8071 18.5801 18.3404 20.1001 16.5004 20.1534Z" stroke="#00AE60" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M12.62 24.3535C10.74 25.6068 10.74 27.6601 12.62 28.9135C14.7533 30.3401 18.2466 30.3401 20.38 28.9135C22.26 27.6601 22.26 25.6068 20.38 24.3535C18.26 22.9401 14.7533 22.9401 12.62 24.3535Z" stroke="#00AE60" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+    )
+}
+
+export const Strategy = () => {
+    return (
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.2604 6.78007C4.32707 2.16673 11.2737 2.16673 12.3271 6.78007C12.9537 9.48674 11.2337 11.7801 9.7404 13.2067C8.64707 14.2467 6.92707 14.2334 5.83373 13.2067C4.35373 11.7801 2.63373 9.48674 3.2604 6.78007Z" stroke="#00AE60" strokeWidth="1.5" />
+            <path d="M20.5933 22.7801C21.66 18.1667 28.6467 18.1667 29.7133 22.7801C30.34 25.4867 28.62 27.7801 27.1133 29.2067C26.02 30.2467 24.2867 30.2334 23.1933 29.2067C21.6867 27.7801 19.9667 25.4867 20.5933 22.7801Z" stroke="#00AE60" strokeWidth="1.5" />
+            <path d="M16.5003 7.31335H20.0736C22.5403 7.31335 23.6869 10.3667 21.8336 11.9934L11.1803 21.3134C9.32692 22.9267 10.4736 25.98 12.9269 25.98H16.5003" stroke="#00AE60" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M7.81496 7.98002H7.83036" stroke="#00AE60" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M25.148 23.98H25.1634" stroke="#00AE60" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+    )
+}
+
+export const Decisions = () => {
+    return (
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.5003 29.98C23.8337 29.98 29.8337 23.98 29.8337 16.6467C29.8337 9.31335 23.8337 3.31335 16.5003 3.31335C9.16699 3.31335 3.16699 9.31335 3.16699 16.6467C3.16699 23.98 9.16699 29.98 16.5003 29.98Z" stroke="#00AE60" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M10.833 16.6467L14.6063 20.4201L22.1663 12.8734" stroke="#00AE60" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+    )
+}
+
+export const Suitable = () => {
+    return (
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.5003 29.98H20.5003C27.167 29.98 29.8337 27.3134 29.8337 20.6467V12.6467C29.8337 5.98002 27.167 3.31335 20.5003 3.31335H12.5003C5.83366 3.31335 3.16699 5.98002 3.16699 12.6467V20.6467C3.16699 27.3134 5.83366 29.98 12.5003 29.98Z" stroke="#00AE60" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M12.6338 16.6467V14.6734C12.6338 12.1267 14.4338 11.1 16.6338 12.3667L18.3405 13.3534L20.0471 14.3401C22.2471 15.6067 22.2471 17.6867 20.0471 18.9534L18.3405 19.94L16.6338 20.9267C14.4338 22.1934 12.6338 21.1534 12.6338 18.62V16.6467Z" stroke="#00AE60" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+    )
+}

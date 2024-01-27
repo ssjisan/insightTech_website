@@ -27,9 +27,3 @@ const DigitalMarketingServices = [
 ];
 
 export { DigitalMarketingServices };
-
-// 2D & 3D Motion Graphics
-// Corporate Videos
-// Product Shoots
-// TV Commercials
-// Event Promotions
