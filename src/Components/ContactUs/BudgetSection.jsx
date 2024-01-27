@@ -1,10 +1,14 @@
 import { Box, Typography, useMediaQuery } from "@mui/material";
 import FormChip from "./FormChip";
+import { useContext } from "react";
+import { DataContext } from "../../DataProcessing/DataProcessing";
 
 
 export default function BudgetSection() {
-    const forBelow767 = useMediaQuery("(max-width:767px)");
+    const {formData,handleBudget} = useContext(DataContext)
 
+    const forBelow767 = useMediaQuery("(max-width:767px)");
+    
     const ContainerSx = {
         display: "flex",
         flexDirection: "column",
@@ -12,7 +16,6 @@ export default function BudgetSection() {
         gap: "40px",
         width: "100%"
     }
-
 
     const ChipContainerSx = {
         display: "flex",
@@ -30,7 +33,11 @@ export default function BudgetSection() {
             <Box sx={ChipContainerSx}>
                 {budget.map((data) => {
                     return (
-                        <FormChip key={data.id} label={data} />
+                        <FormChip 
+                        key={data.index}
+                        label={data}
+                        handleClick={()=>handleBudget(data)} 
+                        selected={data === formData.budget} />
                     )
                 })}
             </Box>

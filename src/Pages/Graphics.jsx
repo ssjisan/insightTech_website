@@ -9,7 +9,6 @@ import FaQ from "../Components/Grpahics/FaQ";
 import Reminder from "../Components/Common/Reminder";
 import Footer from "../Layout/Footer/Footer"
 import GraphicsEssentials from "../Components/Grpahics/GraphicsEssentials";
-import ProjectShowCase from "../Components/Grpahics/ProjectShowCase";
 export default function Graphics() {
   // eslint-disable-next-line
   const forBelow999 = useMediaQuery("(max-width:999px)");

@@ -4,6 +4,7 @@ import MobileDrawer from "./Components/MobileDrawer";
 import Testimonial from "./Components/Testimonial";
 import BlogData from "./Components/BlogData";
 import ScrollTop from "./Components/ScrollTop";
+import ContactUs from "./Components/ContactUs";
 
 export const DataContext = createContext();
 
@@ -12,6 +13,7 @@ export default function DataProcessing({ children }) {
     const { sliderRef, nextSlide, prevSlide } = Testimonial()
     const { randomBlogs, blogWithId1 } = BlogData()
     const { goToTop } = ScrollTop()
+    const {formData,handleChange,handleServices,handleBudget} = ContactUs()
     return (
         <DataContext.Provider
             value={{
@@ -22,7 +24,9 @@ export default function DataProcessing({ children }) {
                 // Blog Data
                 randomBlogs, blogWithId1,
                 // Scroll Top 
-                goToTop
+                goToTop,
+                // Contact Us Form Data
+                formData,handleChange,handleServices,handleBudget
             }}
         >
             {children}

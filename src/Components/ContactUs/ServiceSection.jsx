@@ -1,9 +1,12 @@
 import { Box, Typography, useMediaQuery } from "@mui/material";
 import { services } from "../../Layout/Navbar/NavConfig"
 import FormChip from "./FormChip";
+import { useContext } from "react";
+import { DataContext } from "../../DataProcessing/DataProcessing";
 
 
 export default function ServiceSection() {
+    const {formData,handleServices} = useContext(DataContext)
     const forBelow767 = useMediaQuery("(max-width:767px)");
 
     const ContainerSx = {
@@ -29,7 +32,10 @@ export default function ServiceSection() {
             <Box sx={ChipContainerSx}>
                 {services.map((data) => {
                     return (
-                        <FormChip key={data.id} label={data.title} />
+                        <FormChip key={data.id}
+                            label={data.title}
+                            handleClick={()=>handleServices(data.title)}
+                            selected={data.title === formData.service} />
                     )
                 })}
             </Box>
