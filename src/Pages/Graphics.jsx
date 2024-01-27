@@ -2,8 +2,14 @@ import { Box } from "@mui/material";
 import { useMediaQuery } from "@mui/material";
 import Navbar from "../Layout/Navbar/Navbar";
 import NavForMobile from "../Layout/Navbar/NavForMobile";
-import ComingSoon from "../Components/ComingSoon";
-
+import HeroSection from "../Components/Grpahics/HeroSection";
+import Services from "../Components/Grpahics/ServiceSection/Services"
+import Promotion from "../Components/Grpahics/Promotion";
+import FaQ from "../Components/Grpahics/FaQ";
+import Reminder from "../Components/Common/Reminder";
+import Footer from "../Layout/Footer/Footer"
+import GraphicsEssentials from "../Components/Grpahics/GraphicsEssentials";
+import ProjectShowCase from "../Components/Grpahics/ProjectShowCase";
 export default function Graphics() {
   // eslint-disable-next-line
   const forBelow999 = useMediaQuery("(max-width:999px)");
@@ -11,10 +17,17 @@ export default function Graphics() {
 
   return (
     <Box>
-    {
-      forBelow1100 ? <NavForMobile /> : <Navbar />
-    }
-    <ComingSoon/>
-  </Box>
+      {
+        forBelow1100 ? <NavForMobile /> : <Navbar />
+      }
+      <HeroSection />
+      <Services />
+      <Promotion />
+      <GraphicsEssentials />
+      {/* <ProjectShowCase /> */}
+      <FaQ />
+      <Reminder />
+      <Footer />
+    </Box>
   )
 }
