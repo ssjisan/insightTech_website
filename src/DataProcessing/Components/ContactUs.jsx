@@ -1,7 +1,7 @@
-import emailjs from '@emailjs/browser';
 import { useState } from "react";
 
 export default function ContactUs() {
+
     const [formData, setFormData] = useState({
         service: null,
         budget: null,
@@ -13,7 +13,7 @@ export default function ContactUs() {
         projectBrief: "",
     });
 
-    const handleChange = (e) => {
+    const handleChange =  (e) => {
         const { id, value } = e.target;
         setFormData({ ...formData, [id]: value });
     };
@@ -23,28 +23,23 @@ export default function ContactUs() {
     const handleBudget = (data) => {
         setFormData({ ...formData, budget: data });
     };
-    const handleSubmit = (e) => {
+    const handleSubmit =async (e) => {
         e.preventDefault();
-
-        const templateParams = {
-            name: formData.name,
-            email: formData.email,
-            phone: formData.phone,
-            company: formData.company,
-            position: formData.position,
-            projectBrief: formData.projectBrief,
-            budgetId: formData.budgetId
-        };
-
-        emailjs.send('service_8qpmatl', 'template_pwb6kzz', templateParams, 'ilk2iVMcaEmPNdb_V')
-            .then((response) => {
-                console.log('Email sent successfully:', response);
-                // Add your success handling code here
-            })
-            .catch((error) => {
-                console.error('Email sending failed:', error);
-                // Add your error handling code here
-            });
+        const { service, budget, name, email, phone, company, position, projectBrief } = formData
+        const options = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ service, budget, name, email, phone, company, position, projectBrief })
+        }
+        const res = await fetch("https://insighttechbd-d4ca9-default-rtdb.firebaseio.com/ClientRequest.json", options)
+        if (res) {
+            alert("Done")
+        }
+        else {
+            alert("Error")
+        }
     };
     console.log(formData);
     return (

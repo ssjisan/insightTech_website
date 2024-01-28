@@ -17,7 +17,7 @@ export default function Form() {
     }
 
     return (
-        <Container sx={FormSx}>
+        <Container sx={FormSx} >
             <ServiceSection />
             <BudgetSection />
             <InputFields />
