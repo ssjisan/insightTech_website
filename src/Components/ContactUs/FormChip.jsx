@@ -1,4 +1,4 @@
-import { Box, useMediaQuery } from "@mui/material"
+import { Button, useMediaQuery } from "@mui/material"
 import PropTypes from "prop-types";
 
 export default function FormChip({ label, id, handleClick, selected }) {
@@ -14,17 +14,17 @@ export default function FormChip({ label, id, handleClick, selected }) {
         borderRadius: "50px",
         border: "1px solid #00AB55",
         cursor: "pointer",
-        backgroundColor: selected ? "#00AB55" : "transparent"
-    }
-
-    const TextSx = {
-        fontSize: forBelow767 ? "14px" : "18px",
-        color:  selected ? "#FFF" : "#00AB55"
+        backgroundColor: selected ? "#00AB55" : "transparent",
+        color: selected ? "#FFF" : "#00AB55",
+        "&:hover": {
+            backgroundColor: selected ? "#008549" : "#F5FBF9",
+        }
     }
     return (
-        <Box sx={ChipSx} onClick={() => handleClick(id)}>
-            <Box componsnt="span" sx={TextSx}>{label}</Box>
-        </Box>
+
+        <Button sx={ChipSx} onClick={() => handleClick(id)}>
+            {label}
+        </Button>
     )
 }
 FormChip.propTypes = {

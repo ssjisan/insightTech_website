@@ -30,10 +30,11 @@ export default function ServiceSection() {
         <Box sx={ContainerSx}>
             <Typography variant="h4">What can we help you with?</Typography>
             <Box sx={ChipContainerSx}>
-                {services.map((data) => {
+                {services.map((data,index) => {
                     return (
-                        <FormChip key={data.id}
+                        <FormChip key={index}
                             label={data.title}
+                            id={data.id}
                             handleClick={()=>handleServices(data.title)}
                             selected={data.title === formData.service} />
                     )

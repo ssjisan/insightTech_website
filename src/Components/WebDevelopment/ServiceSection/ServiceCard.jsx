@@ -50,7 +50,7 @@ export default function ServiceCard() {
         <Grid container spacing={2}>
             {WebDevelopmentServices.map((data) => {
                 return (
-                    <Grid item sx={12} sm={6} lg={4} key={data.id}>
+                    <Grid item xs={12} sm={6} lg={4} key={data.id}>
                         <Box sx={CardSx} onMouseEnter={() => handleMouseEnter(data.id)}
                             onMouseLeave={handleMouseLeave}>
                             <Box component="span" sx={{

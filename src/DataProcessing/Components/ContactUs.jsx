@@ -1,5 +1,6 @@
 import { useState } from "react";
-
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/src/sweetalert2.scss'
 export default function ContactUs() {
 
     const [formData, setFormData] = useState({
@@ -13,7 +14,7 @@ export default function ContactUs() {
         projectBrief: "",
     });
 
-    const handleChange =  (e) => {
+    const handleChange = (e) => {
         const { id, value } = e.target;
         setFormData({ ...formData, [id]: value });
     };
@@ -23,7 +24,7 @@ export default function ContactUs() {
     const handleBudget = (data) => {
         setFormData({ ...formData, budget: data });
     };
-    const handleSubmit =async (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const { service, budget, name, email, phone, company, position, projectBrief } = formData
         const options = {
@@ -35,13 +36,19 @@ export default function ContactUs() {
         }
         const res = await fetch("https://insighttechbd-d4ca9-default-rtdb.firebaseio.com/ClientRequest.json", options)
         if (res) {
-            alert("Done")
+            Swal.fire({
+                position: "center",
+                icon: "success",
+                title: "Your request has been sent. A team will contact with you soon.",
+                showConfirmButton: false,
+                timer: 1500
+            })
         }
         else {
             alert("Error")
         }
     };
-    console.log(formData);
+    // console.log(formData);
     return (
         {
             formData, handleChange, handleServices, handleBudget, handleSubmit

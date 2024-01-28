@@ -63,7 +63,7 @@ export default function ServiceCard() {
         <Grid container spacing={2}>
             {services.map((data) => {
                 return (
-                    <Grid item sx={12} sm={6} lg={[1, 2, 6, 7].includes(data.id) ? 6 : 4} key={data.id}>
+                    <Grid item xs={12} sm={6} lg={[1, 2, 6, 7].includes(data.id) ? 6 : 4} key={data.id}>
                         <Link to={data.link} style={linkStyle}>
                             <Box sx={CardSx} onMouseEnter={() => handleMouseEnter(data.id)} onMouseLeave={handleMouseLeave} onClick={goToTop}>
                                 <Box sx={{

@@ -31,10 +31,11 @@ export default function BudgetSection() {
         <Box sx={ContainerSx}>
             <Typography variant="h4">Your Budget</Typography>
             <Box sx={ChipContainerSx}>
-                {budget.map((data) => {
+                {budget.map((data,index) => {
                     return (
                         <FormChip 
-                        key={data.index}
+                        key={index}
+                        id={index}
                         label={data}
                         handleClick={()=>handleBudget(data)} 
                         selected={data === formData.budget} />

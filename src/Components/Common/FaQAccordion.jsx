@@ -4,7 +4,7 @@ import { DownArrow } from "../../Assets/IconSet";
 import PropTypes from "prop-types";
 
 export default function FaQAccordion({ questions }) {
-    const [expanded, setExpanded] = useState(questions.length > 0 ? questions[0].id : "");
+    const [expanded, setExpanded] = useState(questions.length > 0 ? parseInt(questions[0].id) : 0);
 
     const handleChange = (id) => (event, isExpanded) => {
         setExpanded(isExpanded ? id : false);
@@ -15,7 +15,7 @@ export default function FaQAccordion({ questions }) {
         borderRadius: "12px",
         border: "1px solid rgba(145, 142, 175, 0.40)",
         boxShadow: "none",
-        position: "inherit",
+        position: "inherit"
     }
 
     return (
@@ -25,7 +25,7 @@ export default function FaQAccordion({ questions }) {
                     key={question.id}
                     expanded={expanded === question.id}
                     onChange={handleChange(question.id)}
-                    square="false"
+                    square={false}
                     sx={AccordionSx}
                 >
                     <AccordionSummary expandIcon={<DownArrow />}>
@@ -45,7 +45,7 @@ export default function FaQAccordion({ questions }) {
 FaQAccordion.propTypes = {
     questions: PropTypes.arrayOf(
         PropTypes.shape({
-            id: PropTypes.string.isRequired,
+            id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
             question: PropTypes.string.isRequired,
             answer: PropTypes.string.isRequired,
         })

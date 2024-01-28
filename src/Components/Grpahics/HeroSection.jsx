@@ -35,7 +35,7 @@ export default function HeroSection() {
                 <Grid item xs={12} sm={12} md={6} lg={6}>
                     <Box sx={HeroSectionContentSx}>
                         <Box sx={ContentSx}>
-                            <PageChip label="PBX" />
+                            <PageChip label="Graphics" />
                             <Typography variant="h2" sx={{ textAlign: forBelow899 && "center" }}>Fueling Brand Brilliance, Igniting Digital Presence</Typography>
                         </Box>
                         <Link to="/contact_us"><Button variant="contained" sx={{ width: "220px" }}>Start a Project</Button></Link>

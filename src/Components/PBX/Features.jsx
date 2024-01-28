@@ -37,7 +37,7 @@ export default function Features() {
     return (
         <Container sx={ContainerSx}>
             <Grid container spacing={3}>
-                <Grid item sx={12} sm={5} md={5} lg={5}>
+                <Grid item xs={12} sm={5} md={5} lg={5}>
                     <Box sx={ContentSx}>
                         <Box sx={HeaderSx}>
                             <PageChip label="Features" />
@@ -52,7 +52,7 @@ export default function Features() {
                         </Box>
                     </Box>
                 </Grid>
-                <Grid item sx={12} sm={7} md={7} lg={7}>
+                <Grid item xs={12} sm={7} md={7} lg={7}>
                     <Box sx={{ width: "100%" }}>
                         <img src="PBX/feature.webp" alt="Hero Section" style={{ objectFit: "cover", width: "100%" }} />
                     </Box>
