@@ -58,7 +58,7 @@ export default function SeoService() {
                 {
                     SEOServices.map((data) => {
                         return (
-                            <Grid item xs={12} sm={6} md={6} c key={data.id}>
+                            <Grid item xs={12} sm={6} md={6} lg={[4,5].includes(data.id) ? 6 : 4} key={data.id}>
                                 <Box sx={BoxSx}>
                                     <Typography variant="h4">{data.title}</Typography>
                                     <Typography variant="body1" color="text.secondary">{data.subTitle}</Typography>

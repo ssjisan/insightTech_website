@@ -21,14 +21,14 @@ export default function WebDevelopment() {
       {
         forBelow1100 ? <NavForMobile /> : <Navbar />
       }
-      <HeroSection />
-      <Services />
-      <NeedWebsite />
-      <CleanUI />
-      <Technology />
-      <FaQ />
-      <Reminder />
-      <Footer />
+        <HeroSection />
+        <Services />
+        <NeedWebsite />
+        <CleanUI />
+        <Technology />
+        <FaQ />
+        <Reminder />
+        <Footer />
     </Box>
   )
 }

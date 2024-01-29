@@ -36,7 +36,7 @@ export default function WhyUs() {
                 <Box sx={ContentContainerSx}>
                     <PageChip label="Why US" />
                     <Typography variant="h2" sx={TitleContainerSx}>Unlocking Excellence through Our  <Box component="span" sx={{ color: "#00AE60" }}>Core Values</Box></Typography>
-                    <Typography variant="h5" color="text.secondary" sx={{ textAlign: "center" }}> Embark on a Journey of Tech Innovation, Strategic Insight, Global Impact, Delightful Experiences, Uncompromising Quality, and Pursuit of Perfection.</Typography>
+                    <Typography variant="h5" color="text.secondary" sx={{ textAlign: "center" }}>Embark on a Journey of Tech Innovation, Global Impact, Quality, and Perfect Experiences.</Typography>
                 </Box>
                 <WhyUsPoints />
             </Box >

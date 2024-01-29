@@ -10,6 +10,7 @@ import PBX from "../Pages/PBX";
 import AboutUs from "../Pages/AboutUs";
 import ContactUs from "../Pages/ContactUs";
 import Dashboard from "./Dashboard";
+import Blog from "../Pages/Blog";
 
 
 export default function MainRoute() {
@@ -26,6 +27,7 @@ export default function MainRoute() {
         <Route path="about_us" element={<AboutUs />} />
         <Route path="contact_us" element={<ContactUs/>} />
         <Route path="dashboard" element={<Dashboard/>} />
+        <Route path="blog" element={<Blog/>} />
       </Routes>
     );
   }

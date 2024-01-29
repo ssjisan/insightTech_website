@@ -24,7 +24,7 @@ export default function HeroSection() {
         <Container sx={ContainerSx}>
             <Box sx={ContentSx}>
                 <PageChip label="Web Development" />
-                <Typography variant="h1" sx={{ textAlign: "center" }}>Not Just an Another <Box component="span" sx={{color:"#00AE60"}}>SASS</Box> product.</Typography>
+                <Typography variant="h1" sx={{ textAlign: "center" }}>Not Just an Another <Box component="span" sx={{ color: "#00AE60" }}>SASS</Box> product.</Typography>
             </Box>
             <Box sx={{ width: "100%" }}>
                 <img src="web_development/hero.png" alt="" style={{ objectFit: "cover", width: "100%" }} />

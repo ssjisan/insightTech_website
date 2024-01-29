@@ -15,7 +15,8 @@ export default function FaQAccordion({ questions }) {
         borderRadius: "12px",
         border: "1px solid rgba(145, 142, 175, 0.40)",
         boxShadow: "none",
-        position: "inherit"
+        position: "inherit",
+        padding:"4px"
     }
 
     return (
@@ -25,7 +26,7 @@ export default function FaQAccordion({ questions }) {
                     key={question.id}
                     expanded={expanded === question.id}
                     onChange={handleChange(question.id)}
-                    square={false}
+                    square={"false"}
                     sx={AccordionSx}
                 >
                     <AccordionSummary expandIcon={<DownArrow />}>

@@ -14,7 +14,7 @@ export default function PageChip({ label }) {
 
     return (
         <Box sx={ChipSx}>
-            <Typography variant="body2">{label}</Typography>
+            <Typography variant="body2" sx={{textTransform:"uppercase"}}>{label}</Typography>
         </Box>
     )
 }

@@ -36,7 +36,7 @@ export default function Services() {
                     <Box sx={ContentContainerSx}>
                         <PageChip label="What we do" />
                         <Typography variant="h2" sx={TitleContainerSx}>Explore Our Diverse Range of <Box component="span" sx={{ color: "#00AE60" }}>Solutions</Box></Typography>
-                        <Typography variant="h5" color="text.secondary" sx={{ textAlign: "center" }}>Explore a Myriad of Tailored Solutions, Delving into a Spectrum of Services Crafted to Elevate Your Experience and Propel Your Digital Success to Uncharted Heights</Typography>
+                        <Typography variant="h5" color="text.secondary" sx={{ textAlign: "center" }}>Discover a wide range of personalized solutions designed to enhance your experience and boost your digital success to new levels.</Typography>
                     </Box>
                 <ServiceCard />
             </Box >
