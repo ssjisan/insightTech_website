@@ -1,18 +1,15 @@
-import { Box, Button, Container, Typography, useMediaQuery } from "@mui/material";
+import { Box, Button, Container, Typography } from "@mui/material";
 import { keyframes } from '@emotion/react';
 import { Link } from "react-router-dom";
 
 export default function HeroSection() {
-    const forBelow667 = useMediaQuery("(max-width:667px)");
-    const forBelow999 = useMediaQuery("(max-width:999px)");
+
     const gradientAnimation = keyframes`from {filter: hue-rotate(0deg);} to {filter: hue-rotate(-360deg);}`;
     const MainBoxSx = {
-        backgroundImage: !forBelow667 && "url('homeBG.png')", backgroundSize: "cover",
-        backgroundRepeat: "no-repeat", backgroundPosition: 'center'
+        backgroundImage: "url('https://i.ibb.co/f0zmnGD/homeBG.png')", backgroundSize: "cover",
+        backgroundRepeat: "no-repeat", backgroundPosition: 'center', height: "100vh", display: "flex", alignItems: "center"
     }
     const ContainerSx = {
-        paddingTop: forBelow999 ? "120px" : "160px",
-        paddingBottom: forBelow999 ? "64px" : "160px",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
