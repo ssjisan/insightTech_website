@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { DataContext } from "../../DataProcessing/DataProcessing";
 
 export default function InputFields() {
-    const { formData, handleChange, openAlert } = useContext(DataContext)
+    const { formData, handleChange, openErrorAlert } = useContext(DataContext)
     const forBelow767 = useMediaQuery("(max-width:767px)");
 
     const ContainerSx = {
@@ -24,7 +24,7 @@ export default function InputFields() {
         },
     }
     const ErrorInputFieldSx = {
-        borderRadius: openAlert && "10px", border: openAlert && "1px solid #C22635"
+        borderRadius: openErrorAlert && "10px", border: openErrorAlert && "1px solid #C22635"
     }
     return (
         <Box sx={ContainerSx}>
@@ -58,7 +58,7 @@ export default function InputFields() {
                 variant="outlined"
                 type="number"
                 required
-                sx={{...InputFieldSx, ...ErrorInputFieldSx}}
+                sx={{ ...InputFieldSx, ...ErrorInputFieldSx }}
                 fullWidth
                 size={forBelow767 ? "medium" : "large"}
                 value={formData.phone}
