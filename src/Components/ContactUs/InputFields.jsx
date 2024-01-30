@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { DataContext } from "../../DataProcessing/DataProcessing";
 
 export default function InputFields() {
-    const { formData, handleChange } = useContext(DataContext)
+    const { formData, handleChange, openAlert } = useContext(DataContext)
     const forBelow767 = useMediaQuery("(max-width:767px)");
 
     const ContainerSx = {
@@ -23,6 +23,9 @@ export default function InputFields() {
             '-moz-appearance': 'textfield', /* Firefox */
         },
     }
+    const ErrorInputFieldSx = {
+        borderRadius: openAlert && "10px", border: openAlert && "1px solid #C22635"
+    }
     return (
         <Box sx={ContainerSx}>
             <TextField
@@ -31,29 +34,31 @@ export default function InputFields() {
                 type="text"
                 variant="outlined"
                 fullWidth
-                required  
+                required
                 size={forBelow767 ? "medium" : "large"}
                 value={formData.name}
                 onChange={handleChange}
+                sx={ErrorInputFieldSx}
             />
             <TextField
                 id="email"
                 label="Your Email"
                 variant="outlined"
                 type="email"
-                required  
+                required
                 fullWidth
                 size={forBelow767 ? "medium" : "large"}
                 value={formData.email}
                 onChange={handleChange}
+                sx={ErrorInputFieldSx}
             />
             <TextField
                 id="phone"
                 label="Your Phone"
                 variant="outlined"
                 type="number"
-                required  
-                sx={InputFieldSx}
+                required
+                sx={{...InputFieldSx, ...ErrorInputFieldSx}}
                 fullWidth
                 size={forBelow767 ? "medium" : "large"}
                 value={formData.phone}

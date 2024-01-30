@@ -26,8 +26,8 @@ export default function HeroSection() {
                 <PageChip label="Web Development" />
                 <Typography variant="h1" sx={{ textAlign: "center" }}>Not Just an Another <Box component="span" sx={{ color: "#00AE60" }}>SASS</Box> product.</Typography>
             </Box>
-            <Box sx={{ width: "100%" }}>
-                <img src="web_development/hero.png" alt="" style={{ objectFit: "cover", width: "100%" }} />
+            <Box sx={{ width: "100%", borderRadius:"16px", overflow:"hidden",border:"1px solid #E0E0E0"}}>
+                <img src="https://i.ibb.co/2n58DN6/heroImg.webp" alt="" style={{ objectFit: "cover", width: "100%" }} />
             </Box>
         </Container>
     )

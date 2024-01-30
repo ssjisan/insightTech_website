@@ -1,3 +1,4 @@
+// import { Alert } from "@mui/material";
 import { useState } from "react";
 export default function ContactUs() {
 
@@ -11,7 +12,17 @@ export default function ContactUs() {
         position: "",
         projectBrief: "",
     });
+    const [openErrorAlert, setOpenErrorAlert] = useState(false);
+    const [openSuccessAlert, setOpenSuccessAlert] = useState(false);
 
+    const handleClose = (event, reason) => {
+        if (reason === 'clickaway') {
+            return;
+        }
+
+        setOpenErrorAlert(false);
+        setOpenSuccessAlert(false)
+    };
     const handleChange = (e) => {
         const { id, value } = e.target;
         setFormData({ ...formData, [id]: value });
@@ -25,6 +36,11 @@ export default function ContactUs() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const { service, budget, name, email, phone, company, position, projectBrief } = formData
+
+        if (!name || !email || !phone) {
+            setOpenErrorAlert(true)
+            return;
+        }
         const options = {
             method: "POST",
             headers: {
@@ -34,7 +50,17 @@ export default function ContactUs() {
         }
         const res = await fetch("https://insighttechbd-d4ca9-default-rtdb.firebaseio.com/ClientRequest.json", options)
         if (res) {
-            alert("Done")
+            setOpenSuccessAlert(true)
+            setFormData({
+                service: '',
+                budget: '',
+                name: '',
+                email: '',
+                phone: '',
+                company: '',
+                position: '',
+                projectBrief: ''
+            });
         }
         else {
             alert("Error")
@@ -43,7 +69,7 @@ export default function ContactUs() {
     // console.log(formData);
     return (
         {
-            formData, handleChange, handleServices, handleBudget, handleSubmit
+            formData, handleChange, handleServices, handleBudget, handleSubmit, openErrorAlert, handleClose,openSuccessAlert
         }
     )
 }

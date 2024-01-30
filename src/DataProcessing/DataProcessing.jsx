@@ -13,7 +13,7 @@ export default function DataProcessing({ children }) {
     const { sliderRef, nextSlide, prevSlide } = Testimonial()
     const { randomBlogs, blogWithId1 } = BlogData()
     const { goToTop } = ScrollTop()
-    const {formData,handleChange,handleServices,handleBudget,handleSubmit} = ContactUs()
+    const {formData,handleChange,handleServices,handleBudget,handleSubmit,openErrorAlert,handleClose,openSuccessAlert} = ContactUs()
     return (
         <DataContext.Provider
             value={{
@@ -26,7 +26,7 @@ export default function DataProcessing({ children }) {
                 // Scroll Top 
                 goToTop,
                 // Contact Us Form Data
-                formData,handleChange,handleServices,handleBudget,handleSubmit
+                formData,handleChange,handleServices,handleBudget,handleSubmit,openErrorAlert,handleClose,openSuccessAlert
             }}
         >
             {children}
