@@ -18,7 +18,7 @@ export default function Promotion() {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        maxWidth: "460px",
+        maxWidth: "620px",
         width: "100%",
         gap: "16px"
     }
@@ -26,7 +26,7 @@ export default function Promotion() {
         <Container sx={ContainerSx}>
             <Box sx={ContentSx}>
                 <PageChip label="Movie Streaming Solutions" />
-                <Typography variant="h3" sx={{ textAlign: "center" }}>Delight customers with great conversations.</Typography>
+                <Typography variant="h3" sx={{ textAlign: "center" }}>Best Streaming Solutions for Elevated Entertainment Experience</Typography>
             </Box>
             <Box sx={{ width: "100%", borderRadius: "16px", overflow: "hidden" }}>
                 <img src="https://i.ibb.co/6H6B51B/FTP.webp" alt="" style={{ objectFit: "cover", width: "100%" }} />

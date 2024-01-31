@@ -2,27 +2,27 @@ const VideographyServices = [
     {
         id: 1,
         title: "2D & 3D Motion Graphics",
-        subTitle: "Crafting Dynamic Digital Experiences through Innovative Web Solutions",
+        subTitle: "Dynamic Visual Solutions for Engaging Multimedia Experiences",
     },
     {
         id: 2,
         title: "Corporate Videos",
-        subTitle: "Crafting Dynamic Digital Experiences through Innovative Web Solutions",
+        subTitle: "Professional Storytelling to Elevate Your Brand Narrative",
     },
     {
         id: 3,
         title: "Product Shoots",
-        subTitle: "Crafting Dynamic Digital Experiences through Innovative Web Solutions",
+        subTitle: "Showcase Your Products with Stunning Visuals and Creativity",
     },
     {
         id: 4,
         title: "TV Commercials",
-        subTitle: "Crafting Dynamic Digital Experiences through Innovative Web Solutions",
+        subTitle: "Captivate Audiences with Compelling Television Advertising Campaigns",
     },
     {
         id: 5,
         title: "Event Promotions",
-        subTitle: "Crafting Dynamic Digital Experiences through Innovative Web Solutions",
+        subTitle: "Promote Your Events with Impactful Visual Storytelling Techniques",
     }
 ];
 

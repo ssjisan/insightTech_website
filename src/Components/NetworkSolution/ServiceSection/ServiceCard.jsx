@@ -1,5 +1,5 @@
 import { Box, Grid, Typography, useMediaQuery } from "@mui/material";
-import {  useState } from "react";
+import { useState } from "react";
 import { NetworkSolutions } from "../../../Assets/ServicesCategory/NetworkSolutions";
 
 export default function ServiceCard() {
@@ -49,7 +49,7 @@ export default function ServiceCard() {
         <Grid container spacing={3}>
             {NetworkSolutions.map((data) => {
                 return (
-                    <Grid item xs={12} sm={6} lg={[1,2].includes(data.id) ? 6 : 4} key={data.id}>
+                    <Grid item xs={12} sm={[5].includes(data.id) ? 12 : 6} md={[5].includes(data.id) ? 12 : 6} lg={[1, 2].includes(data.id) ? 6 : 4} key={data.id}>
                         <Box sx={CardSx} onMouseEnter={() => handleMouseEnter(data.id)}
                             onMouseLeave={handleMouseLeave}>
                             <Box component="span" sx={{

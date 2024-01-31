@@ -34,9 +34,9 @@ export default function Services() {
         <Container sx={ContainerSx}>
             <Box sx={MainBox}>
                 <Box sx={ContentContainerSx}>
-                    <PageChip label="What we do"/>
+                    <PageChip label="What we do" />
                     <Typography variant="h2" sx={TitleContainerSx}>Explore Our Diverse Range of <Box component="span" sx={{ color: "#00AE60" }}>Solutions</Box></Typography>
-                    <Typography variant="h5" color="text.secondary" sx={{ textAlign: "center" }}>Explore a Myriad of Tailored Solutions, Delving into a Spectrum of Services Crafted to Elevate Your Experience and Propel Your Digital Success to Uncharted Heights</Typography>
+                    <Typography variant="h5" color="text.secondary" sx={{ textAlign: "center" }}>Expert Videography Services for Captivating Visual Narratives That Speak Volumes. Let Us Bring Your Vision to Life with Precision and Creativity.</Typography>
                 </Box>
                 <ServiceCard />
             </Box >

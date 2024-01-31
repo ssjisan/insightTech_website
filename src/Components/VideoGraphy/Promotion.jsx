@@ -29,8 +29,8 @@ export default function Promotion() {
     return (
         <Container sx={ContainerSx}>
             <Box sx={ContentSx}>
-                <PageChip label="Best Projects" />
-                <Typography variant="h3" sx={{ textAlign: "center" }}>Delight customers with great conversations.</Typography>
+                <PageChip label="Event Cover" />
+                <Typography variant="h3" sx={{ textAlign: "center" }}>Event Promotion Central: Your Success Gateway</Typography>
             </Box>
             <Box sx={{ width: "100%", borderRadius: "16px", overflow: "hidden", height:(forBelow499 && "190px") ||(forBelow599 && "240px") ||(forBelow767 && "280px") || (forBelow999 && "380px") || "520px" }}>
                 <img src="https://i.ibb.co/D8hGMk2/alozza-ezgif-com-optimize.gif" alt="" style={{ objectFit: "cover", width: "100%" }} />

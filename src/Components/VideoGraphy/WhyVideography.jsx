@@ -64,9 +64,9 @@ export default function WhyVideography() {
         <Container sx={ContainerSx}>
             <Box sx={ContentSx}>
                 <PageChip label="Why Videography" />
-                <Typography variant="h3" sx={{ textAlign: "center" }}>Delight customers with great conversations.</Typography>
+                <Typography variant="h3" sx={{ textAlign: "center" }}>Discovering Videography&lsquo;s Impact on Your Business</Typography>
             </Box>
-            <Grid container spacing={3} sx={{alignItems:"center"}}>
+            <Grid container spacing={3} sx={{ alignItems: "center" }}>
                 <Grid item sm={12} md={3} lg={3}>
                     <Box>
                         <Box sx={ContentNewSx}>
@@ -78,7 +78,7 @@ export default function WhyVideography() {
                                     Reach Niche Audience
                                 </Typography>
                                 <Typography variant="subtitle2" color="text.secondary">
-                                    Lorem ipsum dolor sitamt, consectetur adip ising elit, sed do eius mod tempor incidi dunt ut labore et
+                                    Target Your Unique Market Segment with Tailored Visual Strategies
                                 </Typography>
                             </Box>
                         </Box>
@@ -91,13 +91,13 @@ export default function WhyVideography() {
                                     Enriches Content Strategy
                                 </Typography>
                                 <Typography variant="subtitle2" color="text.secondary">
-                                    Lorem ipsum dolor sitamt, consectetur adip ising elit, sed do eius mod tempor incidi dunt ut labore et
+                                    Elevate Your Content Approach with Compelling Visual Storytelling Techniques
                                 </Typography>
                             </Box>
                         </Box>
                     </Box>
                 </Grid>
-                <Grid item sm={12} md={6} lg={6} sx={{display:forBelow899 && "flex", justifyContent:forBelow899 && "center", }}>
+                <Grid item sm={12} md={6} lg={6} sx={{ display: forBelow899 && "flex", justifyContent: forBelow899 && "center", }}>
                     <Box sx={ImageContainerSx}>
                         <img src="iPhone 12 Pro.png" alt="" style={{ objectFit: "cover", width: "100%" }} />
                     </Box>
@@ -113,7 +113,7 @@ export default function WhyVideography() {
                                     Drive Purchase Decisions
                                 </Typography>
                                 <Typography variant="subtitle2" color="text.secondary">
-                                    Lorem ipsum dolor sitamt, consectetur adip ising elit, sed do eius mod tempor incidi dunt ut labore et
+                                    Influence Consumer Behavior with Persuasive Video Marketing Campaigns
                                 </Typography>
                             </Box>
                         </Box>
@@ -126,7 +126,7 @@ export default function WhyVideography() {
                                     Suitable For Any Business
                                 </Typography>
                                 <Typography variant="subtitle2" color="text.secondary">
-                                    Lorem ipsum dolor sitamt, consectetur adip ising elit, sed do eius mod tempor incidi dunt ut labore et
+                                    Benefit from Versatile Videography Solutions Adapted to Your Business
                                 </Typography>
                             </Box>
                         </Box>

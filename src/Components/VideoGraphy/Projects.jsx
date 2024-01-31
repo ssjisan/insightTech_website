@@ -20,7 +20,7 @@ export default function Projects() {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        maxWidth:"460px",
+        maxWidth:"620px",
         width:"100%",
         gap: "16px"
     }
@@ -28,7 +28,7 @@ export default function Projects() {
         <Container sx={ContainerSx}>
             <Box sx={ContentSx}>
                 <PageChip label="Best Projects" />
-                <Typography variant="h3" sx={{textAlign:"center"}}>Delight customers with great conversations.</Typography>
+                <Typography variant="h3" sx={{textAlign:"center"}}>Our Latest Videography Projects Through Visual Storytelling</Typography>
             </Box>
             <Box>
                 <Grid container spacing={3}>

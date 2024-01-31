@@ -27,7 +27,7 @@ export default function FaQ() {
         <Container sx={ContainerSx}>
             <Box sx={HeaderSx}>
                 <PageChip label="Frequently Asked Questions" />
-                <Typography variant="h2">Our Story in Questions</Typography>
+                <Typography variant="h2">Common Queries</Typography>
             </Box>
             <Grid container sx={FqAContainerSx}>
                 <Grid item xs={12} sm={12} md={8} lg={8}>

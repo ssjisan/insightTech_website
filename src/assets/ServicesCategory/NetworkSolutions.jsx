@@ -2,27 +2,27 @@ const NetworkSolutions = [
     {
         id: 1,
         title: "Network Design & Deployment",
-        subTitle: "Crafting Dynamic Digital Experiences through Innovative Web Solutions",
+        subTitle: "Expert solutions for robust network design and efficient deployment.",
     },
     {
         id: 2,
         title: "Network Monitoring System",
-        subTitle: "Crafting Dynamic Digital Experiences through Innovative Web Solutions",
+        subTitle: "Advanced monitoring systems ensuring optimal network performance.",
     },
     {
         id: 3,
         title: "Network Security",
-        subTitle: "Crafting Dynamic Digital Experiences through Innovative Web Solutions",
+        subTitle: "Comprehensive security solutions safeguarding networks from all threats.",
     },
     {
         id: 4,
         title: "FTP & PLEX Server",
-        subTitle: "Crafting Dynamic Digital Experiences through Innovative Web Solutions",
+        subTitle: "High-performance servers for seamless file transfer and multimedia streaming.",
     },
     {
         id: 5,
         title: "IPTV Solutions",
-        subTitle: "Crafting Dynamic Digital Experiences through Innovative Web Solutions",
+        subTitle: "Cutting-edge solutions for immersive and seamless IPTV experiences.",
     }
 ];
 
