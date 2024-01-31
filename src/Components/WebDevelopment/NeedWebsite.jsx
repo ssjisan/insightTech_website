@@ -51,7 +51,7 @@ export default function NeedWebsite() {
                 </Grid>
                 <Grid item xs={12} sm={12} md={6} lg={6}>
                     <Box>
-                        <img src="web_development/sample.png" style={{ width: "100%", objectFit: "contain", height: forBelow599 && "310px" }} />
+                        <img src="https://i.ibb.co/mvBrvCR/sample.webp" style={{ width: "100%", objectFit: "contain", height: forBelow599 && "310px" }} />
                     </Box>
                 </Grid>
                 {forBelow899 &&

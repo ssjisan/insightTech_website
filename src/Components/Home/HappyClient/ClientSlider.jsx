@@ -38,13 +38,13 @@ export default function ClientSlider() {
   return (
     <Container>
       <Slider {...settings}>
-        <img src="clients/Alozza.jpg" />
-        <img src="clients/Whiz.jpg" />
-        <img src="clients/JBH.jpg" />
-        <img src="clients/GP.jpg" />
-        <img src="clients/Sunshine.jpg" />
-        <img src="clients/Alnoor.jpg" />
-        <img src="clients/FeniEasy.jpg" />
+        <img src="https://i.ibb.co/VJp6k4j/Whiz.jpg" />
+        <img src="https://i.ibb.co/CtNwHRS/Alozza.jpg" />
+        <img src="https://i.ibb.co/fDRxJJB/JBH.jpg" />
+        <img src="https://i.ibb.co/HKqLmFP/GP.jpg" />
+        <img src="https://i.ibb.co/GRMpg0k/Sunshine.jpg" />
+        <img src="https://i.ibb.co/JFVcNF5/Alnoor.jpg" />
+        <img src="https://i.ibb.co/gv30rgH/FeniEasy.jpg" />
       </Slider>
     </Container>
 

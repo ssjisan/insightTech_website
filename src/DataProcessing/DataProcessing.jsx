@@ -5,6 +5,7 @@ import Testimonial from "./Components/Testimonial";
 import BlogData from "./Components/BlogData";
 import ScrollTop from "./Components/ScrollTop";
 import ContactUs from "./Components/ContactUs";
+import ImageLoader from "./Components/ImageLoader";
 
 export const DataContext = createContext();
 
@@ -14,6 +15,7 @@ export default function DataProcessing({ children }) {
     const { randomBlogs, blogWithId1 } = BlogData()
     const { goToTop } = ScrollTop()
     const {formData,handleChange,handleServices,handleBudget,handleSubmit,openErrorAlert,handleClose,openSuccessAlert} = ContactUs()
+    const { handleLoad, loaded } = ImageLoader()
     return (
         <DataContext.Provider
             value={{
@@ -26,7 +28,9 @@ export default function DataProcessing({ children }) {
                 // Scroll Top 
                 goToTop,
                 // Contact Us Form Data
-                formData,handleChange,handleServices,handleBudget,handleSubmit,openErrorAlert,handleClose,openSuccessAlert
+                formData,handleChange,handleServices,handleBudget,handleSubmit,openErrorAlert,handleClose,openSuccessAlert,
+                // Image Loader
+                handleLoad, loaded
             }}
         >
             {children}

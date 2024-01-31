@@ -1,9 +1,12 @@
-import { Box, Container, Grid, Typography, useMediaQuery } from "@mui/material";
+import { Box, Container, Grid, Skeleton, Typography, useMediaQuery } from "@mui/material";
 import BulletPoint from "../Common/BulletPoint";
 import { PBXFeatures } from "../../Assets/PBXFeatures"
 import PageChip from "../Common/PageChip";
+import { useContext } from "react";
+import { DataContext } from "../../DataProcessing/DataProcessing";
 export default function Features() {
     const forBelow899 = useMediaQuery("(max-width:899px)");
+    const { handleLoad, loaded } = useContext(DataContext)
 
     const ContainerSx = {
         paddingTop: forBelow899 ? "40px" : "64px",
@@ -54,7 +57,10 @@ export default function Features() {
                 </Grid>
                 <Grid item xs={12} sm={7} md={7} lg={7}>
                     <Box sx={{ width: "100%" }}>
-                        <img src="PBX/feature.webp" alt="Hero Section" style={{ objectFit: "cover", width: "100%" }} />
+                        {!loaded && (
+                            <Skeleton variant="rectangular" animation="wave" width="100%" height={400} />
+                        )}
+                        <img src="https://i.ibb.co/3k8DfmF/feature.webp" alt="Hero Section" style={{ objectFit: "cover", width: "100%" }} onLoad={handleLoad} />
                     </Box>
                 </Grid>
             </Grid>

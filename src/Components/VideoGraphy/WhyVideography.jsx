@@ -99,7 +99,7 @@ export default function WhyVideography() {
                 </Grid>
                 <Grid item sm={12} md={6} lg={6} sx={{ display: forBelow899 && "flex", justifyContent: forBelow899 && "center", }}>
                     <Box sx={ImageContainerSx}>
-                        <img src="iPhone 12 Pro.png" alt="" style={{ objectFit: "cover", width: "100%" }} />
+                        <img src="https://i.ibb.co/QYwnym5/i-Phone-12-Pro.webp" alt="" style={{ objectFit: "cover", width: "100%" }} />
                     </Box>
                 </Grid>
                 <Grid item sm={12} md={3} lg={3}>

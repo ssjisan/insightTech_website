@@ -1,10 +1,13 @@
-import { Box, Button, Container, Grid, Typography, useMediaQuery } from "@mui/material";
+import { Box, Button, Container, Grid, Skeleton, Typography, useMediaQuery } from "@mui/material";
 import PageChip from "../Common/PageChip"
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { DataContext } from "../../DataProcessing/DataProcessing";
 export default function HeroSection() {
     //eslint-disable-next-line
     const forBelow999 = useMediaQuery("(max-width:999px)");
     const forBelow899 = useMediaQuery("(max-width:899px)");
+    const { handleLoad, loaded } = useContext(DataContext)
 
     const ContainerSx = {
         paddingTop: forBelow899 ? "80px" : "160px",
@@ -31,7 +34,7 @@ export default function HeroSection() {
     }
     return (
         <Container sx={ContainerSx}>
-            <Grid container spacing={forBelow899 ? 5 :2}>
+            <Grid container spacing={forBelow899 ? 5 : 2}>
                 <Grid item xs={12} sm={12} md={6} lg={6}>
                     <Box sx={HeroSectionContentSx}>
                         <Box sx={ContentSx}>
@@ -44,7 +47,10 @@ export default function HeroSection() {
                 </Grid>
                 <Grid item xs={12} sm={12} md={6} lg={6}>
                     <Box sx={{ width: "100%" }}>
-                        <img src="PBX/hero.webp" alt="Hero Section" style={{ objectFit: "cover", width: "100%" }} />
+                        {!loaded && (
+                            <Skeleton variant="rectangular" animation="wave" width="100%" height={400} />
+                        )}
+                        <img src="https://i.ibb.co/fQx3xHV/hero.webp" alt="Hero Section" style={{ objectFit: "cover", width: "100%" }} onLoad={handleLoad} />
                     </Box>
                 </Grid>
             </Grid>

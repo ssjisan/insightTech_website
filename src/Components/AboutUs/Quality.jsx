@@ -44,7 +44,7 @@ export default function Quality() {
                                 <Box sx={{ ...CardSx, paddingTop: (data.id === 2 && (forBelow899 ? "40px" : "80px")) || (data.id === 3 && (forBelow899 ? "40px" : "280px")) }}>
                                     {!(data.id === 1) &&
                                         <Box sx={{ width: forBelow899 ? "100%" : "190px", display: "flex", justifyContent: "center" }}>
-                                            <img src="about_us/illustration.png" width="190px" style={{ transform: forBelow899 && data.id === 3 ? "scaleX(-1)" : "scaleX(1)" }} />
+                                            <img src="https://i.ibb.co/z7NJp7d/illustration.png" width="190px" style={{ transform: forBelow899 && data.id === 3 ? "scaleX(-1)" : "scaleX(1)" }} />
                                         </Box>
                                     }
                                     <Box sx={{ display: "flex", flexDirection: "column", alignItems: forBelow899 && "center", gap: "8px" }}>

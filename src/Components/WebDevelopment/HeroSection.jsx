@@ -1,7 +1,10 @@
-import { Box, Container, Typography, useMediaQuery } from "@mui/material";
+import { Box, Container, Skeleton, Typography, useMediaQuery } from "@mui/material";
 import PageChip from "../../Components/Common/PageChip"
+import { useContext } from "react";
+import { DataContext } from "../../DataProcessing/DataProcessing";
 export default function HeroSection() {
     const forBelow999 = useMediaQuery("(max-width:999px)");
+    const { handleLoad, loaded } = useContext(DataContext)
 
     const ContainerSx = {
         paddingTop: forBelow999 ? "80px" : "120px",
@@ -27,7 +30,10 @@ export default function HeroSection() {
                 <Typography variant="h1" sx={{ textAlign: "center" }}>Not Just an Another <Box component="span" sx={{ color: "#00AE60" }}>SASS</Box> product.</Typography>
             </Box>
             <Box sx={{ width: "100%", borderRadius:"16px"}}>
-                <img src="https://i.ibb.co/JBTLMh2/hero.webp" alt="" style={{ objectFit: "cover", width: "100%" }} />
+            {!loaded && (
+                    <Skeleton variant="rectangular" width="100%" height={400} />
+                )}
+                <img src="https://i.ibb.co/JBTLMh2/hero.webp" alt="" style={{ objectFit: "cover", width: "100%" }}  onLoad={handleLoad}/>
             </Box>
         </Container>
     )

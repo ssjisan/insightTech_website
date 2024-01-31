@@ -1,10 +1,13 @@
-import { Box, Container, Grid, Typography, useMediaQuery } from "@mui/material";
+import { Box, Container, Grid, Skeleton, Typography, useMediaQuery } from "@mui/material";
 import PageChip from "../Common/PageChip";
 import { PbxWhy } from "../../Assets/PbxWhy";
+import { useContext } from "react";
+import { DataContext } from "../../DataProcessing/DataProcessing";
 
 export default function WhyUs() {
     const forBelow899 = useMediaQuery("(max-width:999px)");
     const forBelow767 = useMediaQuery("(max-width:767px)");
+    const { handleLoad, loaded } = useContext(DataContext)
 
     const ContainerSx = {
         paddingTop: forBelow899 ? "40px" : "64px",
@@ -20,7 +23,7 @@ export default function WhyUs() {
     }
     const BoxSx = {
         display: "flex",
-        padding: forBelow767 ? "12px":"24px",
+        padding: forBelow767 ? "12px" : "24px",
         flexDirection: "column",
         alignItems: "flex-start",
         gap: "12px"
@@ -38,7 +41,10 @@ export default function WhyUs() {
                 </Grid>
                 <Grid item xs={12} sm={12} md={6} lg={6}>
                     <Box sx={{ width: "100%", borderRadius: "16px", overflow: "hidden", }}>
-                        <img src="PBX/whyus.webp" style={{ objectFit: "cover", width: "100%" }} alt="why us?" />
+                        {!loaded && (
+                            <Skeleton variant="rectangular" animation="wave" width="100%" height={400} />
+                        )}
+                        <img src="https://i.ibb.co/zsWNqcd/whyus.webp" style={{ objectFit: "cover", width: "100%" }} alt="why us?" onLoad={handleLoad} />
                     </Box>
                 </Grid>
                 {

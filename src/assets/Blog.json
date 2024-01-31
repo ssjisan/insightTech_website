@@ -1,63 +1,63 @@
 [
     {
         "id": 1,
-        "image": "blog/web-development.jpg",
+        "image": "https://i.ibb.co/7N92jgT/Social-Media-2.webp",
         "title": "Crafting a Dynamic Online Presence with Web Development",
         "date": "04.25.2019",
         "readTime": "5 min"
     },
     {
         "id": 2,
-        "image": "blog/domain-hosting.jpg",
+        "image": "https://i.ibb.co/RCbYnrh/Social-Media-1.webp",
         "title": "Unlocking Digital Success with Domain & Hosting Strategies",
         "date": "04.25.2019",
         "readTime": "5 min"
     },
     {
         "id": 3,
-        "image": "blog/digital-marketing.jpg",
+        "image": "https://i.ibb.co/wrgQwsd/Second.webp",
         "title": "Strategies for Digital Marketing Excellence",
         "date": "04.25.2019",
         "readTime": "5 min"
     },
     {
         "id": 4,
-        "image": "blog/graphics.jpg",
+        "image": "https://i.ibb.co/QFDjnC4/image-46.webp",
         "title": "The Art of Visual Branding: Graphics Insights",
         "date": "04.25.2019",
         "readTime": "5 min"
     },
     {
         "id": 5,
-        "image": "blog/videography.jpg",
+        "image": "https://i.ibb.co/7N92jgT/Social-Media-2.webp",
         "title": "Lights, Camera, Action: Videography Impact",
         "date": "04.25.2019",
         "readTime": "5 min"
     },
     {
         "id": 6,
-        "image": "blog/network.jpg",
+        "image": "https://i.ibb.co/RCbYnrh/Social-Media-1.webp",
         "title": "Navigating Connectivity with Network Solutions",
         "date": "04.25.2019",
         "readTime": "5 min"
     },
     {
         "id": 7,
-        "image": "blog/PBX.jpg",
+        "image": "https://i.ibb.co/wrgQwsd/Second.webp",
         "title": "Revolutionizing Communication with PBX Solutions",
         "date": "04.25.2019",
         "readTime": "5 min"
     },
     {
         "id": 8,
-        "image": "blog/web-development2.jpg",
+        "image": "https://i.ibb.co/QFDjnC4/image-46.webp",
         "title": "The Future of Digital Marketing: Trends and Innovations to Watch",
         "date": "04.25.2019",
         "readTime": "5 min"
     },
     {
         "id": 9,
-        "image": "blog/digital-marketing2.jpg",
+        "image": "https://i.ibb.co/QFDjnC4/image-46.webp",
         "title": "Elevating User Experience: The Power of Web Development",
         "date": "04.25.2019",
         "readTime": "5 min"
