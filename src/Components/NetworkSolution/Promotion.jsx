@@ -1,8 +1,12 @@
 import { Box, Button, Container, Typography, useMediaQuery } from "@mui/material";
 import PageChip from "../Common/PageChip";
+import { useContext } from "react";
+import { DataContext } from "../../DataProcessing/DataProcessing";
+import { Link } from "react-router-dom";
 
 export default function Promotion() {
     const forBelow899 = useMediaQuery("(max-width:899px)");
+    const { goToTop } = useContext(DataContext);
 
     const ContainerSx = {
         paddingTop: forBelow899 ? "40px" : "64px",
@@ -31,7 +35,9 @@ export default function Promotion() {
             <Box sx={{ width: "100%", borderRadius: "16px", overflow: "hidden" }}>
                 <img src="https://i.ibb.co/6H6B51B/FTP.webp" alt="" style={{ objectFit: "cover", width: "100%" }} />
             </Box>
-            <Button variant="contained" sx={{ width: "220px" }}>Request a Demo</Button>
+            <Link to="/contact_us">
+                <Button variant="contained" sx={{ width: "220px" }} onClick={goToTop}>Request a Demo</Button>
+            </Link>
         </Container>
     )
 }

@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, IconButton, Typography } from "@mui/material";
 import { LeftArrow, RightArrow } from "../../../Assets/IconSet";
 import { useContext } from "react";
 import { DataContext } from "../../../DataProcessing/DataProcessing";
@@ -45,12 +45,12 @@ export default function Controller() {
                 <Typography variant="h3">Insight Impact in Real <Box component="span" sx={{ color: "#00AE60" }}>Stories</Box></Typography>
             </Box>
             <Box sx={ControllerSx}>
-                <Box sx={ArrowBoxSx} onClick={nextSlide}>
+                <IconButton sx={ArrowBoxSx} onClick={nextSlide}>
                     <LeftArrow />
-                </Box>
-                <Box sx={ArrowBoxSx} onClick={prevSlide}>
+                </IconButton>
+                <IconButton sx={ArrowBoxSx} onClick={prevSlide}>
                     <RightArrow />
-                </Box>
+                </IconButton>
             </Box>
         </Box>
     )

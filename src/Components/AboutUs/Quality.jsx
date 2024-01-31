@@ -33,7 +33,7 @@ export default function Quality() {
     return (
         <Container sx={ContainerSx}>
             <Box sx={ContentSx}>
-                <PageChip label="About Us" />
+                <PageChip label="Process" />
                 <Typography variant="h2" sx={{ textAlign: "center" }}>We are committed to achieve extraordinary results</Typography>
             </Box>
             <Grid container spacing={2}>
@@ -48,8 +48,8 @@ export default function Quality() {
                                         </Box>
                                     }
                                     <Box sx={{ display: "flex", flexDirection: "column", alignItems: forBelow899 && "center", gap: "8px" }}>
-                                        <Typography variant="h4" sx={{ width: "260px" }}>Smart but simple solutions.</Typography>
-                                        <Typography variant="body1" color="text.secondary" sx={{textAlign:forBelow899 && "center"}}>Leverage the wealth of knowledge our team of experts offer with over 10 years of experience delivering excellence in complex digital solutions.</Typography>
+                                        <Typography variant="h4" sx={{ width: "260px" }}>{data.title}</Typography>
+                                        <Typography variant="body1" color="text.secondary" sx={{ textAlign: forBelow899 && "center" }}>{data.subtitle}</Typography>
                                     </Box>
                                 </Box>
                             </Grid>

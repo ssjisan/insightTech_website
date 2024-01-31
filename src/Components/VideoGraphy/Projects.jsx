@@ -2,10 +2,12 @@ import { Box, Button, Container, Grid, Typography, useMediaQuery } from "@mui/ma
 import PageChip from "../Common/PageChip";
 import { VideographyProjects } from "../../Assets/Projects/VideographyProjects";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { DataContext } from "../../DataProcessing/DataProcessing";
 
 export default function Projects() {
     const forBelow899 = useMediaQuery("(max-width:899px)");
-
+    const { goToTop } = useContext(DataContext);
     const ContainerSx = {
         paddingTop: forBelow899 ? "40px" : "64px",
         paddingBottom: forBelow899 ? "40px" : "64px",
@@ -46,7 +48,7 @@ export default function Projects() {
                 </Grid>
             </Box>
             <Link to="/contact_us">
-                    <Button variant="contained" sx={{width:"220px"}}>Start a Project</Button>
+                    <Button variant="contained" sx={{width:"220px"}} onClick={goToTop}>Start a Project</Button>
             </Link>
         </Container>
     )

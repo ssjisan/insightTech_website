@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import { DataContext } from "../../../DataProcessing/DataProcessing"
-import { Box } from "@mui/material"
+import { Box, IconButton } from "@mui/material"
 import { LeftArrow, RightArrow } from "../../../Assets/IconSet"
 
 export default function ArrowGroup() {
@@ -22,12 +22,12 @@ export default function ArrowGroup() {
     }
     return (
         <Box sx={ControllerSx}>
-            <Box sx={ArrowBoxSx} onClick={nextSlide}>
+            <IconButton sx={ArrowBoxSx} onClick={nextSlide}>
                 <LeftArrow />
-            </Box>
-            <Box sx={ArrowBoxSx} onClick={prevSlide}>
+            </IconButton>
+            <IconButton sx={ArrowBoxSx} onClick={prevSlide}>
                 <RightArrow />
-            </Box>
+            </IconButton>
         </Box>
     )
 }
