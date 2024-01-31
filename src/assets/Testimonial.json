@@ -2,19 +2,19 @@
     {
         "id": 1,
         "rating": 5,
-        "avatar": "testimonial/1.jpg",
-        "name": "Jimmy Rajkumar",
-        "company": "company 1",
-        "position": "General Manager",
-        "message": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available."
+        "avatar": "https://i.ibb.co/Rb2JnwX/bokul.webp",
+        "name": "Masud Bakul",
+        "company": "Whiz Communication",
+        "position": "Founder & MD",
+        "message": "InsightTech BD's videography service has truly impressed us at Whiz Communication. Their attention to detail, creative flair, and professionalism throughout the process have made our collaboration seamless and enjoyable. We highly recommend their top-notch services to anyone seeking outstanding videography solutions."
     },
     {
         "id": 2,
         "rating": 5,
-        "avatar": "testimonial/2.jpg",
-        "name": "Prashant Rao",
-        "company": "company 2",
-        "position": "Senior Manager",
-        "message": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available."
+        "avatar": "https://i.ibb.co/yFMwtRb/CEO-1-1.png",
+        "name": "Faruk Hossain",
+        "company": "Feni Easy Net",
+        "position": "Founder and CEO",
+        "message": "Feny Easy Net's experience with InsightTech BD for our company website has been exceptional. Their team's expertise, attention to detail, and dedication to our vision resulted in a stunning website that perfectly reflects our brand. We highly recommend InsightTech BD for website development services."
     }
 ]

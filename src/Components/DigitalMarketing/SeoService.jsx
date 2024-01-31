@@ -42,8 +42,8 @@ export default function SeoService() {
                     <Box sx={ContentContainerSx}>
                         <Box sx={ContentSx}>
                             <PageChip label="SEO" />
-                            <Typography variant="h3">Power Up Your Social Confirmation and Lift Up Your Sales</Typography>
-                            <Typography variant="body1" color="text.secondary">At our core is a distinctive approach that sets us apart. We&lsquo;re committed to crafting digital excellence, navigating the landscape with precision and innovation. It&lsquo;s not just what we do; it&lsquo;s how we do it—ensuring every project reflects our dedication to excellence and passion for digital craftsmanship</Typography>
+                            <Typography variant="h3">Optimizing Your Online Presence with SEO Solutions</Typography>
+                            <Typography variant="body1" color="text.secondary">Elevate Your Visibility and Reach with Tailored SEO Strategies. Dominate Search Rankings, Drive Organic Traffic, and Achieve Sustainable Growth.</Typography>
                         </Box>
                         <Link to="/contact_us">
                             <Button variant="contained" sx={{ width: "220px" }} onClick={goToTop}>Start a Project</Button>

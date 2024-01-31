@@ -31,7 +31,7 @@ export default function GraphicsEssentials() {
                     <Box sx={ContentSx}>
                         <Box sx={InfoSx}>
                             <Typography variant="h3">Next generation of logo’s</Typography>
-                            <Typography variant="body1" color="text.secondary">Create professional designs, videos and social posts no matter your skill level. Choose from thousands of smart templates to edit within your browser</Typography>
+                            <Typography variant="body1" color="text.secondary">Explore Next-Generation Logo Designs Redefining Brand Identity and Innovation. Experience Cutting-Edge Creativity and Elevate Your Brand with Unparalleled Visual Impact and Effectiveness</Typography>
                         </Box>
                         <Box sx={{ width: "100%" }}>
                             <img src="https://i.ibb.co/0sQwwcz/logo.webp" style={{ width: "100%" }} />
@@ -42,7 +42,7 @@ export default function GraphicsEssentials() {
                     <Box sx={ContentSx}>
                         <Box sx={InfoSx}>
                             <Typography variant="h3">High-quality infographics</Typography>
-                            <Typography variant="body1" color="text.secondary">Create professional designs, videos and social posts no matter your skill level. Choose from thousands of smart templates to edit within your browser</Typography>
+                            <Typography variant="body1" color="text.secondary">Unlock the Power of Visual Storytelling: Dive into a World of High-Quality Infographics, Where Information Comes to Life with Clarity, Creativity, and Impactful Design.</Typography>
                         </Box>
                         <Box sx={{ width: "100%" }}>
                             <img src="https://i.ibb.co/NrRLK0Z/infographics.webp" style={{ width: "100%" }} />

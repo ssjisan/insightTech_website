@@ -25,8 +25,8 @@ export default function Promotion() {
     return (
         <Container sx={ContainerSx}>
             <Box sx={ContentSx}>
-                <PageChip label="Best Projects" />
-                <Typography variant="h3" sx={{ textAlign: "center" }}>Delight customers with great conversations.</Typography>
+                <PageChip label="Why Brand Identity" />
+                <Typography variant="h3" sx={{ textAlign: "center" }}>Deciphering Brand Identity: Your Business&lsquo;s Essence</Typography>
             </Box>
             <Box sx={{ width: "100%", borderRadius: "16px", overflow: "hidden" }}>
                 <img src="https://i.ibb.co/d0YyM9Y/promotion.webp" alt="" style={{ objectFit: "cover", width: "100%" }} />

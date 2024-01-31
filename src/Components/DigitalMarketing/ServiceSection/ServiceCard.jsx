@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { DataContext } from "../../../DataProcessing/DataProcessing";
 
 export default function ServiceCard() {
+    const forBelow599 = useMediaQuery("(max-width:599px)");
     const forBelow787 = useMediaQuery("(max-width:787px)");
     const [hoveredId, setHoveredId] = useState(null);
     const { goToTop } = useContext(DataContext)
@@ -55,7 +56,8 @@ export default function ServiceCard() {
         border: "1px solid rgba(145, 142, 175, 0.24)",
         background: "linear-gradient(99deg, #00A76F 0%, #007867 100.7%)",
         alignSelf: "stretch",
-        height: "100%"
+        height: "100%",
+        gap: forBelow599 && "40px"
     }
     const ButtonSx = {
         width: "142px",

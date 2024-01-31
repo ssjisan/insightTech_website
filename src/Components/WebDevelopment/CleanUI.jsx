@@ -23,8 +23,8 @@ export default function CleanUI() {
     return (
         <Container sx={ContainerSx}>
             <Box sx={ContentSx}>
-                <PageChip label="User Interfaces" />
-                <Typography variant="h2" sx={{ textAlign: "center", maxWidth:"510px", width:"100%"}}>Beautiful, modern and clean user interfaces</Typography>
+                <PageChip label="Clean UI" />
+                <Typography variant="h2" sx={{ textAlign: "center", }}>Crafting Clean and Intuitive UI Designs for Seamless User Experience</Typography>
             </Box>
             <Box sx={{ width: "100%" }}>
                 <img src="web_development/clean.png" alt="" style={{ objectFit: "cover", width:"100%" }} />

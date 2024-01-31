@@ -3,7 +3,7 @@ import BulletPoint from "../Common/BulletPoint";
 import PageChip from "../Common/PageChip";
 export default function SocialMedia() {
     const forBelow899 = useMediaQuery("(max-width:899px)");
-    const Points =["Sponsored Content","Sponsored Content","Sponsored Content","Sponsored Content"];
+    const Points =["Targeted Strategies","Engaging Content","Analytics Insights","Community Building"];
     const ContainerSx = {
         paddingTop: forBelow899 ? "40px" : "64px",
         paddingBottom: forBelow899 ? "40px" : "64px",
@@ -45,8 +45,8 @@ export default function SocialMedia() {
                     <Box sx={ContentSx}>
                         <Box sx={HeaderSx}>
                             <PageChip label="Why social media marketing?" />
-                            <Typography variant="h3">Power Up Your Social Confirmation and Lift Up Your Sales</Typography>
-                            <Typography variant="body1" color="text.secondary">At our core is a distinctive approach that sets us apart. We&lsquo;re committed to crafting digital excellence, navigating the landscape with precision and innovation. It&lsquo;s not just what we do; it&lsquo;s how we do it—ensuring every project reflects our dedication to excellence and passion for digital craftsmanship</Typography>
+                            <Typography variant="h3">Unleashing the Power of Social Media Marketing for Your Business</Typography>
+                            <Typography variant="body1" color="text.secondary">Elevate Your Brand with Our Expert Social Media Marketing Services. Harness Targeted Strategies, Engaging Content, Analytics Insights, and Community Building to Drive Growth and Maximize ROI in the Digital Landscape.</Typography>
                         </Box>
                         <Box sx={PointContainerSx}>
                             {Points.map((data,index) => {

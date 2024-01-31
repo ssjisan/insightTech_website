@@ -2,32 +2,32 @@ const WebDevelopmentServices = [
     {
         id: 1,
         title: "WordPress",
-        subTitle: "Crafting Dynamic Digital Experiences through Innovative Web Solutions",
+        subTitle: "Create Stunning Websites with Powerful WordPress Development Solutions",
     },
     {
         id: 2,
-        title: "ERP",
-        subTitle: "Crafting Dynamic Digital Experiences through Innovative Web Solutions",
+        title: "eCommerce",
+        subTitle: "Build Your Online Store with Customized eCommerce Development Services",
     },
     {
         id: 3,
-        title: "Entertainment",
-        subTitle: "Crafting Dynamic Digital Experiences through Innovative Web Solutions",
+        title: "Web application",
+        subTitle: "Craft Scalable and Secure Web Applications for Your Business Needs",
     },
     {
         id: 4,
-        title: "Education",
-        subTitle: "Crafting Dynamic Digital Experiences through Innovative Web Solutions",
+        title: "ERP Application",
+        subTitle: "Streamline Your Business Operations with Tailored ERP Application Development",
     },
     {
         id: 5,
         title: "App Development",
-        subTitle: "Crafting Dynamic Digital Experiences through Innovative Web Solutions",
+        subTitle: "Bring Your Ideas to Life with Innovative Mobile App Development",
     },
     {
         id: 6,
         title: "UI/UX Design",
-        subTitle: "Crafting Dynamic Digital Experiences through Innovative Web Solutions",
+        subTitle: "Enhance User Experience with Intuitive UI/UX Design Solutions",
     }
 ];
 

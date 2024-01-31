@@ -78,7 +78,7 @@ export default function TestimonialSlider() {
                             </Box>
                             <Box sx={SenderSx}>
                                 <Box sx={AvatarSx}>
-                                    <img src={data.avatar} />
+                                    <img src={data.avatar} style={{objectFit:"cover", width:"100%"}}/>
                                 </Box>
                                 <Typography variant="h5" sx={{ color: "#fff", textAlign: forBelow500 && "center" }}>{data.name} - {data.company}, {data.position} </Typography>
                             </Box>

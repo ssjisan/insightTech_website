@@ -3,7 +3,7 @@ import BulletPoint from "../Common/BulletPoint";
 import PageChip from "../Common/PageChip";
 export default function WhySeo() {
     const forBelow899 = useMediaQuery("(max-width:899px)");
-    const Points = ["Sponsored Content", "Sponsored Content", "Sponsored Content", "Sponsored Content"];
+    const Points = ["Targeted Strategies", "Keyword Optimization", "Content Enhancement", "Performance Tracking"];
     const ContainerSx = {
         paddingTop: forBelow899 ? "40px" : "64px",
         paddingBottom: forBelow899 ? "40px" : "64px",
@@ -40,8 +40,8 @@ export default function WhySeo() {
                     <Box sx={ContentSx}>
                         <Box sx={HeaderSx}>
                             <PageChip label="WHY SEO?" />
-                            <Typography variant="h3">Power Up Your Social Confirmation and Lift Up Your Sales</Typography>
-                            <Typography variant="body1" color="text.secondary">At our core is a distinctive approach that sets us apart. We&lsquo;re committed to crafting digital excellence, navigating the landscape with precision and innovation. It&lsquo;s not just what we do; it&lsquo;s how we do it—ensuring every project reflects our dedication to excellence and passion for digital craftsmanship</Typography>
+                            <Typography variant="h3">Unlocking Business Growth with Strategic SEO Solutions</Typography>
+                            <Typography variant="body1" color="text.secondary">Elevate Your Online Presence with Our Expert SEO Services. Harness Targeted Strategies, Keyword Optimization, Content Enhancement, and Performance Tracking to Dominate Search Rankings and Drive Organic Traffic to Your Website</Typography>
                         </Box>
                         <Box sx={PointContainerSx}>
                             {Points.map((data,index) => {

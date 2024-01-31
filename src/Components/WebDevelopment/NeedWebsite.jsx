@@ -1,12 +1,14 @@
 import { Box, Button, Container, Grid, Typography, useMediaQuery } from "@mui/material";
 import PageChip from "../Common/PageChip";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { DataContext } from "../../DataProcessing/DataProcessing";
 
 export default function NeedWebsite() {
     const forBelow899 = useMediaQuery("(max-width:899px)");
     const forBelow599 = useMediaQuery("(max-width:599px)");
     const forBelow999 = useMediaQuery("(max-width:999px)");
-
+    const {goToTop} = useContext(DataContext)
     // Configure Style Start
 
     const ContainerSx = {
@@ -39,12 +41,11 @@ export default function NeedWebsite() {
                     <Box sx={ContentContainerSx}>
                         <Box sx={TitleContainerSx}>
                             <PageChip label="Looking for a website?" />
-                            <Typography variant="h3" sx={TextSx}>Dreams Unveiled,
-                                Effortless Web Development</Typography>
-                            <Typography variant="body1" color="text.secondary" sx={TextSx}>Insighttech Bangladesh accelerates digital growth, offering innovative solutions to optimize business processes and drive efficiency, contributing to a thriving global digital ecosystem.</Typography>
+                            <Typography variant="h3" sx={TextSx}>Ready for Your Own Website? Let&lsquo;s Bring Your Vision to Life!</Typography>
+                            <Typography variant="body1" color="text.secondary" sx={TextSx}>Unlock the Power of Online Presence with Our Custom Website Development Services. From Concept to Launch, We&lsquo;ll Build a Website that Reflects Your Brand, Engages Your Audience, and Drives Results.</Typography>
                         </Box>
                         {!forBelow899 &&
-                            <Link to="/contact_us"><Button variant="contained" size="large" sx={{ width: "220px" }}>Start a Project</Button></Link>
+                            <Link to="/contact_us"><Button variant="contained" size="large" sx={{ width: "220px" }} onClick={goToTop}>Start a Project</Button></Link>
                         }
                     </Box>
                 </Grid>
