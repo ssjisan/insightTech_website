@@ -4,9 +4,11 @@ import { Logo } from "../../Assets/Logo"
 import { Link, useLocation } from "react-router-dom";
 import { useContext } from "react";
 import { DataContext } from "../../DataProcessing/DataProcessing";
+import ScheduleModal from "../../Components/Schedule/ScheduleModal";
+import FormModal from "../../Components/Schedule/FormModal";
 export default function Navbar() {
     const { pathname } = useLocation();
-    const { goToTop,handleScheduleModalOpen } = useContext(DataContext);
+    const { goToTop, handleScheduleModalOpen } = useContext(DataContext);
 
     // eslint-disable-next-line
     const forBelow1400 = useMediaQuery("(max-width:1400px)");
@@ -53,14 +55,14 @@ export default function Navbar() {
     return (
         <Box sx={NavSx}>
             <Link to="/">
-                <Box sx={LogoSx}  onClick={goToTop}>
+                <Box sx={LogoSx} onClick={goToTop}>
                     <Logo />
                 </Box></Link>
             <Box sx={{ display: "flex" }}>
                 {
                     services.map((data) => {
                         return (
-                            <Box sx={MenuListSx} key={data.id}  onClick={goToTop}>
+                            <Box sx={MenuListSx} key={data.id} onClick={goToTop}>
                                 <Link to={data.link} style={linkStyle}>
                                     <Box sx={{ ...MenuButtonSx, backgroundColor: pathname === data.link && "rgba(0, 174, 96, 0.08)" }}>
                                         <Typography sx={{
@@ -76,6 +78,8 @@ export default function Navbar() {
                 }
             </Box>
             <Button size="medium" variant="contained" color="primary" onClick={handleScheduleModalOpen}>Schedule a Call</Button>
+            <ScheduleModal />
+            <FormModal />
         </Box>
     )
 }

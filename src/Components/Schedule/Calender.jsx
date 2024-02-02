@@ -1,25 +1,13 @@
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DateCalendar } from "@mui/x-date-pickers";
+import { useContext } from "react";
+import { DataContext } from "../../DataProcessing/DataProcessing";
 import dayjs from "dayjs";
-import { useState } from "react";
+
 export default function Calender() {
-
-    const isDisabled = (date) => {
-        const today = new Date();
-        const day = date.day();
-        const isWeekend = day === 6 || day === 5;
-        const isToday = date.isSame(today, "day");
-        return isWeekend || isToday;
-    };
-    const [selectedDate, setSelectedDate] = useState();
-    const handleDateChange = (newDate) => {
-        const formattedDate = dayjs(newDate).format("DD MMMM YYYY");
-        setSelectedDate(formattedDate);
-    };
-    console.log(selectedDate);
-    const lastDay = dayjs().endOf("month");
-
+    const { isDisabled, lastDay, handleDateChange,meetingData } = useContext(DataContext)
+    const selectedDate = dayjs(meetingData.date);
     const DateSx = {
         width: "360px",
         "& .css-1oo78o3-MuiButtonBase-root-MuiPickersDay-root": {
@@ -43,6 +31,7 @@ export default function Calender() {
                 disablePast
                 disableHighlightToday
                 disableOpenPicker
+                value={selectedDate}
                 label={"Choose Date"}
                 views={["day"]}
                 shouldDisableDate={isDisabled}

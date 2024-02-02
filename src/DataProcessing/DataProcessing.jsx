@@ -15,9 +15,10 @@ export default function DataProcessing({ children }) {
     const { sliderRef, nextSlide, prevSlide } = Testimonial()
     const { randomBlogs, blogWithId1 } = BlogData()
     const { goToTop } = ScrollTop()
-    const {formData,handleChange,handleServices,handleBudget,handleSubmit,openErrorAlert,handleClose,openSuccessAlert} = ContactUs()
+    const { formData, handleChange, handleServices, handleBudget, handleSubmit, openErrorAlert, handleClose, openSuccessAlert } = ContactUs()
     const { handleLoad, loaded } = ImageLoader()
-    const { openScheduleModal,handleScheduleModalOpen,handleScheduleModalClose } = ScheduleData()
+    const { openScheduleModal, handleScheduleModalOpen, handleScheduleModalClose, isDisabled, handleDateChange, lastDay, openFormModal, handleFormModalOpen, handleFormModalClose, handleSlotSelect, selectedSlot,meetingData
+    } = ScheduleData()
     return (
         <DataContext.Provider
             value={{
@@ -30,11 +31,11 @@ export default function DataProcessing({ children }) {
                 // Scroll Top 
                 goToTop,
                 // Contact Us Form Data
-                formData,handleChange,handleServices,handleBudget,handleSubmit,openErrorAlert,handleClose,openSuccessAlert,
+                formData, handleChange, handleServices, handleBudget, handleSubmit, openErrorAlert, handleClose, openSuccessAlert,
                 // Image Loader
                 handleLoad, loaded,
                 // Schedule Modal Data
-                openScheduleModal,handleScheduleModalOpen,handleScheduleModalClose
+                openScheduleModal, handleScheduleModalOpen, handleScheduleModalClose, isDisabled, handleDateChange, lastDay, openFormModal, handleFormModalOpen, handleFormModalClose, handleSlotSelect, selectedSlot,meetingData
             }}
         >
             {children}
