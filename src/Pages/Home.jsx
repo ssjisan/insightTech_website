@@ -10,6 +10,7 @@ import Reminder from "../Components/Common/Reminder";
 import Blog from "../Components/Home/Blog/Blog";
 import WhyUs from "../Components/Home/WhyUs/WhyUs";
 import Testimonial from "../Components/Common/Testimonial/Testimonial";
+import ScheduleModal from "../Components/Schedule/ScheduleModal";
 
 export default function Home() {
   // eslint-disable-next-line
@@ -21,15 +22,16 @@ export default function Home() {
       {
         forBelow1100 ? <NavForMobile /> : <Navbar />
       }
-        <HeroSection />
-        <Services />
-        <WhoWeAre />
-        <HappyClient />
-        <WhyUs />
-        <Testimonial />
-        <Blog />
-        <Reminder />
-        <Footer />
+      <ScheduleModal />
+      <HeroSection />
+      <Services />
+      <WhoWeAre />
+      <HappyClient />
+      <WhyUs />
+      <Testimonial />
+      <Blog />
+      <Reminder />
+      <Footer />
     </Box>
   )
 }

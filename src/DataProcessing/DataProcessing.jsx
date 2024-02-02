@@ -6,6 +6,7 @@ import BlogData from "./Components/BlogData";
 import ScrollTop from "./Components/ScrollTop";
 import ContactUs from "./Components/ContactUs";
 import ImageLoader from "./Components/ImageLoader";
+import ScheduleData from "./Components/ScheduleData";
 
 export const DataContext = createContext();
 
@@ -16,6 +17,7 @@ export default function DataProcessing({ children }) {
     const { goToTop } = ScrollTop()
     const {formData,handleChange,handleServices,handleBudget,handleSubmit,openErrorAlert,handleClose,openSuccessAlert} = ContactUs()
     const { handleLoad, loaded } = ImageLoader()
+    const { openScheduleModal,handleScheduleModalOpen,handleScheduleModalClose } = ScheduleData()
     return (
         <DataContext.Provider
             value={{
@@ -30,7 +32,9 @@ export default function DataProcessing({ children }) {
                 // Contact Us Form Data
                 formData,handleChange,handleServices,handleBudget,handleSubmit,openErrorAlert,handleClose,openSuccessAlert,
                 // Image Loader
-                handleLoad, loaded
+                handleLoad, loaded,
+                // Schedule Modal Data
+                openScheduleModal,handleScheduleModalOpen,handleScheduleModalClose
             }}
         >
             {children}
