@@ -31,7 +31,7 @@ export default function TimeSlotChip({ label, handleClick, selected }) {
 }
 TimeSlotChip.propTypes = {
     label: PropTypes.string.isRequired,
-    handleClick: PropTypes.func.isRequired,
+     handleClick: PropTypes.func.isRequired,
     selected: PropTypes.bool.isRequired
 };
 

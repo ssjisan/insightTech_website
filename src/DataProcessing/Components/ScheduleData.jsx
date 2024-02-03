@@ -4,14 +4,37 @@ import { useState } from "react";
 export default function ScheduleData() {
     const [openScheduleModal, setOpenScheduleModal] = useState(false);
     const [openFormModal, setOpenFormModal] = useState(false);
-
+    const [openMeetingErrorAlert, setOpenMeetingErrorAlert] = useState(false);
+    const [openMeetingSuccessAlert, setOpenMeetingSuccessAlert] = useState(false);
+    const handleMeetingAlertClose = (event, reason) => {
+        if (reason === 'clickaway') {
+            return;
+        }
+        setOpenMeetingErrorAlert(false);
+        setOpenMeetingSuccessAlert(false)
+    };
     const handleScheduleModalOpen = () => {
         setOpenScheduleModal(true);
     };
-
-    const handleScheduleModalClose = () => {
+    const handleNext = () => {
         setOpenScheduleModal(false);
         setOpenFormModal(true)
+    }
+    const handleModifyDate = () => {
+        setOpenScheduleModal(true);
+        setOpenFormModal(false)
+    }
+    const handleScheduleModalClose = () => {
+        setOpenScheduleModal(false);
+        setOpenFormModal(false);
+        setMeetingData({
+            date: "",
+            timeSlot: "",
+            name: "",
+            email: "",
+            phone: "",
+            brief: "",
+        });
     };
     const handleFormModalOpen = () => {
         setOpenFormModal(true);
@@ -19,6 +42,14 @@ export default function ScheduleData() {
 
     const handleFormModalClose = () => {
         setOpenFormModal(false);
+        setMeetingData({
+            date: "",
+            timeSlot: "",
+            name: "",
+            email: "",
+            phone: "",
+            brief: "",
+        });
     };
 
     // Calender Data
@@ -60,7 +91,7 @@ export default function ScheduleData() {
         const { date, timeSlot, name, email, phone, brief } = meetingData
 
         if (!name || !email || !phone) {
-            alert("Error")
+            setOpenMeetingErrorAlert(true)
             return;
         }
         const options = {
@@ -72,7 +103,7 @@ export default function ScheduleData() {
         }
         const res = await fetch("https://insighttechbd-d4ca9-default-rtdb.firebaseio.com/MeetingResuest.json", options)
         if (res) {
-            alert("Success")
+            setOpenMeetingSuccessAlert(true)
             setMeetingData({
                 date: "",
                 timeSlot: "",
@@ -90,7 +121,7 @@ export default function ScheduleData() {
     console.log(meetingData);
     return (
         {
-            openScheduleModal, handleScheduleModalOpen, handleScheduleModalClose, isDisabled, handleDateChange, lastDay, openFormModal, handleFormModalOpen, handleFormModalClose, handleSlotSelect, meetingData, handleMeetingFormField, handleMeetingRequestSubmit
+            openScheduleModal, handleScheduleModalOpen, handleScheduleModalClose, isDisabled, handleDateChange, lastDay, openFormModal, handleFormModalOpen, handleFormModalClose, handleSlotSelect, meetingData, handleMeetingFormField, handleMeetingRequestSubmit, handleNext, handleModifyDate, openMeetingErrorAlert, openMeetingSuccessAlert, handleMeetingAlertClose
         }
     )
 }

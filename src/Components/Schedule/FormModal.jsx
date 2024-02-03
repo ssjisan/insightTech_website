@@ -6,7 +6,7 @@ import InputFields from "./InputFields";
 import dayjs from "dayjs";
 
 export default function FormModal() {
-    const { openFormModal, handleFormModalClose, meetingData,handleMeetingRequestSubmit} = useContext(DataContext)
+    const { openFormModal, handleFormModalClose, meetingData, handleMeetingRequestSubmit, handleModifyDate } = useContext(DataContext)
     const formattedDate = dayjs(meetingData.date).format("DD MMMM YYYY");
     return (
         <Dialog
@@ -29,7 +29,7 @@ export default function FormModal() {
                 <Box sx={{ display: "flex", flexDirection: "column", gap: "8px" }}>
                     <Box sx={{ display: "flex", alignItems: "center", gap: "16px" }}>
                         <Typography variant="body2">{formattedDate}  {meetingData.timeSlot}</Typography>
-                        <Button variant="soft" size="small" >Change</Button>
+                        <Button variant="soft" size="small" onClick={handleModifyDate}>Change</Button>
                     </Box>
                     <Box sx={{ display: "flex", alignItems: "center", gap: "8px" }}>
                         <Location />

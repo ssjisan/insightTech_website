@@ -62,7 +62,7 @@ export default function ContactUs() {
             });
         }
         else {
-            alert("Error")
+            setOpenErrorAlert(true)
         }
     };
     // console.log(formData);

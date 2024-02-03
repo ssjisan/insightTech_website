@@ -7,7 +7,8 @@ import { DataContext } from "../../DataProcessing/DataProcessing";
 export default function Calender() {
     const { isDisabled, lastDay, handleDateChange } = useContext(DataContext)
     const DateSx = {
-        width: "360px",
+        maxWidth: "360px",
+        width:"100%",
         "& .css-1oo78o3-MuiButtonBase-root-MuiPickersDay-root": {
             fontSize: "14px",
             fontWeight: 500,

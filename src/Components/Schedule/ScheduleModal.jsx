@@ -1,4 +1,4 @@
-import { Button, Dialog, DialogActions, DialogContent, DialogTitle, IconButton, Typography } from "@mui/material";
+import { Button, Dialog, DialogActions, DialogContent, DialogTitle, IconButton, Typography, useMediaQuery } from "@mui/material";
 import { useContext } from "react";
 import { DataContext } from "../../DataProcessing/DataProcessing";
 import Calender from "./Calender";
@@ -6,7 +6,8 @@ import { Close } from "../../Assets/IconSet";
 import TimeSlotSelection from "./TimeSlotSelection";
 
 export default function ScheduleModal() {
-    const { openScheduleModal, handleScheduleModalClose,meetingData } = useContext(DataContext)
+    const { openScheduleModal, handleScheduleModalClose, meetingData, handleNext } = useContext(DataContext)
+    const forBelow767 = useMediaQuery("(max-width:767px)");
 
     return (
         <Dialog
@@ -15,7 +16,7 @@ export default function ScheduleModal() {
             PaperProps={{
                 sx: {
                     borderRadius: "16px",
-                    maxWidth:"1000px"
+                    maxWidth: "1000px"
                 }
             }}
         >
@@ -25,16 +26,16 @@ export default function ScheduleModal() {
                     <Close />
                 </IconButton>
             </DialogTitle>
-            <DialogContent sx={{display:"flex", gap:"24px", maxWidth: "1000px"}}>
+            <DialogContent sx={{ display: "flex", gap: "24px", maxWidth: "1000px", flexDirection: forBelow767 ? "column" :"row" }}>
                 <Calender />
-                <TimeSlotSelection/>
+                <TimeSlotSelection />
             </DialogContent>
-            <DialogActions sx={{ padding: "16px 24px", borderTop:"1px solid rgba(145,158,171,0.48)" }}>
+            <DialogActions sx={{ padding: "16px 24px", borderTop: "1px solid rgba(145,158,171,0.48)" }}>
                 <Button onClick={handleScheduleModalClose} variant="outlined" color="inherit">Cancel</Button>
                 {
                     meetingData.date === "" || meetingData.timeSlot === "" ?
-                    <Button onClick={handleScheduleModalClose} variant="contained" color="primary" disabled>Next</Button> :
-                    <Button onClick={handleScheduleModalClose} variant="contained" color="primary" >Next</Button> 
+                        <Button onClick={handleScheduleModalClose} variant="contained" color="primary" disabled>Next</Button> :
+                        <Button onClick={handleNext} variant="contained" color="primary" >Next</Button>
                 }
             </DialogActions>
         </Dialog>

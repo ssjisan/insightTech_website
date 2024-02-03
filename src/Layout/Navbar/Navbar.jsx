@@ -4,8 +4,6 @@ import { Logo } from "../../Assets/Logo"
 import { Link, useLocation } from "react-router-dom";
 import { useContext } from "react";
 import { DataContext } from "../../DataProcessing/DataProcessing";
-import ScheduleModal from "../../Components/Schedule/ScheduleModal";
-import FormModal from "../../Components/Schedule/FormModal";
 export default function Navbar() {
     const { pathname } = useLocation();
     const { goToTop, handleScheduleModalOpen } = useContext(DataContext);
@@ -78,8 +76,6 @@ export default function Navbar() {
                 }
             </Box>
             <Button size="medium" variant="contained" color="primary" onClick={handleScheduleModalOpen}>Schedule a Call</Button>
-            <ScheduleModal />
-            <FormModal />
         </Box>
     )
 }
