@@ -26,11 +26,11 @@ export default function ScheduleModal() {
                     <Close />
                 </IconButton>
             </DialogTitle>
-            <DialogContent sx={{ display: "flex", gap: "24px", maxWidth: "1000px", flexDirection: forBelow767 ? "column" :"row" }}>
+            <DialogContent sx={{ display: "flex", gap:forBelow767 ? "8px" : "24px", maxWidth: "1000px", flexDirection: forBelow767 ? "column" :"row" }}>
                 <Calender />
                 <TimeSlotSelection />
             </DialogContent>
-            <DialogActions sx={{ padding: "16px 24px", borderTop: "1px solid rgba(145,158,171,0.48)" }}>
+            <DialogActions sx={{ padding:forBelow767 ? "8px 16px" : "16px 24px", borderTop: "1px solid rgba(145,158,171,0.48)" }}>
                 <Button onClick={handleScheduleModalClose} variant="outlined" color="inherit">Cancel</Button>
                 {
                     meetingData.date === "" || meetingData.timeSlot === "" ?

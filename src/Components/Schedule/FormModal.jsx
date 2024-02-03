@@ -1,13 +1,13 @@
-import { Box, Button, Dialog, DialogActions, DialogContent, DialogTitle, IconButton, Typography } from "@mui/material";
+import { Box, Button, Dialog, DialogActions, DialogContent, DialogTitle, IconButton, Typography, useMediaQuery } from "@mui/material";
 import { Close, Location } from "../../Assets/IconSet";
 import { useContext } from "react";
 import { DataContext } from "../../DataProcessing/DataProcessing";
 import InputFields from "./InputFields";
-import dayjs from "dayjs";
 
 export default function FormModal() {
+    const forBelow767 = useMediaQuery("(max-width:767px)");
+
     const { openFormModal, handleFormModalClose, meetingData, handleMeetingRequestSubmit, handleModifyDate } = useContext(DataContext)
-    const formattedDate = dayjs(meetingData.date).format("DD MMMM YYYY");
     return (
         <Dialog
             open={openFormModal}
@@ -28,7 +28,7 @@ export default function FormModal() {
             <DialogContent sx={{ display: "flex", flexDirection: "column", gap: "24px", padding: "24px", }}>
                 <Box sx={{ display: "flex", flexDirection: "column", gap: "8px" }}>
                     <Box sx={{ display: "flex", alignItems: "center", gap: "16px" }}>
-                        <Typography variant="body2">{formattedDate}  {meetingData.timeSlot}</Typography>
+                        <Typography variant="body2">{meetingData.date}  {meetingData.timeSlot}</Typography>
                         <Button variant="soft" size="small" onClick={handleModifyDate}>Change</Button>
                     </Box>
                     <Box sx={{ display: "flex", alignItems: "center", gap: "8px" }}>
@@ -38,7 +38,7 @@ export default function FormModal() {
                 </Box>
                 <InputFields />
             </DialogContent>
-            <DialogActions sx={{ padding: "16px 24px", borderTop: "1px solid rgba(145,158,171,0.48)" }}>
+            <DialogActions sx={{ padding:forBelow767 ? "8px 16px" : "16px 24px", borderTop: "1px solid rgba(145,158,171,0.48)" }}>
                 <Button onClick={handleFormModalClose} variant="outlined" color="inherit">Cancel</Button>
                 <Button onClick={handleMeetingRequestSubmit} variant="contained" color="primary">Confirm</Button>
             </DialogActions>

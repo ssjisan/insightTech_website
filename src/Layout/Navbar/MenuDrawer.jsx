@@ -31,8 +31,8 @@ export default function MenuDrawer() {
         borderRadius: "8px",
         background: "rgba(145, 142, 175, 0.16)",
         p: "4px",
-        width: "48px",
-        height: "48px",
+        width: "40px",
+        height: "40px",
         display: "flex",
         justifyContent: "center",
         alignItems: "center"
@@ -84,7 +84,7 @@ export default function MenuDrawer() {
                         )
                     })
                 }
-                <Button variant="contained" color="primary" size="large" onClick={handleScheduleModalOpen}>Schedule a Call</Button>
+                <Button variant="contained" color="primary" size="small" onClick={handleScheduleModalOpen}>Schedule a Call</Button>
             </Box>
         </Drawer>
     )
