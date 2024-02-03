@@ -1,7 +1,10 @@
 import { Box, TextField, useMediaQuery } from "@mui/material";
+import { useContext } from "react";
+import { DataContext } from "../../DataProcessing/DataProcessing";
 
 export default function InputFields() {
     const forBelow767 = useMediaQuery("(max-width:767px)");
+    const { meetingData, handleMeetingFormField } = useContext(DataContext)
 
     return (
         <Box sx={{ width: "648px", display: "flex", gap: "16px", flexDirection: "column" }}>
@@ -13,35 +16,41 @@ export default function InputFields() {
                 fullWidth
                 required
                 size={forBelow767 ? "medium" : "large"}
+                value={meetingData.name}
+                onChange={handleMeetingFormField}
             />
             <TextField
-                id="mail"
+                id="email"
                 label="Mail"
-                type="text"
+                type="mail"
                 variant="outlined"
                 fullWidth
                 required
                 size={forBelow767 ? "medium" : "large"}
+                value={meetingData.email}
+                onChange={handleMeetingFormField}
             />
             <TextField
-                id="mobile"
-                label="Mobile"
-                type="text"
+                id="phone"
+                label="Phone"
+                type="number"
                 variant="outlined"
                 fullWidth
                 required
                 size={forBelow767 ? "medium" : "large"}
+                value={meetingData.phone}
+                onChange={handleMeetingFormField}
             />
             <TextField
-                id="projectBrief"
-                label="Project Brief"
+                id="brief"
+                label="Brief"
                 variant="outlined"
                 type="text"
                 fullWidth
                 multiline
                 rows={4}
-            // value={formData.projectBrief}
-            // onChange={handleChange}
+                value={meetingData.brief}
+                onChange={handleMeetingFormField}
             />
         </Box>
     )

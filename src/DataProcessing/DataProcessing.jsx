@@ -17,7 +17,7 @@ export default function DataProcessing({ children }) {
     const { goToTop } = ScrollTop()
     const { formData, handleChange, handleServices, handleBudget, handleSubmit, openErrorAlert, handleClose, openSuccessAlert } = ContactUs()
     const { handleLoad, loaded } = ImageLoader()
-    const { openScheduleModal, handleScheduleModalOpen, handleScheduleModalClose, isDisabled, handleDateChange, lastDay, openFormModal, handleFormModalOpen, handleFormModalClose, handleSlotSelect, selectedSlot,meetingData
+    const { openScheduleModal, handleScheduleModalOpen, handleScheduleModalClose, isDisabled, handleDateChange, lastDay, openFormModal, handleFormModalOpen, handleFormModalClose, handleSlotSelect, selectedSlot,meetingData,handleMeetingFormField,handleMeetingRequestSubmit
     } = ScheduleData()
     return (
         <DataContext.Provider
@@ -35,7 +35,7 @@ export default function DataProcessing({ children }) {
                 // Image Loader
                 handleLoad, loaded,
                 // Schedule Modal Data
-                openScheduleModal, handleScheduleModalOpen, handleScheduleModalClose, isDisabled, handleDateChange, lastDay, openFormModal, handleFormModalOpen, handleFormModalClose, handleSlotSelect, selectedSlot,meetingData
+                openScheduleModal, handleScheduleModalOpen, handleScheduleModalClose, isDisabled, handleDateChange, lastDay, openFormModal, handleFormModalOpen, handleFormModalClose, handleSlotSelect, selectedSlot,meetingData,handleMeetingFormField,handleMeetingRequestSubmit
             }}
         >
             {children}

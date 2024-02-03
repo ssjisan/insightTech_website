@@ -3,11 +3,9 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DateCalendar } from "@mui/x-date-pickers";
 import { useContext } from "react";
 import { DataContext } from "../../DataProcessing/DataProcessing";
-import dayjs from "dayjs";
 
 export default function Calender() {
-    const { isDisabled, lastDay, handleDateChange,meetingData } = useContext(DataContext)
-    const selectedDate = dayjs(meetingData.date);
+    const { isDisabled, lastDay, handleDateChange } = useContext(DataContext)
     const DateSx = {
         width: "360px",
         "& .css-1oo78o3-MuiButtonBase-root-MuiPickersDay-root": {
@@ -30,14 +28,12 @@ export default function Calender() {
             <DateCalendar
                 disablePast
                 disableHighlightToday
-                disableOpenPicker
-                value={selectedDate}
                 label={"Choose Date"}
                 views={["day"]}
                 shouldDisableDate={isDisabled}
                 sx={DateSx}
                 maxDate={lastDay}
-                onChange={handleDateChange}
+                onChange={handleDateChange} // Capture the selected date
             />
         </LocalizationProvider>
     )

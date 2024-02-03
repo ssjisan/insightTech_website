@@ -19,7 +19,6 @@ export default function ContactUs() {
         if (reason === 'clickaway') {
             return;
         }
-
         setOpenErrorAlert(false);
         setOpenSuccessAlert(false)
     };
