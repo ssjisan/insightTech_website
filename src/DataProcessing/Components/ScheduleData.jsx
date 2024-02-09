@@ -126,7 +126,6 @@ export default function ScheduleData() {
         }
         setOpenFormModal(false);
     };
-    console.log(meetingData);
     return (
         {
             openScheduleModal, handleScheduleModalOpen, handleScheduleModalClose, isDisabled, handleDateChange, lastDay, openFormModal, handleFormModalOpen, handleFormModalClose, handleSlotSelect, meetingData, handleMeetingFormField, handleMeetingRequestSubmit, handleNext, handleModifyDate, openMeetingErrorAlert, openMeetingSuccessAlert, handleMeetingAlertClose
