@@ -7,7 +7,7 @@ export default function InputFields() {
     const { meetingData, handleMeetingFormField } = useContext(DataContext)
 
     return (
-        <Box sx={{ maxWidth: "648px", width:"100%", display: "flex", gap: "16px", flexDirection: "column" }}>
+        <Box sx={{ width: forBelow767 ? "100%" : "648px", display: "flex", gap: "16px", flexDirection: "column" }}>
             <TextField
                 id="name"
                 label="Your Name"

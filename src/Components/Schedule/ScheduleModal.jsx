@@ -4,6 +4,7 @@ import { DataContext } from "../../DataProcessing/DataProcessing";
 import Calender from "./Calender";
 import { Close } from "../../Assets/IconSet";
 import TimeSlotSelection from "./TimeSlotSelection";
+import ScheduleModalMobile from "./ScheduleModalMobile";
 
 export default function ScheduleModal() {
     const { openScheduleModal, handleScheduleModalClose, meetingData, handleNext } = useContext(DataContext)
@@ -26,11 +27,14 @@ export default function ScheduleModal() {
                     <Close />
                 </IconButton>
             </DialogTitle>
-            <DialogContent sx={{ display: "flex", gap:forBelow767 ? "8px" : "24px", maxWidth: "1000px", flexDirection: forBelow767 ? "column" :"row" }}>
-                <Calender />
-                <TimeSlotSelection />
-            </DialogContent>
-            <DialogActions sx={{ padding:forBelow767 ? "8px 16px" : "16px 24px", borderTop: "1px solid rgba(145,158,171,0.48)" }}>
+            {forBelow767 ?
+                <ScheduleModalMobile /> :
+                <DialogContent sx={{ display: "flex", gap: forBelow767 ? "8px" : "24px", maxWidth: "1000px" }}>
+                    <Calender />
+                    <TimeSlotSelection />
+                </DialogContent>
+            }
+            <DialogActions sx={{ padding: forBelow767 ? "8px 16px" : "16px 24px", borderTop: "1px solid rgba(145,158,171,0.48)" }}>
                 <Button onClick={handleScheduleModalClose} variant="outlined" color="inherit">Cancel</Button>
                 {
                     meetingData.date === "" || meetingData.timeSlot === "" ?

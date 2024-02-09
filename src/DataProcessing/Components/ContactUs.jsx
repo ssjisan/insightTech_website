@@ -47,7 +47,7 @@ export default function ContactUs() {
             },
             body: JSON.stringify({ service, budget, name, email, phone, company, position, projectBrief })
         }
-        const res = await fetch("https://insighttechbd-d4ca9-default-rtdb.firebaseio.com/ClientRequest.json", options)
+        const res = await fetch("https://insighttechbd-2c31b-default-rtdb.firebaseio.com/ClientRequest.json", options)
         if (res) {
             setOpenSuccessAlert(true)
             setFormData({

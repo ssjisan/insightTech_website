@@ -9,6 +9,9 @@ export default function Calender() {
     const DateSx = {
         maxWidth: "360px",
         width:"100%",
+        "& .css-nk89i7-MuiPickersCalendarHeader-root":{
+            padding:"0px"
+        },
         "& .css-1oo78o3-MuiButtonBase-root-MuiPickersDay-root": {
             fontSize: "14px",
             fontWeight: 500,

@@ -22,7 +22,15 @@ export default function ScheduleData() {
     }
     const handleModifyDate = () => {
         setOpenScheduleModal(true);
-        setOpenFormModal(false)
+        setOpenFormModal(false);
+        setMeetingData({
+            date: "",
+            timeSlot: "",
+            name: "",
+            email: "",
+            phone: "",
+            brief: "",
+        });
     }
     const handleScheduleModalClose = () => {
         setOpenScheduleModal(false);

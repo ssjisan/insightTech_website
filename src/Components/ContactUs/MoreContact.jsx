@@ -37,17 +37,24 @@ export default function MoreContact() {
                 <Typography variant="h2">Need to know more?</Typography>
             </Box>
             <Grid container spacing={2}>
-                <Grid item xs={12} sm={6} md={6} lg={6}>
+                <Grid item xs={12} sm={6} md={4} lg={4}>
                     <Box sx={InfoContainerSx}>
                         <Call />
-                        <Typography variant="h4">+880 1914 47 46 61</Typography>
+                        <Typography variant="h4">+880 1894 68 89 20</Typography>
                         <Typography variant="body1" color="text.secondary">Call us for sales related queries</Typography>
                     </Box>
                 </Grid>
-                <Grid item xs={12} sm={6} md={6} lg={6}>
+                <Grid item xs={12} sm={6} md={4} lg={4}>
                     <Box sx={InfoContainerSx}>
                         <Call />
-                        <Typography variant="h4">+880 1894 68 89 20 - 22</Typography>
+                        <Typography variant="h4">+880 1894 68 89 21</Typography>
+                        <Typography variant="body1" color="text.secondary">Call us for sales related queries</Typography>
+                    </Box>
+                </Grid>
+                <Grid item xs={12} sm={12} md={4} lg={4}>
+                    <Box sx={InfoContainerSx}>
+                        <Call />
+                        <Typography variant="h4">+880 1894 68 89 22</Typography>
                         <Typography variant="body1" color="text.secondary">Call us for sales related queries</Typography>
                     </Box>
                 </Grid>
