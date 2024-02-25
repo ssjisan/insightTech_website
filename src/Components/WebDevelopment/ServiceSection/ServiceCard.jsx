@@ -1,5 +1,5 @@
 import { Box, Grid, Typography, useMediaQuery } from "@mui/material";
-import { WebDevelopmentServices } from "../../../Assets/WebDevelopmentServices"
+import { WebDevelopmentServices } from "../../../Assets/ServicesCategory/WebDevelopmentServices"
 import { useState } from "react";
 
 export default function ServiceCard() {

@@ -15,7 +15,7 @@ export default function DataProcessing({ children }) {
     const { sliderRef, nextSlide, prevSlide } = Testimonial()
     const { randomBlogs, blogWithId1 } = BlogData()
     const { goToTop } = ScrollTop()
-    const { formData, handleChange, handleServices, handleBudget, handleSubmit, openErrorAlert, handleClose, openSuccessAlert } = ContactUs()
+    const { formData, handleChange, handleServices, handleBudget, handleSubmit, openErrorAlert, handleClose, openSuccessAlert,handleSubServices } = ContactUs()
     const { handleLoad, loaded } = ImageLoader()
     const { openScheduleModal, handleScheduleModalOpen, handleScheduleModalClose, isDisabled, handleDateChange, lastDay, openFormModal, handleFormModalOpen, handleFormModalClose, handleSlotSelect, selectedSlot, meetingData, handleMeetingFormField, handleMeetingRequestSubmit, handleNext, handleModifyDate, openMeetingErrorAlert, openMeetingSuccessAlert, handleMeetingAlertClose
     } = ScheduleData()
@@ -31,7 +31,7 @@ export default function DataProcessing({ children }) {
                 // Scroll Top 
                 goToTop,
                 // Contact Us Form Data
-                formData, handleChange, handleServices, handleBudget, handleSubmit, openErrorAlert, handleClose, openSuccessAlert,
+                formData, handleChange, handleServices, handleBudget, handleSubmit, openErrorAlert, handleClose, openSuccessAlert,handleSubServices,
                 // Image Loader
                 handleLoad, loaded,
                 // Schedule Modal Data

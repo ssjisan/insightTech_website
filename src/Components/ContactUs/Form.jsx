@@ -4,9 +4,11 @@ import BudgetSection from "./BudgetSection";
 import InputFields from "./InputFields";
 import { useContext } from "react";
 import { DataContext } from "../../DataProcessing/DataProcessing";
+import SubServiceSection from "./SubServiceSection";
 
 export default function Form() {
-    const { handleSubmit, openErrorAlert, handleClose,openSuccessAlert } = useContext(DataContext)
+    const { handleSubmit, openErrorAlert, handleClose, openSuccessAlert, formData } = useContext(DataContext)
+
     const FormSx = {
         display: "flex",
         flexDirection: "column",
@@ -19,6 +21,10 @@ export default function Form() {
     return (
         <Container sx={FormSx} >
             <ServiceSection />
+            {
+                (formData.service !== "" && formData.service !== "Domain & Hosting" && formData.service !== "PBX") && <SubServiceSection />
+
+            }
             <BudgetSection />
             <InputFields />
             <Button variant="contained" sx={{ width: "220px" }} onClick={handleSubmit}>Submit</Button>

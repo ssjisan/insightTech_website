@@ -4,6 +4,7 @@ export default function ContactUs() {
 
     const [formData, setFormData] = useState({
         service: "",
+        subService: "",
         budget: "",
         name: "",
         email: "",
@@ -12,6 +13,7 @@ export default function ContactUs() {
         position: "",
         projectBrief: "",
     });
+    console.log(formData);
     const [openErrorAlert, setOpenErrorAlert] = useState(false);
     const [openSuccessAlert, setOpenSuccessAlert] = useState(false);
 
@@ -29,12 +31,15 @@ export default function ContactUs() {
     const handleServices = (title) => {
         setFormData({ ...formData, service: title });
     };
+    const handleSubServices = (title) => {
+        setFormData({ ...formData, subService: title });
+    };
     const handleBudget = (data) => {
         setFormData({ ...formData, budget: data });
     };
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const { service, budget, name, email, phone, company, position, projectBrief } = formData
+        const { service,subService, budget, name, email, phone, company, position, projectBrief } = formData
 
         if (!name || !email || !phone) {
             setOpenErrorAlert(true)
@@ -45,13 +50,14 @@ export default function ContactUs() {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({ service, budget, name, email, phone, company, position, projectBrief })
+            body: JSON.stringify({ service, subService, budget, name, email, phone, company, position, projectBrief })
         }
         const res = await fetch("https://insighttechbd-2c31b-default-rtdb.firebaseio.com/ClientRequest.json", options)
         if (res) {
             setOpenSuccessAlert(true)
             setFormData({
                 service: '',
+                subService:'',
                 budget: '',
                 name: '',
                 email: '',
@@ -68,7 +74,7 @@ export default function ContactUs() {
     // console.log(formData);
     return (
         {
-            formData, handleChange, handleServices, handleBudget, handleSubmit, openErrorAlert, handleClose,openSuccessAlert
+            formData, handleChange, handleServices, handleBudget, handleSubmit, openErrorAlert, handleClose,openSuccessAlert,handleSubServices
         }
     )
 }
