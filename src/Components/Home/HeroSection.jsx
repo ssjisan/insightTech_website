@@ -6,7 +6,7 @@ export default function HeroSection() {
 
     const gradientAnimation = keyframes`from {filter: hue-rotate(0deg);} to {filter: hue-rotate(-360deg);}`;
     const MainBoxSx = {
-        backgroundImage: "url('https://i.ibb.co/f0zmnGD/homeBG.png')", backgroundSize: "cover",
+        backgroundImage: "url('/home-bg.png')", backgroundSize: "cover",
         backgroundRepeat: "no-repeat", backgroundPosition: 'center', height: "100vh", display: "flex", alignItems: "center"
     }
     const ContainerSx = {

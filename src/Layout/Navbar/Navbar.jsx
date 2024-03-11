@@ -6,7 +6,7 @@ import { useContext } from "react";
 import { DataContext } from "../../DataProcessing/DataProcessing";
 export default function Navbar() {
     const { pathname } = useLocation();
-    const { goToTop, handleScheduleModalOpen } = useContext(DataContext);
+    const { goToTop } = useContext(DataContext);
 
     // eslint-disable-next-line
     const forBelow1400 = useMediaQuery("(max-width:1400px)");
@@ -75,7 +75,7 @@ export default function Navbar() {
                     })
                 }
             </Box>
-            <Button size="medium" variant="contained" color="primary" onClick={handleScheduleModalOpen}>Schedule a Call</Button>
+            <Button size="medium" variant="contained" color="primary" >Schedule a Call</Button>
         </Box>
     )
 }

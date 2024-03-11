@@ -12,7 +12,7 @@ export default function InputFields() {
                 id="name"
                 label="Your Name"
                 type="text"
-                variant="outlined"
+                variant="outlined" 
                 fullWidth
                 required
                 size={forBelow767 ? "medium" : "large"}
