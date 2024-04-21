@@ -6,7 +6,7 @@ import { services } from "./NavConfig"
 import { Link, useLocation } from "react-router-dom"
 
 export default function MenuDrawer() {
-    const { toggleDrawer, open, handleDrawerClose, handleScheduleModalOpen } = useContext(DataContext)
+    const { toggleDrawer, open, handleDrawerClose, handleScheduleDrawerOpen } = useContext(DataContext)
     const forBelow676 = useMediaQuery("(max-width:676px)");
     const { pathname } = useLocation();
     const { goToTop } = useContext(DataContext)
@@ -84,7 +84,7 @@ export default function MenuDrawer() {
                         )
                     })
                 }
-                <Button variant="contained" color="primary" size="small" onClick={handleScheduleModalOpen}>Schedule a Call</Button>
+                <Button variant="contained" color="primary" size="medium" onClick={handleScheduleDrawerOpen}>Schedule a Call</Button>
             </Box>
         </Drawer>
     )

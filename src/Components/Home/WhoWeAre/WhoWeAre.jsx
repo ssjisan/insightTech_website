@@ -58,7 +58,7 @@ export default function WhoWeAre() {
                 </Grid>
                 <Grid item xs={12} sm={6} lg={6}>
                     <Box>
-                        <img src="https://i.ibb.co/HzkkYcf/whoweare.webp" style={{ width: "100%", objectFit: "contain", height: forBelow599 && "310px" }} />
+                        <img src="/images/home/whoWeAre.webp" style={{ width: "100%", objectFit: "contain", height: forBelow599 && "310px" }} />
                     </Box>
                 </Grid>
                 {forBelow800 &&

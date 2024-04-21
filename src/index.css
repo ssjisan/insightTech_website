@@ -3,3 +3,7 @@ body {
   padding: 0;
   font-family: 'Inter', sans-serif;
 }
+.slick-track {
+  display: flex;
+  gap:24px
+}

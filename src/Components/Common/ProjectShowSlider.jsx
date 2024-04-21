@@ -1,61 +1,84 @@
 import { Box } from "@mui/material";
+import { useRef } from "react";
 import Slider from "react-slick";
 
 export default function ProjectShowSlider() {
-    const imageUrls = [
-        'https://i.ibb.co/5Ydv6cw/9.png',
-        'https://i.ibb.co/x3FpwqX/1.png',
-        'https://i.ibb.co/2jHFRMB/2.png',
-        'https://i.ibb.co/jzJhGqr/3.png',
-        'https://i.ibb.co/bvz9d15/4.png',
-        'https://i.ibb.co/vQH6Y3z/5.png',
-        'https://i.ibb.co/5971WW4/6.png',
-        'https://i.ibb.co/gWsHpdy/7.png',
-        'https://i.ibb.co/R2Xzg1R/8.png'
-    ];
-    const settings = {
-        dots: false,
-        infinite: true,
-        slidesToScroll: 1,
-        slidesToShow: 6,
-        pauseOnHover: true,
-        autoplay: true,
-        speed: 2000,
-        autoplaySpeed: 2000,
-        cssEase: "linear",
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 4
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 3
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1
-                }
-            }
-        ]
-    };
+  //eslint-disable-next-line
+  let sliderRef = useRef(null);
 
-    return (
-        <Slider {...settings} style={{ width: "98%" }}>
-            {
-                imageUrls.map((data) => {
-                    return (
-                        <Box sx={{ width: "384px", height: "280px", overflow:"hidden"}} key={data.index}>
-                            <img src={data} style={{width:"100%", height:"100%", objectFit:"cover"}}/>
-                        </Box>
-                    )
-                })
-            }
-        </Slider>
-    )
+  const imageUrls = [
+    "/images/home/projects/1.gif",
+    "/images/home/projects/2.png",
+    "/images/home/projects/3.png",
+    "/images/home/projects/4.gif",
+    "/images/home/projects/5.png",
+    "/images/home/projects/6.png",
+    "/images/home/projects/7.png",
+    "/images/home/projects/8.gif",
+    "/images/home/projects/9.png",
+    "/images/home/projects/10.png",
+  ];
+  const settings = {
+    initialSlide: 0,
+    arrows: false,
+    dots: false,
+    infinite: true,
+    slidesToScroll: 1,
+    slidesToShow: 4,
+    pauseOnHover: true,
+    autoplay: true,
+    speed: 4000,
+    autoplaySpeed: 4000,
+    cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 597,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
+  return (
+    <div className="slider-container">
+      <Slider
+        {...settings}
+        ref={(slider) => {
+          sliderRef = slider;
+        }}
+      >
+        {imageUrls.map((data, index) => {
+          return (
+            <Box
+              sx={{
+                width: "384px",
+                height: "280px",
+                overflow: "hidden",
+                borderRadius: "16px",
+              }}
+              key={index}
+            >
+              <img
+                src={data}
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+            </Box>
+          );
+        })}
+      </Slider>
+    </div>
+  );
 }
