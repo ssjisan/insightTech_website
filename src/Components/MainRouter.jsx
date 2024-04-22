@@ -10,22 +10,23 @@ import PBX from "../Pages/PBX";
 import AboutUs from "../Pages/AboutUs";
 import ContactUs from "../Pages/ContactUs";
 import Blog from "../Pages/Blog";
-
+import Schedule from "../Pages/Schedule";
 
 export default function MainRoute() {
-    return (
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="web_development" element={<WebDevelopment />} />
-        <Route path="domain_hosting" element={<DomainHosting />} />
-        <Route path="digital_marketing" element={<DigitalMarketing />} />
-        <Route path="graphics" element={<Graphics />} />
-        <Route path="videography" element={<Videography />} />
-        <Route path="network_solution" element={<NetworkSolution />} />
-        <Route path="pbx" element={<PBX />} />
-        <Route path="about_us" element={<AboutUs />} />
-        <Route path="contact_us" element={<ContactUs/>} />
-        <Route path="blog" element={<Blog/>} />
-      </Routes>
-    );
-  }
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="web_development" element={<WebDevelopment />} />
+      <Route path="domain_hosting" element={<DomainHosting />} />
+      <Route path="digital_marketing" element={<DigitalMarketing />} />
+      <Route path="graphics" element={<Graphics />} />
+      <Route path="videography" element={<Videography />} />
+      <Route path="network_solution" element={<NetworkSolution />} />
+      <Route path="pbx" element={<PBX />} />
+      <Route path="about_us" element={<AboutUs />} />
+      <Route path="contact_us" element={<ContactUs />} />
+      <Route path="blog" element={<Blog />} />
+      <Route path="schedule" element={<Schedule />} />
+    </Routes>
+  );
+}

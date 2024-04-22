@@ -1,12 +1,11 @@
-import { Button, useMediaQuery } from "@mui/material"
+import { Button } from "@mui/material"
 import PropTypes from "prop-types";
 
 export default function TimeSlotChip({ label, handleClick, selected }) {
-    const forBelow767 = useMediaQuery("(max-width:767px)");
 
     const ChipSx = {
         display: "flex",
-        width: forBelow767 ? "auto" : "220px",
+        width: "100%",
         height: "36px",
         padding: "4px 16px",
         justifyContent: "center",

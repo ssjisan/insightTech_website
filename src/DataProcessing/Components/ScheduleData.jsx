@@ -2,73 +2,16 @@ import dayjs from "dayjs";
 import { useState } from "react";
 
 export default function ScheduleData() {
-  const [openScheduleDrawer, setOpenScheduleDrawer] = useState(false);
+  // Back Button 
 
-  const handleScheduleDrawerOpen = () => {
-    setOpenScheduleDrawer(true);
-  };
-  const handleScheduleDrawerClose = () => {
-    setOpenScheduleDrawer(false);
-  };
-
-  const [openScheduleModal, setOpenScheduleModal] = useState(false);
-  const [openFormModal, setOpenFormModal] = useState(false);
-  const [openMeetingErrorAlert, setOpenMeetingErrorAlert] = useState(false);
-  const [openMeetingSuccessAlert, setOpenMeetingSuccessAlert] = useState(false);
-  const handleMeetingAlertClose = (event, reason) => {
-    if (reason === "clickaway") {
-      return;
-    }
-    setOpenMeetingErrorAlert(false);
-    setOpenMeetingSuccessAlert(false);
-  };
-  const handleScheduleModalOpen = () => {
-    setOpenScheduleModal(true);
-  };
-  const handleNext = () => {
-    setOpenScheduleModal(false);
-    setOpenFormModal(true);
-  };
-  const handleModifyDate = () => {
-    setOpenScheduleModal(true);
-    setOpenFormModal(false);
+  const handleBack = () => {
+    // Remove the date and time slot data
     setMeetingData({
+      ...meetingData,
       date: "",
       timeSlot: "",
-      name: "",
-      email: "",
-      phone: "",
-      brief: "",
     });
   };
-  const handleScheduleModalClose = () => {
-    setOpenScheduleModal(false);
-    setOpenFormModal(false);
-    setMeetingData({
-      date: "",
-      timeSlot: "",
-      name: "",
-      email: "",
-      phone: "",
-      brief: "",
-    });
-  };
-  const handleFormModalOpen = () => {
-    setOpenFormModal(true);
-  };
-
-  const handleFormModalClose = () => {
-    setOpenFormModal(false);
-    setMeetingData({
-      date: "",
-      timeSlot: "",
-      name: "",
-      email: "",
-      phone: "",
-      brief: "",
-    });
-  };
-
   // Calender Data
   const isDisabled = (date) => {
     const today = new Date();
@@ -107,7 +50,7 @@ export default function ScheduleData() {
     const { date, timeSlot, name, email, phone, brief } = meetingData;
 
     if (!name || !email || !phone) {
-      setOpenMeetingErrorAlert(true);
+      alert("true");
       return;
     }
     const options = {
@@ -122,7 +65,6 @@ export default function ScheduleData() {
       options
     );
     if (res) {
-      setOpenMeetingSuccessAlert(true);
       setMeetingData({
         date: "",
         timeSlot: "",
@@ -134,32 +76,17 @@ export default function ScheduleData() {
     } else {
       alert("Error");
     }
-    setOpenFormModal(false);
   };
+  console.log(meetingData);
   return {
-    openScheduleModal,
-    handleScheduleModalOpen,
-    handleScheduleModalClose,
     isDisabled,
     handleDateChange,
     lastDay,
-    openFormModal,
-    handleFormModalOpen,
-    handleFormModalClose,
     handleSlotSelect,
     meetingData,
     handleMeetingFormField,
     handleMeetingRequestSubmit,
-    handleNext,
-    handleModifyDate,
-    openMeetingErrorAlert,
-    openMeetingSuccessAlert,
-    handleMeetingAlertClose,
-
-    // 
-
-    openScheduleDrawer,
-    handleScheduleDrawerOpen,
-    handleScheduleDrawerClose
+    //
+    handleBack
   };
 }
