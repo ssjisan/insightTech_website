@@ -38,11 +38,7 @@ export default function GraphicsEssentials() {
               </Typography>
             </Box>
             <Box sx={{ width: "100%" }}>
-              <img
-                src="/images/graphics/font.webp"
-                style={{ width: "100%" }}
-                alt="font"
-              />
+              <img src="/images/graphics/font.webp" alt="font" width="100%" />
             </Box>
           </Box>
         </Grid>
@@ -57,11 +53,7 @@ export default function GraphicsEssentials() {
               </Typography>
             </Box>
             <Box sx={{ width: "100%" }}>
-              <img
-                src="/images/graphics/info.webp"
-                style={{ width: "100%" }}
-                alt="info"
-              />
+              <img src="/images/graphics/info.webp" width="100%" alt="info" />
             </Box>
           </Box>
         </Grid>

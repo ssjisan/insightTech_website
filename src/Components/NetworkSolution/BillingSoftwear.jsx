@@ -68,7 +68,8 @@ export default function BillingSoftwear() {
             <img
               src="/images/network/billing.webp"
               alt="Social Media"
-              style={{ objectFit: "cover", width: "100%" }}
+              width="100%"
+              style={{ objectFit: "cover" }}
             />
           </Box>
         </Grid>

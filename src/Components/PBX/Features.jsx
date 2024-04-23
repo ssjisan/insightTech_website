@@ -75,7 +75,8 @@ export default function Features() {
             <img
               src="/images/pbx/feature.webp"
               alt="Hero Section"
-              style={{ objectFit: "cover", width: "100%" }}
+              width="100%"
+              style={{ objectFit: "cover" }}
               onLoad={handleLoad}
             />
           </Box>

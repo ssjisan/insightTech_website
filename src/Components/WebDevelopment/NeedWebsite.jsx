@@ -77,10 +77,11 @@ export default function NeedWebsite() {
           <Box>
             <img
               src="/images/web_development/component-set.webp"
+              alt="Need Website"
+              width="100%"
+              height={forBelow599 && "310px"}
               style={{
-                width: "100%",
                 objectFit: "contain",
-                height: forBelow599 && "310px",
               }}
             />
           </Box>

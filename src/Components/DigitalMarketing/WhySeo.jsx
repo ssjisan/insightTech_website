@@ -67,7 +67,8 @@ export default function WhySeo() {
             <img
               src="/images/digital_marketing/seo-3.webp"
               alt="Social Media"
-              style={{ objectFit: "cover", width: "100%" }}
+              width="100%"
+              style={{ objectFit: "cover" }}
             />
           </Box>
         </Grid>

@@ -47,8 +47,9 @@ export default function HeroSection() {
         )}
         <img
           src="/images/web_development/hero.webp"
-          alt=""
-          style={{ objectFit: "cover", width: "100%" }}
+          alt="Hero"
+          width="100%"
+          style={{ objectFit: "cover" }}
           onLoad={handleLoad}
         />
       </Box>

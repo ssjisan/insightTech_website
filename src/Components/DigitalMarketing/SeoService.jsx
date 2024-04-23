@@ -73,8 +73,9 @@ export default function SeoService() {
           <Box sx={{ width: "100%", borderRadius: "16px", overflow: "hidden" }}>
             <img
               src="/images/digital_marketing/seo-2.webp"
-              style={{ objectFit: "cover", width: "100%" }}
+              style={{ objectFit: "cover" }}
               alt="SEO Services"
+              width="100%"
             />
           </Box>
         </Grid>

@@ -47,8 +47,9 @@ export default function CleanUI() {
         )}
         <img
           src="/images/web_development/clean-ui.webp"
-          alt=""
-          style={{ objectFit: "cover", width: "100%" }}
+          alt="Clean UI"
+          width="100%"
+          style={{ objectFit: "cover" }}
           onLoad={handleLoad}
         />
       </Box>

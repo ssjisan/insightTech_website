@@ -54,7 +54,8 @@ export default function Promotion() {
               <img
                 src="/images/pbx/1st.webp"
                 alt="first"
-                style={{ objectFit: "cover", width: "100%" }}
+                width="100%"
+                style={{ objectFit: "cover" }}
                 onLoad={handleLoad}
               />
             </Box>
@@ -72,7 +73,8 @@ export default function Promotion() {
               <img
                 src="/images/pbx/2nd.webp"
                 alt="first"
-                style={{ objectFit: "cover", width: "100%" }}
+                width="100%"
+                style={{ objectFit: "cover" }}
                 onLoad={handleLoad}
               />
             </Box>

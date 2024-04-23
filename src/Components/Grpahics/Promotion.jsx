@@ -29,7 +29,7 @@ export default function Promotion() {
                 <Typography variant="h3" sx={{ textAlign: "center" }}>Deciphering Brand Identity: Your Business&lsquo;s Essence</Typography>
             </Box>
             <Box sx={{ width: "100%", borderRadius: "16px", overflow: "hidden" }}>
-                <img src="/images/graphics/event.webp" alt="" style={{ objectFit: "cover", width: "100%" }} />
+                <img src="/images/graphics/event.webp" alt="Event"  width= "100%" style={{ objectFit: "cover" }} />
             </Box>
         </Container>
     )
