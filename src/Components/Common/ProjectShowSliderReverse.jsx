@@ -18,16 +18,14 @@ export default function ProjectShowSliderReverse() {
     "/images/home/projects/10.png",
   ];
   const settings = {
-    initialSlide: 0,
+    slidesToShow: 4,
+    slidesToScroll: 1,
     arrows: false,
     dots: false,
     infinite: true,
-    slidesToScroll: 1,
-    slidesToShow: 4,
-    pauseOnHover: true,
     autoplay: true,
-    speed: 4000,
-    autoplaySpeed: 4000,
+    speed: 3000,
+    autoplaySpeed: 3000,
     cssEase: "linear",
     rtl: true,
     responsive: [
@@ -60,24 +58,27 @@ export default function ProjectShowSliderReverse() {
           sliderRef = slider;
         }}
       >
-        {imageUrls.slice().reverse().map((data, index) => {
-          return (
-            <Box
-              sx={{
-                width: "384px",
-                height: "280px",
-                overflow: "hidden",
-                borderRadius: "16px",
-              }}
-              key={index}
-            >
-              <img
-                src={data}
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
-              />
-            </Box>
-          );
-        })}
+        {imageUrls
+          .slice()
+          .reverse()
+          .map((data, index) => {
+            return (
+              <Box
+                sx={{
+                  width: "384px",
+                  height: "280px",
+                  overflow: "hidden",
+                  borderRadius: "16px",
+                }}
+                key={index}
+              >
+                <img
+                  src={data}
+                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                />
+              </Box>
+            );
+          })}
       </Slider>
     </div>
   );

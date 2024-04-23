@@ -1,10 +1,10 @@
 import { Box, Container, Typography, useMediaQuery } from "@mui/material";
 import PageChip from "../../Common/PageChip";
 import ProjectShowSlider from "../../Common/ProjectShowSlider";
-import ProjectShowSliderReverse from "../../Common/ProjectShowSliderReverse";
+// import ProjectShowSliderReverse from "../../Common/ProjectShowSliderReverse";
 
 export default function RecentProjects() {
-  const forBelow597 = useMediaQuery("(max-width:597px)");
+  // const forBelow597 = useMediaQuery("(max-width:597px)");
   const forBelow999 = useMediaQuery("(max-width:999px)");
 
   // Configure Style Start
@@ -47,7 +47,7 @@ export default function RecentProjects() {
       </Container>
       <Box sx={{ display: "flex", flexDirection: "column", gap: "24px" }}>
         <ProjectShowSlider />
-        {!forBelow597 && <ProjectShowSliderReverse />}
+        {/* {!forBelow597 && <ProjectShowSliderReverse />} */}
       </Box>
     </Box>
   );

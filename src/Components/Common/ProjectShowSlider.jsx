@@ -7,25 +7,23 @@ export default function ProjectShowSlider() {
   let sliderRef = useRef(null);
 
   const imageUrls = [
-    "/images/home/projects/1.gif",
-    "/images/home/projects/2.png",
-    "/images/home/projects/3.png",
-    "/images/home/projects/4.gif",
-    "/images/home/projects/5.png",
-    "/images/home/projects/6.png",
-    "/images/home/projects/7.png",
-    "/images/home/projects/8.gif",
-    "/images/home/projects/9.png",
-    "/images/home/projects/10.png",
+    "/images/home/projects/1.webp",
+    "/images/home/projects/2.webp",
+    "/images/home/projects/3.webp",
+    "/images/home/projects/4.webp",
+    "/images/home/projects/5.webp",
+    "/images/home/projects/6.webp",
+    "/images/home/projects/7.webp",
+    "/images/home/projects/8.webp",
+    "/images/home/projects/9.webp",
+    "/images/home/projects/10.webp",
   ];
   const settings = {
-    initialSlide: 0,
+    slidesToShow: 4,
+    slidesToScroll: 1,
     arrows: false,
     dots: false,
     infinite: true,
-    slidesToScroll: 1,
-    slidesToShow: 4,
-    pauseOnHover: true,
     autoplay: true,
     speed: 4000,
     autoplaySpeed: 4000,
@@ -73,7 +71,10 @@ export default function ProjectShowSlider() {
             >
               <img
                 src={data}
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                width="100%"
+                height="100%"
+                style={{ objectFit: "cover" }}
+                alt="Project Preview"
               />
             </Box>
           );
