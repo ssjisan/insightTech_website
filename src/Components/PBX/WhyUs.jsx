@@ -44,7 +44,7 @@ export default function WhyUs() {
                         {!loaded && (
                             <Skeleton variant="rectangular" animation="wave" width="100%" height={400} />
                         )}
-                        <img src="https://i.ibb.co/zsWNqcd/whyus.webp" style={{ objectFit: "cover", width: "100%" }} alt="why us?" onLoad={handleLoad} />
+                        <img src="/images/pbx/whyus.webp" style={{ objectFit: "cover", width: "100%" }} alt="why us?" onLoad={handleLoad} />
                     </Box>
                 </Grid>
                 {

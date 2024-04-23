@@ -50,7 +50,7 @@ export default function HeroSection() {
                         {!loaded && (
                             <Skeleton variant="rectangular" animation="wave" width="100%" height={400} />
                         )}
-                        <img src="https://i.ibb.co/fQx3xHV/hero.webp" alt="Hero Section" style={{ objectFit: "cover", width: "100%" }} onLoad={handleLoad} />
+                        <img src="/images/pbx/hero.webp" alt="Hero Section" style={{ objectFit: "cover", width: "100%" }} onLoad={handleLoad} />
                     </Box>
                 </Grid>
             </Grid>

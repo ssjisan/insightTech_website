@@ -27,11 +27,9 @@ export default function WhyVideography() {
   const ImageContainerSx = {
     display: "flex",
     width: (forBelow499 && "100%") || (forBelow899 && "75%") || "100%",
-    padding: "24px 80px",
+    // padding: "24px 80px",
     justifyContent: "center",
     alignItems: "center",
-    gap: "10px",
-    overflow: "hidden",
   };
   const ContentNewSx = {
     display: "flex",

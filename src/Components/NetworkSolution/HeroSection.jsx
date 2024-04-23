@@ -29,7 +29,7 @@ export default function HeroSection() {
                 </Typography>
             </Box>
             <Box sx={{ maxWidth: "780px", width: "100%" }}>
-                <img src="https://i.ibb.co/h1PxKxv/Hero-Image.webp" alt="" style={{ objectFit: "cover", width: "100%" }} />
+                <img src="/images/network/hero.webp" alt="" style={{ objectFit: "cover", width: "100%" }} />
             </Box>
         </Container>
     )
