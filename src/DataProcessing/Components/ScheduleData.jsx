@@ -2,8 +2,17 @@ import dayjs from "dayjs";
 import { useState } from "react";
 
 export default function ScheduleData() {
-  // Back Button 
+  const [scheduleErrorAlert, setScheduleErrorAlert] = useState(false);
+  const [scheduleSuccessAlert, setScheduleSuccessAlert] = useState(false);
 
+  const handleAlertClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setScheduleErrorAlert(false);
+    setScheduleSuccessAlert(false);
+  };
+  // Back Button
   const handleBack = () => {
     // Remove the date and time slot data
     setMeetingData({
@@ -12,6 +21,7 @@ export default function ScheduleData() {
       timeSlot: "",
     });
   };
+
   // Calender Data
   const isDisabled = (date) => {
     const today = new Date();
@@ -41,16 +51,19 @@ export default function ScheduleData() {
   const handleSlotSelect = (slot) => {
     setMeetingData({ ...meetingData, timeSlot: slot });
   };
+
+  // Form
   const handleMeetingFormField = (e) => {
     const { id, value } = e.target;
     setMeetingData({ ...meetingData, [id]: value });
   };
+
   const handleMeetingRequestSubmit = async (e) => {
     e.preventDefault();
     const { date, timeSlot, name, email, phone, brief } = meetingData;
 
     if (!name || !email || !phone) {
-      alert("true");
+      setScheduleErrorAlert(true);
       return;
     }
     const options = {
@@ -64,7 +77,7 @@ export default function ScheduleData() {
       "https://insighttechbd-d4ca9-default-rtdb.firebaseio.com/MeetingResuest.json",
       options
     );
-    if (res) {
+    if (res.ok) {
       setMeetingData({
         date: "",
         timeSlot: "",
@@ -73,11 +86,14 @@ export default function ScheduleData() {
         phone: "",
         brief: "",
       });
+      setTimeout(() => {
+        window.history.back(); // Go back in history after 5 seconds
+      }, 2000);
+      setScheduleSuccessAlert(true);
     } else {
-      alert("Error");
+      setScheduleErrorAlert(true);
     }
   };
-  console.log(meetingData);
   return {
     isDisabled,
     handleDateChange,
@@ -86,7 +102,9 @@ export default function ScheduleData() {
     meetingData,
     handleMeetingFormField,
     handleMeetingRequestSubmit,
-    //
-    handleBack
+    handleBack,
+    scheduleErrorAlert,
+    scheduleSuccessAlert,
+    handleAlertClose,
   };
 }

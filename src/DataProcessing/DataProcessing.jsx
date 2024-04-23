@@ -28,6 +28,7 @@ export default function DataProcessing({ children }) {
   } = ContactUs();
   const { handleLoad, loaded } = ImageLoader();
   const {
+    showConfirmation,
     isDisabled,
     handleDateChange,
     lastDay,
@@ -40,6 +41,9 @@ export default function DataProcessing({ children }) {
     handleMeetingFormField,
     handleMeetingRequestSubmit,
     handleBack,
+    scheduleErrorAlert,
+    scheduleSuccessAlert,
+    handleAlertClose,
   } = ScheduleData();
   return (
     <DataContext.Provider
@@ -74,17 +78,19 @@ export default function DataProcessing({ children }) {
         isDisabled,
         handleDateChange,
         lastDay,
-
         handleSlotSelect,
         selectedSlot,
         meetingData,
         handleMeetingFormField,
         handleMeetingRequestSubmit,
-
+        showConfirmation,
         openScheduleDrawer,
         handleScheduleDrawerOpen,
         handleScheduleDrawerClose,
         handleBack,
+        scheduleErrorAlert,
+        scheduleSuccessAlert,
+        handleAlertClose,
       }}
     >
       {children}

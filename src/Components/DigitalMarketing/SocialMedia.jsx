@@ -38,7 +38,7 @@ export default function SocialMedia() {
             <Grid container spacing={3}>
                 <Grid item xs={12} sm={6} md={6} lg={6}>
                     <Box sx={{ width: "100%" }}>
-                        <img src="https://i.ibb.co/8c1rznd/Social-Media.webp" alt="Social Media" style={{ objectFit: "cover", width: "100%" }} />
+                        <img src="/images/digital_marketing/seo.webp" alt="Social Media" style={{ objectFit: "cover", width: "100%" }} />
                     </Box>
                 </Grid>
                 <Grid item xs={12} sm={6} md={6} lg={6}>

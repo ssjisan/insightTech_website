@@ -1,18 +1,22 @@
-import { Box, Button, Container, Grid, Typography } from "@mui/material";
+import {
+  Alert,
+  AlertTitle,
+  Box,
+  Button,
+  Container,
+  Grid,
+  Snackbar,
+} from "@mui/material";
 import Calender from "../Components/Schedule/Calender";
 import TimeSlotSelection from "../Components/Schedule/TimeSlotSelection";
-import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { DataContext } from "../DataProcessing/DataProcessing";
-import { CalenderIcon, Clock, GoogleMeet } from "../Assets/IconSet";
 import InputFields from "../Components/Schedule/InputFields";
-import Confirmation from "../Components/Schedule/Confirmation";
+import MeetingInfo from "../Components/Schedule/MeetingInfo";
 
 export default function Schedule() {
-  const navigate = useNavigate();
-
   const handleGoBack = () => {
-    navigate(-1);
+    window.history.back();
   };
   const ContainerSx = {
     mt: { xs: "24px", sm: "48px", md: "80px" },
@@ -21,8 +25,14 @@ export default function Schedule() {
     flexDirection: "column",
   };
 
-  const { meetingData, handleMeetingRequestSubmit, handleBack } =
-    useContext(DataContext);
+  const {
+    meetingData,
+    handleMeetingRequestSubmit,
+    handleBack,
+    scheduleErrorAlert,
+    scheduleSuccessAlert,
+    handleAlertClose,
+  } = useContext(DataContext);
 
   return (
     <Container sx={ContainerSx}>
@@ -39,77 +49,29 @@ export default function Schedule() {
         }}
       >
         <Grid container spacing={2}>
-          <Grid
-            item
-            xs={12}
-            sm={meetingData.date && meetingData.timeSlot ? 5 : 3}
-            md={meetingData.date && meetingData.timeSlot ? 5 : 3}
-          >
-            <Box sx={{ width: "100%", maxWidth: "280px" }}>
-              <Typography variant="h4" color="text.primary">
-                Get started on your success with a free expert consultation
-              </Typography>
-              <Typography variant="body1" color="text.secondary">
-                Ready to see how a web solution service agency can help you
-                level up? Book a free consultation today!
-              </Typography>
-              <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "8px",
-                  mt: "24px",
-                }}
-              >
-                {meetingData.date && meetingData.timeSlot && (
-                  <Box sx={{ display: "flex", gap: "8px" }}>
-                    <CalenderIcon />
-                    <Typography variant="body2">
-                      {meetingData.date}&nbsp;&nbsp;{meetingData.timeSlot}
-                    </Typography>
-                  </Box>
-                )}
-                <Box sx={{ display: "flex", alignItems: "center", gap: "8px" }}>
-                  <Clock />
-                  <Typography variant="body2" color="text.secondary">
-                    60 Minutes
-                  </Typography>
-                </Box>
-                <Box sx={{ display: "flex", alignItems: "center", gap: "8px" }}>
-                  <GoogleMeet />
-                  <Typography variant="body2" color="text.secondary">
-                    Google Meet
-                  </Typography>
-                </Box>
-              </Box>
-            </Box>
+          <Grid item xs={12} sm={12} md={3}>
+            <MeetingInfo />
           </Grid>
           {!(meetingData.date && meetingData.timeSlot) && (
-            <>
-              <Grid item xs={12} sm={6} md={6}>
-                <Box>
-                  <Calender />
-                </Box>
-              </Grid>
-              <Grid item xs={12} sm={3} md={3}>
-                <Box>
-                  <TimeSlotSelection />
-                </Box>
-              </Grid>
-            </>
+            <Grid item xs={12} sm={6} md={6}>
+              <Calender />
+            </Grid>
+          )}
+          {!(meetingData.date && meetingData.timeSlot) && (
+            <Grid item xs={12} sm={6} md={3}>
+              <TimeSlotSelection />
+            </Grid>
           )}
           {meetingData.date && meetingData.timeSlot && (
-            <>
-              <Grid item xs={12} sm={7} md={7}>
-                <Box>
-                  <InputFields />
-                </Box>
-              </Grid>
-              <Grid
-                item
-                xs={12}
-                sm={12}
-                md={12}
+            <Grid item xs={12} sm={12} md={9}>
+              <Box>
+                <InputFields />
+              </Box>
+            </Grid>
+          )}
+          {meetingData.date && meetingData.timeSlot && (
+            <Grid item xs={12} sm={12} md={12}>
+              <Box
                 sx={{
                   display: "flex",
                   gap: "16px",
@@ -126,12 +88,44 @@ export default function Schedule() {
                 >
                   Submit
                 </Button>
-              </Grid>
-            </>
+              </Box>
+            </Grid>
           )}
         </Grid>
       </Box>
-      <Confirmation />
+      <Snackbar
+        open={scheduleErrorAlert}
+        autoHideDuration={6000}
+        onClose={handleAlertClose}
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+      >
+        <Alert
+          onClose={handleAlertClose}
+          severity="error"
+          variant="filled"
+          sx={{ width: "100%" }}
+        >
+          <AlertTitle>Error</AlertTitle>
+          Please fill in your name, phone number & email so we can get back to
+          you.
+        </Alert>
+      </Snackbar>
+      <Snackbar
+        open={scheduleSuccessAlert}
+        autoHideDuration={6000}
+        onClose={handleAlertClose}
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+      >
+        <Alert
+          onClose={handleAlertClose}
+          severity="success"
+          variant="filled"
+          sx={{ width: "100%" }}
+        >
+          <AlertTitle>Successfully sent</AlertTitle>
+          Thanks for your interest. We will contact you soon.
+        </Alert>
+      </Snackbar>
     </Container>
   );
 }

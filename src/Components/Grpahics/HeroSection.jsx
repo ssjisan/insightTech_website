@@ -43,7 +43,7 @@ export default function HeroSection() {
                 </Grid>
                 <Grid item xs={12} sm={12} md={6} lg={6}>
                     <Box sx={{ width: "100%" }}>
-                        <img src="https://i.ibb.co/Bztb8wd/hero.webp" alt="Hero Section" style={{ objectFit: "cover", width: "100%" }} />
+                        <img src="/images/graphics/hero.webp" alt="Hero Section" style={{ objectFit: "cover", width: "100%" }} />
                     </Box>
                 </Grid>
             </Grid>

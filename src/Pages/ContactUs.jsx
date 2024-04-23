@@ -9,19 +9,17 @@ import EmailReminder from "../Components/ContactUs/EmailReminder";
 import Footer from "../Layout/Footer/Footer";
 
 export default function ContactUs() {
-    const forBelow1100 = useMediaQuery("(max-width:1100px)");
+  const forBelow1100 = useMediaQuery("(max-width:1100px)");
 
-    return (
-        <Box>
-            {
-                forBelow1100 ? <NavForMobile /> : <Navbar />
-            }
-            <Header />
-            <Form />
-            <MoreContact />
-            <FaQ />
-            <EmailReminder />
-            <Footer />
-        </Box>
-    )
+  return (
+    <Box>
+      {forBelow1100 ? <NavForMobile /> : <Navbar />}
+      <Header />
+      <Form />
+      <MoreContact />
+      <FaQ />
+      <EmailReminder />
+      <Footer />
+    </Box>
+  );
 }
