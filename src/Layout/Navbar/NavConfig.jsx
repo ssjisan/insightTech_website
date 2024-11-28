@@ -1,14 +1,10 @@
 import {
     DigitalMarketingIconDefault,
     DigitalMarketingIconHover,
-    DomainHostIconDefault,
-    DomainHostIconHover,
     GraphicsIconDefault,
     GraphicsIconHover,
     NetworkSolutionIconDefault,
     NetworkSolutionIconHover,
-    PBXIconDefault,
-    PBXIconHover,
     VideographyIconDefault,
     VideographyIconHover,
     WebDevIconDefault,
@@ -49,14 +45,6 @@ const services = [
     },
     {
         id: 2,
-        title: "Domain & Hosting",
-        link: "/domain_hosting",
-        subTitle: "Establishing Digital Presence with Secure Hosting and Domain Management.",
-        iconDefault: <DomainHostIconDefault />,
-        iconHover: <DomainHostIconHover />,
-    },
-    {
-        id: 3,
         title: "Digital Marketing",
         link: "/digital_marketing",
         subTitle: "Expanding Brand Influence through Targeted Online Promotion Tactics.",
@@ -64,7 +52,7 @@ const services = [
         iconHover: <DigitalMarketingIconHover />,
     },
     {
-        id: 4,
+        id: 3,
         title: "Graphics",
         link: "/graphics",
         subTitle: "Enhancing Brand Identity with Engaging Visual Design Services.",
@@ -72,7 +60,7 @@ const services = [
         iconHover: <GraphicsIconHover />,
     },
     {
-        id: 5,
+        id: 4,
         title: "Videography",
         link: "/videography",
         subTitle: "Telling Stories Through Professional Visual Storytelling Services.",
@@ -80,21 +68,13 @@ const services = [
         iconHover: <VideographyIconHover />,
     },
     {
-        id: 6,
+        id: 5,
         title: "Network Solution",
         link: "/network_solution",
         subTitle: "Enabling Seamless Connectivity with Customized Networking Infrastructure.",
         iconDefault: <NetworkSolutionIconDefault />,
         iconHover: <NetworkSolutionIconHover />,
     },
-    {
-        id: 7,
-        title: "PBX",
-        link: "/pbx",
-        subTitle: "Optimizing Communication Channels with Advanced Telephony Systems.",
-        iconDefault: <PBXIconDefault />,
-        iconHover: <PBXIconHover />,
-    }
 ];
 
 export { main, services };
